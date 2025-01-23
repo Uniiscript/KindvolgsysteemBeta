@@ -1,3 +1,4 @@
+import { authConfig } from '~~/shared/authConfig'
 import type { UserSession, UserSessionComposable } from '~~/types/authTypes'
 
 export function useUserSession(): UserSessionComposable {

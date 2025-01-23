@@ -6,7 +6,7 @@ import { decodeBase64 } from '@oslojs/encoding'
 const UPPER_ALPHANUMERIC_ALPHABET = `ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789`
 const LOWER_ALPHANUMERIC_ALPHABET = `abcdefghijklmnopqrstuvwxyz0123456789`
 
-export const key = decodeBase64(process.env.ENCRYPTION_KEY!)
+// export const key = decodeBase64(process.env.ENCRYPTION_KEY!)
 
 export function encrypt(data: Uint8Array): Uint8Array {
   const iv = new Uint8Array(16)

@@ -57,7 +57,7 @@ export default defineEventHandler(async (event) => {
   }
   let key: Uint8Array
   try {
-    key = decodeBase64(encodedKey)
+    // key = decodeBase64(encodedKey)
   }
   catch {
     return {
