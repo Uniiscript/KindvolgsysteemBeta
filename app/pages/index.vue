@@ -29,6 +29,9 @@ import { authConfig } from '~~/shared/authConfig';
           <p class="text-gray-700">
             Houd belangrijke gegevens van kinderen bij, inclusief contactinformatie, medische gegevens en meer.
           </p>
+          <p class="text-blue-500 mt-4 font-semibold">
+            <NuxtLink to="/kindlijst">Klik hier voor het voorbeeld</NuxtLink>
+          </p>
         </div>
         <div class="bg-white rounded-2xl shadow-xl p-6 border border-purple-300">
           <h3 class="text-2xl font-semibold mb-3 text-purple-800">Ontwikkelingsmijlpalen</h3>
@@ -77,3 +80,4 @@ import { authConfig } from '~~/shared/authConfig';
     </footer>
   </div>
 </template>
+
