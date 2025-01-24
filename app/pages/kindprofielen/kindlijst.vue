@@ -39,7 +39,12 @@
                 </div>
               </td>
               <td class="p-4">
-                <p class="font-medium text-purple-800">Emma Jansen</p>
+                <router-link
+                  :to="{ path: '/kinddashboard', query: { name: 'Emma Jansen' } }"
+                  class="font-medium text-purple-800 hover:underline"
+                >
+                  Emma Jansen
+                </router-link>
               </td>
               <td class="p-4">15-03-2020</td>
               <td class="p-4">
@@ -64,7 +69,12 @@
                 </div>
               </td>
               <td class="p-4">
-                <p class="font-medium text-purple-800">Liam de Vries</p>
+                <router-link
+                  :to="{ path: '/kinddashboard', query: { name: 'Liam de Vries' } }"
+                  class="font-medium text-purple-800 hover:underline"
+                >
+                  Liam de Vries
+                </router-link>
               </td>
               <td class="p-4">12-06-2019</td>
               <td class="p-4">
@@ -82,7 +92,6 @@
                 </div>
               </td>
             </tr>
-            <!-- Voeg meer dummy gegevens toe indien nodig -->
           </tbody>
         </table>
       </section>
@@ -105,32 +114,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      isPopupOpen: false,
-      selectedChild: '',
-    };
-  },
-  methods: {
-    openPhotoPopup(childName) {
-      this.selectedChild = childName;
-      this.isPopupOpen = true;
-    },
-    closePopup() {
-      this.isPopupOpen = false;
-    },
-    handleFileChange(event) {
-      const file = event.target.files[0];
-      // Voeg logica toe om de afbeelding te verwerken
-    },
-    savePhoto() {
-      // Voeg logica toe om de foto op te slaan
-      this.closePopup();
-    }
-  }
-};
-</script>
-
