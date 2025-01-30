@@ -1,83 +1,81 @@
-<script lang="ts" setup>
-import { authConfig } from '~~/shared/authConfig';
-</script>
-
 <template>
-  <div class="bg-gradient-to-r from-blue-100 via-pink-100 to-purple-100 min-h-screen flex flex-col">
-    <header class="bg-gradient-to-r from-purple-500 to-blue-500 w-full py-8 shadow-lg rounded-b-3xl">
-      <h1 class="text-5xl font-bold text-center text-white">LittleStepsCare</h1>
-      <p class="text-center text-blue-200 mt-4">Een alles-in-één platform voor kinderopvang en oudercommunicatie</p>
-    </header>
+  <HeaderFooter>
+    <!-- Employee Functions -->
+    <section class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+      <h2 class="text-2xl font-bold text-purple-700">{{ translations[selectedLanguage].employeeTitle }}</h2>
+      <p class="text-gray-700">{{ translations[selectedLanguage].employeeText }}</p>
+    </section>
 
-    <main class="flex-grow flex flex-col items-center mt-8 px-6">
-      <section class="text-center max-w-3xl mb-10">
-        <h2 class="text-4xl font-semibold text-purple-800 mb-6">Geef kinderen een stapje voor in hun ontwikkeling</h2>
-        <p class="text-gray-800 text-lg leading-relaxed">
-          Beheer kindprofielen, volg ontwikkelingsmijlpalen, deel dagrapporten en communiceer direct met ouders. Alles wat je nodig hebt voor transparante en efficiënte kinderopvang.
-        </p>
-      </section>
+    <!-- Parent Functions -->
+    <section class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+      <h2 class="text-2xl font-bold text-blue-700">{{ translations[selectedLanguage].parentTitle }}</h2>
+      <p class="text-gray-700">{{ translations[selectedLanguage].parentText }}</p>
+    </section>
 
-      <div class="animate-bounce bg-gradient-to-r from-blue-400 to-purple-400 text-white rounded-full px-8 py-4 mb-8 shadow-xl">
-        <NuxtLink external :to="`${authConfig.githubSigninURL}`" class="text-xl font-medium">
-          Inloggen met Github
-        </NuxtLink>
+    <!-- Hiring Nannies -->
+    <section class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+      <h2 class="text-2xl font-bold text-pink-700">{{ translations[selectedLanguage].nannyTitle }}</h2>
+      <p class="text-gray-700">{{ translations[selectedLanguage].nannyText }}</p>
+    </section>
+  </HeaderFooter>
+
+  <!-- Login Modal -->
+  <div v-if="showLoginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-xl w-96">
+      <h3 class="text-xl font-semibold text-center mb-4">{{ translations[selectedLanguage].login }}</h3>
+      <div class="space-y-4">
+        <button @click="selectRole('LittleStepsCare')" class="w-full bg-blue-500 text-white p-3 rounded-lg">LittleStepsCare</button>
+        <button @click="selectRole('ParentCare')" class="w-full bg-green-500 text-white p-3 rounded-lg">ParentCare</button>
+        <button @click="selectRole('NannyCare')" class="w-full bg-purple-500 text-white p-3 rounded-lg">NannyCare</button>
       </div>
-
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-purple-300">
-          <h3 class="text-2xl font-semibold mb-3 text-purple-800">Kindprofielen beheren</h3>
-          <p class="text-gray-700">
-            Houd belangrijke gegevens van kinderen bij, inclusief contactinformatie, medische gegevens en meer.
-          </p>
-          <p class="text-blue-500 mt-4 font-semibold">
-            <NuxtLink to="/kindlijst">Klik hier voor het voorbeeld</NuxtLink>
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-purple-300">
-          <h3 class="text-2xl font-semibold mb-3 text-purple-800">Ontwikkelingsmijlpalen</h3>
-          <p class="text-gray-700">
-            Volg de voortgang van kinderen in sociale, emotionele en fysieke vaardigheden.
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-purple-300">
-          <h3 class="text-2xl font-semibold mb-3 text-purple-800">Dagrapportages</h3>
-          <p class="text-gray-700">
-            Deel dagelijkse activiteiten, maaltijden en observaties rechtstreeks met ouders.
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-purple-300">
-          <h3 class="text-2xl font-semibold mb-3 text-purple-800">Communicatie</h3>
-          <p class="text-gray-700">
-            Eenvoudige communicatie tussen ouders en kinderopvangmedewerkers.
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-purple-300">
-          <h3 class="text-2xl font-semibold mb-3 text-purple-800">Overzichten en rapporten</h3>
-          <p class="text-gray-700">
-            Genereer gedetailleerde rapporten over aanwezigheid, voortgang en meer.
-          </p>
-        </div>
-        <div class="bg-white rounded-2xl shadow-xl p-6 border border-purple-300">
-          <h3 class="text-2xl font-semibold mb-3 text-purple-800">Privacy en beveiliging</h3>
-          <p class="text-gray-700">
-            Geavanceerde beveiligingsfuncties om gegevens veilig te bewaren.
-          </p>
-        </div>
-      </section>
-
-      <section class="mt-12 text-center">
-        <div class="bg-gradient-to-r from-pink-300 to-purple-300 text-purple-900 rounded-lg p-8 shadow-xl w-2/3 lg:w-1/3 mx-auto">
-          <h3 class="text-2xl font-semibold mb-4">Samen bouwen aan een veilige en stimulerende omgeving</h3>
-          <p class="text-gray-800 text-lg">
-            LittleStepsCare helpt ouders en medewerkers bij het bieden van de beste zorg en ondersteuning aan kinderen.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-gradient-to-r from-purple-600 to-blue-600 w-full py-6 rounded-t-3xl mt-auto">
-      <p class="text-center text-blue-200">© 2025 LittleStepsCare. Alle rechten voorbehouden.</p>
-    </footer>
+      <button @click="showLoginModal = false" class="mt-4 w-full text-center text-gray-500">Close</button>
+    </div>
   </div>
 </template>
 
+<script setup>
+import { ref } from 'vue';
+import HeaderFooter from '@/components/HeaderFooter.vue';
+
+const selectedLanguage = ref('nl');
+const showLoginModal = ref(false);
+
+const translations = {
+  nl: {
+    title: "LittleStepsCare",
+    subtitle: "Een revolutionair platform voor kinderopvang, ouders en nannies",
+    experience: "Ervaring",
+    features: "Functies",
+    contact: "Contact",
+    footer: "Alle rechten voorbehouden.",
+    login: "Log in om verder te gaan",
+    employeeTitle: "Voor Medewerkers",
+    employeeText: "Beheer roosters, rapporteer over de dag van het kind en communiceer met ouders via ons platform.",
+    parentTitle: "Voor Ouders",
+    parentText: "Bekijk de dagelijkse updates, voeg een dagplanning toe en boek eenvoudig extra opvang.",
+    nannyTitle: "Nanny Inhuren",
+    nannyText: "Huur gemakkelijk een gecertificeerde nanny via ons ouderportaal en beheer je boekingen eenvoudig.",
+  },
+  en: {
+    title: "LittleStepsCare",
+    subtitle: "A revolutionary platform for childcare, parents, and nannies",
+    experience: "Experience",
+    features: "Features",
+    contact: "Contact",
+    footer: "All rights reserved.",
+    login: "Log in to continue",
+    employeeTitle: "For Employees",
+    employeeText: "Manage schedules, report on children's days, and communicate with parents via our platform.",
+    parentTitle: "For Parents",
+    parentText: "View daily updates, add a day schedule, and easily book extra care.",
+    nannyTitle: "Hire a Nanny",
+    nannyText: "Easily hire a certified nanny through our parent portal and manage your bookings efficiently.",
+  }
+};
+
+function selectRole(role) {
+  showLoginModal.value = false;
+  console.log(`Selected role: ${role}`);
+  // Redirect to role-specific login or dashboard
+}
+</script>

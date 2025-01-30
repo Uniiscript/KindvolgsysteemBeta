@@ -36,8 +36,12 @@
     "@oslojs/otp": "^1.1.0",
     "@pilcrowjs/object-parser": "^0.0.4",
     "arctic": "^3.2.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
     "drizzle-orm": "^0.38.4",
     "eslint": "^9.18.0",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
     "nuxt": "^3.15.2",
     "pinia": "^2.3.1",
     "uqr": "^0.1.2",
@@ -65,6 +69,8 @@
     "nuxi": "^3.20.0",
     "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.3"
-  }
+    "typescript": "^5.7.3",
+    "@types/bun": "latest"
+  },
+  "module": "index.ts"
 }
