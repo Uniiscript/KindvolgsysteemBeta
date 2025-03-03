@@ -1,81 +1,98 @@
 <template>
-  <HeaderFooter>
-    <!-- Employee Functions -->
-    <section class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
-      <h2 class="text-2xl font-bold text-purple-700">{{ translations[selectedLanguage].employeeTitle }}</h2>
-      <p class="text-gray-700">{{ translations[selectedLanguage].employeeText }}</p>
-    </section>
+  <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-100 via-yellow-100 to-pink-100 p-6">
+    <!-- Header -->
+    <header class="w-full flex justify-between items-center py-6 bg-white shadow-md rounded-lg px-6">
+      <h1 class="text-4xl font-bold text-gray-800">Little Steps Care</h1>
+      <!-- Inlogknop met popup -->
+      <button @click="showLogin = true" class="px-6 py-3 bg-blue-300 text-white font-semibold rounded-lg hover:bg-blue-400 transition">
+        Inloggen
+      </button>
+    </header>
 
-    <!-- Parent Functions -->
-    <section class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
-      <h2 class="text-2xl font-bold text-blue-700">{{ translations[selectedLanguage].parentTitle }}</h2>
-      <p class="text-gray-700">{{ translations[selectedLanguage].parentText }}</p>
-    </section>
+    <!-- Main Content -->
+    <main class="flex flex-col items-center w-full py-12">
+      <p class="text-lg text-gray-700 max-w-2xl text-center mb-8">
+        Welkom bij Little Steps Care! Wij bieden liefdevolle en professionele opvang en gezinsondersteuning op maat.
+      </p>
 
-    <!-- Hiring Nannies -->
-    <section class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
-      <h2 class="text-2xl font-bold text-pink-700">{{ translations[selectedLanguage].nannyTitle }}</h2>
-      <p class="text-gray-700">{{ translations[selectedLanguage].nannyText }}</p>
-    </section>
-  </HeaderFooter>
+     <!-- Overkoepelend verhaal -->
+<section class="mb-12 max-w-2xl text-center">
+  <div class="bg-white shadow-lg rounded-2xl p-6">
+    <p class="text-lg text-gray-700">
+      Little Steps Care is ontstaan vanuit mijn jarenlange ervaring als oppas en de waardevolle inzichten die ik van mijn moeder heb meegekregen. Wij geloven dat elk gezin uniek is en dat de kleine hulpjes in het dagelijks leven een wereld van verschil kunnen maken.
+    </p>
+    <p class="text-lg text-gray-700 mt-4">
+      Ons platform biedt een breed scala aan services – van algemene gezinsondersteuning en betrouwbare oppasservice tot persoonlijk advies en consultancy. Wij werken samen met professionals die ik persoonlijk ken en vertrouw, zodat we de best mogelijke begeleiding kunnen garanderen.
+    </p>
+    <p class="text-lg text-gray-700 mt-4">
+      Bij ons staat de aandacht voor het aanbieden van de juiste pakketten centraal. Of het nu gaat om het 'Basis Oppas Pakket', het 'Activiteiten Pakket', het 'Avond Pakket', een 'Overnachting Pakket', of een pakket met een 'Specialistische Nanny' of 'Consultancy' – elk pakket is zorgvuldig samengesteld om perfect aan te sluiten bij de behoeften van jouw gezin.
+    </p>
+  </div>
+</section>
 
-  <!-- Login Modal -->
-  <div v-if="showLoginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white p-6 rounded-lg shadow-xl w-96">
-      <h3 class="text-xl font-semibold text-center mb-4">{{ translations[selectedLanguage].login }}</h3>
-      <div class="space-y-4">
-        <button @click="selectRole('LittleStepsCare')" class="w-full bg-blue-500 text-white p-3 rounded-lg">LittleStepsCare</button>
-        <button @click="selectRole('ParentCare')" class="w-full bg-green-500 text-white p-3 rounded-lg">ParentCare</button>
-        <button @click="selectRole('NannyCare')" class="w-full bg-purple-500 text-white p-3 rounded-lg">NannyCare</button>
+      <!-- Services -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl">
+        <NuxtLink v-for="(service, index) in services" :key="index" :to="service.link" class="block">
+          <div class="bg-white shadow-lg rounded-2xl p-6 transition-transform transform hover:scale-105 hover:bg-purple-50">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-2">{{ service.title }}</h2>
+            <p class="text-gray-600">{{ service.description }}</p>
+            <button class="mt-4 px-4 py-2 bg-purple-300 text-white font-semibold rounded-lg hover:bg-purple-400 transition">
+              Lees meer
+            </button>
+          </div>
+        </NuxtLink>
       </div>
-      <button @click="showLoginModal = false" class="mt-4 w-full text-center text-gray-500">Close</button>
-    </div>
+
+      <!-- Pakketten -->
+      <h2 class="text-3xl font-bold text-gray-800 mt-12">Onze Pakketten</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl mt-6">
+        <div v-for="(packageItem, index) in packages" :key="index" class="bg-white shadow-lg rounded-2xl p-6 transition-transform transform hover:scale-105 hover:bg-yellow-50">
+          <h3 class="text-2xl font-semibold text-gray-700 mb-2">{{ packageItem.title }}</h3>
+          <p class="text-gray-600 mb-4">{{ packageItem.description }}</p>
+          <button class="px-4 py-2 bg-pink-300 text-white font-semibold rounded-lg hover:bg-pink-400 transition">
+            Meer info
+          </button>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="mt-12 flex gap-4">
+        <NuxtLink to="/contact" class="px-6 py-3 bg-yellow-300 text-gray-800 font-semibold rounded-lg hover:bg-yellow-400 transition">
+          Contacteer ons
+        </NuxtLink>
+        <NuxtLink to="/aanmelden" class="px-6 py-3 bg-pink-300 text-white font-semibold rounded-lg hover:bg-pink-400 transition">
+          Meld je aan
+        </NuxtLink>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 bg-white mt-12 shadow-md rounded-lg">
+      <p class="text-gray-600">© 2025 Little Steps Care. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <!-- Login Popup Component -->
+    <LoginPopup :isOpen="showLogin" @close="showLogin = false" />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import HeaderFooter from '@/components/HeaderFooter.vue';
+import { ref } from "vue";
 
-const selectedLanguage = ref('nl');
-const showLoginModal = ref(false);
+const showLogin = ref(false);
 
-const translations = {
-  nl: {
-    title: "LittleStepsCare",
-    subtitle: "Een revolutionair platform voor kinderopvang, ouders en nannies",
-    experience: "Ervaring",
-    features: "Functies",
-    contact: "Contact",
-    footer: "Alle rechten voorbehouden.",
-    login: "Log in om verder te gaan",
-    employeeTitle: "Voor Medewerkers",
-    employeeText: "Beheer roosters, rapporteer over de dag van het kind en communiceer met ouders via ons platform.",
-    parentTitle: "Voor Ouders",
-    parentText: "Bekijk de dagelijkse updates, voeg een dagplanning toe en boek eenvoudig extra opvang.",
-    nannyTitle: "Nanny Inhuren",
-    nannyText: "Huur gemakkelijk een gecertificeerde nanny via ons ouderportaal en beheer je boekingen eenvoudig.",
-  },
-  en: {
-    title: "LittleStepsCare",
-    subtitle: "A revolutionary platform for childcare, parents, and nannies",
-    experience: "Experience",
-    features: "Features",
-    contact: "Contact",
-    footer: "All rights reserved.",
-    login: "Log in to continue",
-    employeeTitle: "For Employees",
-    employeeText: "Manage schedules, report on children's days, and communicate with parents via our platform.",
-    parentTitle: "For Parents",
-    parentText: "View daily updates, add a day schedule, and easily book extra care.",
-    nannyTitle: "Hire a Nanny",
-    nannyText: "Easily hire a certified nanny through our parent portal and manage your bookings efficiently.",
-  }
-};
+const services = [
+  { title: "Overall Gezinsondersteuning", description: "Op maat gemaakte ondersteuning voor het hele gezin.", link: "/gezinsondersteuning" },
+  { title: "Oppasservice", description: "Betrouwbare oppassers met extra services zoals verslagen en kindvolgsystemen.", link: "/oppasservice" },
+  { title: "Consultancy & Advies", description: "Persoonlijk advies en begeleiding voor ouders.", link: "/consultancy" },
+];
 
-function selectRole(role) {
-  showLoginModal.value = false;
-  console.log(`Selected role: ${role}`);
-  // Redirect to role-specific login or dashboard
-}
+const packages = [
+  { title: "Basis Oppas Pakket", description: "Kinderen brengen/halen van school door gescreende nannies met rijbewijs." },
+  { title: "Activiteiten Pakket", description: "Nanny biedt ontwikkelingsgerichte activiteiten en zorgt voor materialen." },
+  { title: "Avond Pakket", description: "Nanny kookt, geeft kinderen eten en brengt ze naar bed." },
+  { title: "Overnachting Pakket", description: "Nanny met overnachting en ondersteuning bij sportactiviteiten." },
+  { title: "Specialistische Nanny", description: "Ervaren nanny met slaapcoaching skills of expertise in eetgedrag." },
+  { title: "Consultancy Pakket", description: "Persoonlijke begeleiding en plan van aanpak op maat." },
+];
 </script>
