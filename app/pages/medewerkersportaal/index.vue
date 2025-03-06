@@ -1,93 +1,111 @@
 <template>
-  <div class="bg-gradient-to-r from-blue-100 via-pink-100 to-purple-100 min-h-screen">
-    <div class="container mx-auto p-6">
-      <!-- Dashboard Header -->
-      <div class="bg-white p-6 rounded-lg shadow-xl mb-6">
-        <h1 class="text-4xl font-semibold text-purple-800">Welkom op je Dashboard, {{ username }}</h1>
-        <p class="text-lg text-gray-700 mt-2">Bekijk je aankomende diensten, zorg voor de kinderen en houd contact met ouders.</p>
-      </div>
+  <div class="min-h-screen flex flex-col items-center bg-gradient-to-r from-purple-100 via-yellow-100 to-pink-100 p-6">
+    <!-- Header -->
+    <header class="w-full flex justify-between items-center py-6 bg-white shadow-md rounded-lg px-6 mb-6">
+      <h1 class="text-4xl font-bold text-gray-800">Little Steps Care Dashboard</h1>
+      <button class="px-6 py-3 bg-blue-300 text-white font-semibold rounded-lg hover:bg-blue-400 transition">
+        Uitloggen
+      </button>
+    </header>
 
-      <!-- Upcoming Services (Aankomende Diensten) -->
-      <div class="bg-white p-6 rounded-lg shadow-xl mb-6">
-        <h2 class="text-2xl font-semibold text-purple-800 mb-4">Aankomende Diensten</h2>
-        <div v-if="upcomingServices.length > 0" class="space-y-4">
-          <div v-for="service in upcomingServices" :key="service.id" class="border-l-4 border-purple-600 pl-4">
-            <p class="text-lg text-gray-800"><strong>{{ service.time }}</strong> - {{ service.description }}</p>
-            <p class="text-sm text-gray-600">{{ service.location }}</p>
+    <!-- Main Content -->
+    <main class="w-full max-w-5xl">
+      <!-- Welkomstbericht -->
+      <section class="bg-white shadow-lg rounded-2xl p-6 mb-6 text-center">
+        <h2 class="text-3xl font-semibold text-gray-800">Welkom, {{ username }}!</h2>
+        <p class="text-lg text-gray-700 mt-2">
+          Hier vind je je geplande diensten, informatie over de kinderen in je Bubble.Care en belangrijke mededelingen.
+        </p>
+      </section>
+
+      <!-- Versleepbare Sections -->
+      <draggable v-model="sections" class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6" :animation="200">
+        <div v-for="section in sections" :key="section.id" class="bg-white shadow-lg rounded-2xl p-6 transition-transform transform hover:scale-105" :style="section.style">
+          <h2 class="text-2xl font-semibold text-gray-700 mb-2">{{ section.title }}</h2>
+          <div v-if="section.content.length > 0" class="space-y-4">
+            <div v-for="item in section.content" :key="item.id" class="border-l-4 border-purple-600 pl-4">
+              <p class="text-lg text-gray-800"><strong>{{ item.time || item.name }}</strong> - {{ item.description || item.notes }}</p>
+              <p class="text-sm text-gray-600">{{ item.location || item.age }} {{ item.date || '' }}</p>
+            </div>
           </div>
+          <p v-else class="text-gray-600">{{ section.emptyMessage }}</p>
         </div>
-        <p v-else class="text-gray-600">Er zijn momenteel geen aankomende diensten.</p>
-      </div>
+      </draggable>
 
-      <!-- Children in Care (Kinderen in Zorg) -->
-      <div class="bg-white p-6 rounded-lg shadow-xl mb-6">
-        <h2 class="text-2xl font-semibold text-purple-800 mb-4">Kinderen in Zorg</h2>
-        <div v-if="childrenInCare.length > 0" class="space-y-4">
-          <div v-for="child in childrenInCare" :key="child.id" class="border-b border-gray-300 pb-4">
-            <h3 class="text-xl text-purple-600">{{ child.name }}</h3>
-            <p class="text-sm text-gray-600">Leeftijd: {{ child.age }} jaar</p>
-            <p class="text-sm text-gray-600">Notities: {{ child.notes }}</p>
-          </div>
-        </div>
-        <p v-else class="text-gray-600">Er zijn momenteel geen kinderen in zorg.</p>
-      </div>
+      <!-- Dag Journaling -->
+      <section class="bg-white shadow-lg rounded-2xl p-6 mb-6">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-2">Dag Journaling</h2>
+        <textarea v-model="journalEntry" class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300" rows="4" placeholder="Schrijf hier je dagervaringen..."></textarea>
+        <button @click="saveJournalEntry" class="mt-4 px-4 py-2 bg-blue-300 text-white font-semibold rounded-lg hover:bg-blue-400 transition">
+          Opslaan
+        </button>
+      </section>
+    </main>
 
-      <!-- Important Notes or Messages (Belangrijke Notities/Berichten) -->
-      <div class="bg-white p-6 rounded-lg shadow-xl mb-6">
-        <h2 class="text-2xl font-semibold text-purple-800 mb-4">Belangrijke Notities/Berichten</h2>
-        <div v-if="importantMessages.length > 0" class="space-y-4">
-          <div v-for="message in importantMessages" :key="message.id" class="border-l-4 border-yellow-600 pl-4">
-            <p class="text-lg text-gray-800">{{ message.text }}</p>
-            <p class="text-sm text-gray-500">{{ message.date }}</p>
-          </div>
-        </div>
-        <p v-else class="text-gray-600">Er zijn momenteel geen nieuwe berichten of notities.</p>
-      </div>
-
-      <!-- Calendar (Agenda) -->
-      <div class="bg-white p-6 rounded-lg shadow-xl mb-6">
-        <h2 class="text-2xl font-semibold text-purple-800 mb-4">Je Agenda</h2>
-        <div class="text-center">
-          <p class="text-lg text-gray-700 mb-4">Bekijk je rooster en geplande diensten voor de komende week.</p>
-          <button @click="showCalendar" class="bg-purple-600 text-white px-4 py-2 rounded-lg">Bekijk Kalender</button>
-        </div>
-      </div>
-    </div>
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 bg-white mt-12 shadow-md rounded-lg">
+      <p class="text-gray-600">© 2025 Little Steps Care. Alle rechten voorbehouden.</p>
+    </footer>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+const username = 'Medewerker';
 
-// Mock data voor aankomende diensten, kinderen in zorg, en belangrijke berichten
-const username = 'Medewerker'; // Dit kan worden ingesteld op basis van de ingelogde gebruiker
-const upcomingServices = ref([
-  { id: 1, time: '08:00 - 16:00', description: 'Diensten bij Kinderdagverblijf De Tuin', location: 'Amsterdam' },
-  { id: 2, time: '12:00 - 18:00', description: 'Ophalen en zorgen voor Kinderen', location: 'Utrecht' },
+const upcomingServices = [
+  { id: 1, time: '08:00 - 16:00', description: 'Oppasdienst bij Familie de Vries', location: 'Amsterdam' },
+  { id: 2, time: '14:00 - 18:00', description: 'Activiteitenbegeleiding', location: 'Utrecht' },
+];
+
+const childrenInCare = [
+  { id: 1, name: 'Luca', age: 3, notes: 'Energiek, houdt van tekenen.' },
+  { id: 2, name: 'Sophie', age: 5, notes: 'Speelt graag met blokken.' },
+];
+
+const importantMessages = [
+  { id: 1, text: 'Nieuwe richtlijnen voor hygiëne.', date: '2025-01-28' },
+  { id: 2, text: 'Denk aan je vakantieplanning!', date: '2025-01-20' },
+];
+
+const journalEntry = ref('');
+function saveJournalEntry () {
+  console.warn('Dagboek opgeslagen:', journalEntry.value);
+  journalEntry.value = '';
+}
+
+// Define sections for drag-and-drop
+const sections = ref([
+  {
+    id: 'welkomstbericht',
+    title: 'Welkom, {{ username }}!',
+    content: [],
+    style: 'bg-white shadow-lg rounded-2xl p-6 text-center mb-6',
+    emptyMessage: ''
+  },
+  {
+    id: 'aankomendeDiensten',
+    title: 'Aankomende Diensten',
+    content: upcomingServices,
+    style: 'bg-white shadow-lg rounded-2xl p-6 hover:bg-purple-50',
+    emptyMessage: 'Geen geplande diensten.'
+  },
+  {
+    id: 'bubbleCare',
+    title: 'Bubble Care',
+    content: childrenInCare,
+    style: 'bg-white shadow-lg rounded-2xl p-6 hover:bg-yellow-50',
+    emptyMessage: 'Geen kinderen in zorg.'
+  },
+  {
+    id: 'belangrijkeMededelingen',
+    title: 'Belangrijke Mededelingen',
+    content: importantMessages,
+    style: 'bg-white shadow-lg rounded-2xl p-6 hover:bg-pink-50',
+    emptyMessage: 'Geen nieuwe mededelingen.'
+  },
 ]);
-
-const childrenInCare = ref([
-  { id: 1, name: 'Luca', age: 3, notes: 'Luca is erg energiek, houdt van tekenen.' },
-  { id: 2, name: 'Sophie', age: 5, notes: 'Sophie houdt van knutselen en spelen met blokken.' },
-]);
-
-const importantMessages = ref([
-  { id: 1, text: 'Let op! Nieuwe richtlijnen voor hygiëne', date: '2025-01-28' },
-  { id: 2, text: 'Vergeet niet je vakantie aanvraag in te dienen!', date: '2025-01-20' },
-]);
-
-// Functie om de kalender weer te geven
-const showCalendar = () => {
-  // Dit zou een navigatie kunnen zijn naar een pagina die een kalender toont
-  alert('Kalender wordt geopend...');
-};
 
 onMounted(() => {
-  // Logica die wordt uitgevoerd zodra de component is geladen
-  // Bijvoorbeeld: ophalen van gegevens van een API
+  // Possible API-call for data
 });
 </script>
-
-<style scoped>
-/* Voeg hier extra styling toe indien nodig */
-</style>

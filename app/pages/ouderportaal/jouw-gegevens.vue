@@ -66,7 +66,7 @@
             <img v-if="member.profilePicture" :src="member.profilePicture" alt="Profile Picture" class="w-24 h-24 object-cover rounded-full mb-4" />
             <h3 class="text-lg font-semibold text-teal-800">{{ member.name }}</h3>
             <p class="text-sm text-gray-600">{{ member.role }}</p>
-            <p class="text-sm text-gray-600">{{ member.phoneNumber ? 'Telefoon: ' + member.phoneNumber : '' }}</p>
+            <p class="text-sm text-gray-600">{{ member.phoneNumber ? `Telefoon: ${  member.phoneNumber}` : '' }}</p>
             <p class="text-sm text-gray-600" v-if="member.isExpecting">{{ calculateDueDate(member.dueDate) }}</p>
           </div>
         </div>
@@ -136,8 +136,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
 const parentInfo = ref({
   firstName: '',
   lastName: '',

@@ -56,8 +56,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import HeaderFooter from '@/components/HeaderFooter.vue';
+import HeaderFooter from '~/components/Headerfooter.vue';
 
 const selectedLanguage = ref('nl');
 

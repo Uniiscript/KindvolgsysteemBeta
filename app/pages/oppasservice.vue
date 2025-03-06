@@ -15,6 +15,9 @@
 
         <!-- Domini Component -->
         <dominigridcard class="flex-1" />
+
+        <!-- Sam Component -->
+        <samgridcard class="flex-1" />
       </div>
 
       <h2 class="text-3xl font-bold text-gray-800 mt-12">Extra Diensten en Kosten</h2>
@@ -53,8 +56,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import Agenda from '@/components/Agenda.vue';
+import Agenda from '~/components/Agenda.vue';
 
 const showAgenda = ref(false);
 

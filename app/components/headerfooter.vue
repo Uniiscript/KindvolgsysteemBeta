@@ -33,10 +33,9 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import LanguageTranslate from './LanguageTranslate.vue';
-import LoginButton from './LoginButton.vue';
-import LoginModal from './LoginModal.vue';
+import LoginButton from './Loginbutton.vue';
+import LoginModal from './Loginmodal.vue';
 
 const selectedLanguage = ref('nl');
 const showLoginModal = ref(false); // Status van de modaal

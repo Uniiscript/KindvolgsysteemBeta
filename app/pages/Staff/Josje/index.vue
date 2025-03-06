@@ -115,8 +115,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-
 const currentIndex = ref(0);
 const reviews = [
   {

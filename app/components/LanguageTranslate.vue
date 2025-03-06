@@ -11,8 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
-
 const selectedLanguage = ref('nl');
 
 // Handle language change

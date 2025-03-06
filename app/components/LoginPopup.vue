@@ -65,8 +65,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
 const props = defineProps({ isOpen: Boolean });
 const emit = defineEmits(['close']);
 
