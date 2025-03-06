@@ -15,9 +15,6 @@
 </template>
 
 <script setup>
-import FeatureCard from '@/components/FeatureCard.vue';
-import HeaderFooter from '~/components/Headerfooter.vue';
-
 const selectedLanguage = ref('nl');
 
 const translations = {

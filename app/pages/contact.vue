@@ -67,8 +67,6 @@
 </template>
 
 <script setup>
-import HeaderFooter from '~/components/Headerfooter.vue';
-
 const selectedLanguage = ref('nl');
 const isChatting = ref(false);
 const chatMessages = ref([]);
@@ -83,12 +81,12 @@ const translations = {
   }
 };
 
-const startChat = () => {
+function startChat () {
   isChatting.value = true;
   chatMessages.value.push('Chatbot: Hallo! Hoe kan ik je helpen?');
-};
+}
 
-const sendMessage = () => {
+function sendMessage () {
   if (chatInput.value.trim() !== '') {
     chatMessages.value.push(`Jij: ${chatInput.value}`);
     chatInput.value = '';
@@ -96,7 +94,7 @@ const sendMessage = () => {
       chatMessages.value.push('Chatbot: Bedankt voor je bericht! We zullen je zo snel mogelijk helpen.');
     }, 1000);
   }
-};
+}
 </script>
 
 <style scoped>

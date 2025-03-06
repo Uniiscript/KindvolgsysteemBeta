@@ -49,18 +49,16 @@
       <div class="bg-white p-4 rounded-lg shadow-lg w-full max-w-2xl relative">
         <button @click="showAgenda = false" class="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded">X</button>
         <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">Agenda</h2>
-        <agenda />
+        <Agenda />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import Agenda from '~/components/Agenda.vue';
-
 const showAgenda = ref(false);
 
-const calculateAge = (birthdate) => {
+function calculateAge (birthdate) {
   const birthDate = new Date(birthdate);
   const today = new Date();
   let age = today.getFullYear() - birthDate.getFullYear();
@@ -69,5 +67,5 @@ const calculateAge = (birthdate) => {
     age--;
   }
   return age;
-};
+}
 </script>
