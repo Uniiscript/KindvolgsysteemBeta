@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col items-center w-full py-12 bg-gradient-to-b from-blue-100 to-purple-100">
+  <div class="flex flex-col items-center w-full py-12">
     <p class="text-lg text-gray-800 max-w-2xl text-center mb-8 font-medium">
-      Welkom bij <span class="text-purple-600 font-semibold">Little Steps Care</span>! Wij bieden liefdevolle en professionele opvang en gezinsondersteuning op maat.
+      Welkom bij <span class="text-[#C8A2C8] font-semibold">Little Steps Care</span>! Wij bieden liefdevolle en professionele opvang en gezinsondersteuning op maat.
     </p>
 
     <!-- Overkoepelend Verhaal -->
@@ -19,7 +19,7 @@
         <article class="bg-white shadow-lg border border-gray-300 rounded-2xl p-6 transition-transform transform hover:scale-105 hover:bg-purple-50 hover:border-purple-400">
           <h2 class="text-2xl font-semibold text-gray-800 mb-2">{{ service.title }}</h2>
           <p class="text-gray-600">{{ service.description }}</p>
-          <button class="mt-4 px-4 py-2 bg-purple-400 text-white font-semibold rounded-lg hover:bg-purple-500 transition">
+          <button class="mt-4 px-4 py-2 bg-[#C8A2C8] text-white font-semibold rounded-lg hover:bg-purple-500 transition">
             Lees meer
           </button>
         </article>
