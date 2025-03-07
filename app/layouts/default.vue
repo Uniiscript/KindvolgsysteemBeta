@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-gradient-to-br from-purple-100 via-yellow-100 to-pink-100 border border-transparent md:border-gray-300">
+  <div class="min-h-screen flex flex-col bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] border border-transparent md:border-gray-300">
     <!-- Header Component met Navigatiebalk -->
     <header class="bg-[rgb(214,201,174)] sticky top-0 z-50 shadow-lg border-b-4 border-gray-800 py-2 md:py-6 h-[65px] md:h-[120px]">
       <div class="max-w-7xl mx-auto flex justify-between items-center px-3 md:px-6">

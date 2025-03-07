@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center w-full py-12 bg-gradient-to-b from-blue-100 to-purple-100">
+  <div class="flex flex-col items-center w-full py-12">
     <p class="text-lg text-gray-800 max-w-2xl text-center mb-8 font-medium">
       Welkom bij <span class="text-purple-600 font-semibold">Little Steps Care</span>! Wij bieden liefdevolle en professionele opvang en gezinsondersteuning op maat.
     </p>
