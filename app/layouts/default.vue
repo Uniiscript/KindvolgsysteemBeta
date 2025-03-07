@@ -87,7 +87,7 @@
           <Icon name="mdi:pinterest" class="text-lg" />
         </a>
 
-        <NuxtLink to="#" class="text-xs text-gray-600 hover:text-[#C8A2C8] transition">
+        <NuxtLink to="#" class="text-xs text-gray-600 hover:text-[#A8E6CF] transition">
           Privacy, cookies & meer
         </NuxtLink>
       </div>
