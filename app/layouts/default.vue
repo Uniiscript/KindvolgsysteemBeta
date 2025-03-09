@@ -43,7 +43,6 @@
     ✕
   </button>
 </nav>
-
     </header>
 
     <!-- Hoofdinhoud -->
