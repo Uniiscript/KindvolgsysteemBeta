@@ -29,15 +29,21 @@
       </button>
     </div>
 
-    <!-- Mobiele Navigatie -->
-    <nav v-if="menuOpen" class="lg:hidden bg-white shadow-md border-t border-gray-300">
-      <ul class="flex flex-col space-y-4 p-6 text-lg text-gray-800 font-semibold">
-        <li><NuxtLink @click="menuOpen = false" to="/" class="block hover:text-[#C8A2C8] transition">Home</NuxtLink></li>
-        <li><NuxtLink @click="menuOpen = false" to="/over-ons" class="block hover:text-[#C8A2C8] transition">Over ons</NuxtLink></li>
-        <li><NuxtLink @click="menuOpen = false" to="/onze-diensten" class="block hover:text-[#C8A2C8] transition">Onze diensten</NuxtLink></li>
-        <li><NuxtLink @click="menuOpen = false" to="/vacatures" class="block hover:text-[#C8A2C8] transition">Vacatures</NuxtLink></li>
-      </ul>
-    </nav>
+   <!-- Mobiele Navigatie -->
+<nav v-if="menuOpen" class="fixed top-16 right-4 w-64 max-w-xs bg-[#fdf6f9] border border-gray-300 rounded-lg shadow-xl transition-all duration-300 transform scale-95">
+  <ul class="flex flex-col space-y-4 p-4 text-lg font-semibold text-gray-800">
+    <li><NuxtLink @click="menuOpen = false" to="/" class="block hover:text-[#C8A2C8] transition">Home</NuxtLink></li>
+    <li><NuxtLink @click="menuOpen = false" to="/over-ons" class="block hover:text-[#C8A2C8] transition">Over ons</NuxtLink></li>
+    <li><NuxtLink @click="menuOpen = false" to="/onze-diensten" class="block hover:text-[#C8A2C8] transition">Onze diensten</NuxtLink></li>
+    <li><NuxtLink @click="menuOpen = false" to="/vacatures" class="block hover:text-[#C8A2C8] transition">Vacatures</NuxtLink></li>
+  </ul>
+
+  <!-- Sluitknop -->
+  <button @click="menuOpen = false" class="absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-2xl">
+    ✕
+  </button>
+</nav>
+
     </header>
 
     <!-- Hoofdinhoud -->
