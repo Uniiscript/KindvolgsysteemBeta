@@ -56,4 +56,10 @@ export default defineNuxtConfig({
   i18n: {
      vueI18n: './config/i18n.config.ts'
   },
+  fonts: {
+    experimental: {
+      processCSSVariables: true,
+      
+    }
+  }
 })

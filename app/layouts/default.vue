@@ -6,18 +6,21 @@
         <!-- Logo en Bedrijfsnaam -->
         <div class="flex items-center space-x-4">
           <img src="/LSClogo.png" alt="Little Steps Care logo" class="h-[45px] md:h-[120px] w-auto object-contain opacity-100" />
-          <p class="text-base md:text-3xl font-playwrite-italia-moderna text-gray-800 ml-2 md:ml-4">Little Steps Care</p>
+          <p class="text-base md:text-5xl font-meow_script text-gray-800 ml-2 md:ml-4">Little Steps Care</p>
         </div>
 
-        <!-- Navigatiebalk -->
-        <nav class="hidden lg:flex">
-          <ul class="flex space-x-2 md:space-x-8 text-sm md:text-xl text-gray-800 font-semibold">
-            <li><NuxtLink to="/" class="hover:text-[#C8A2C8] transition">Home</NuxtLink></li>
-            <li><NuxtLink to="/over-ons" class="hover:text-[#C8A2C8] transition">Over ons</NuxtLink></li>
-            <li><NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] transition">Onze diensten</NuxtLink></li>
-            <li><NuxtLink to="/vacatures" class="hover:text-[#C8A2C8] transition">Vacatures</NuxtLink></li>
-          </ul>
-        </nav>
+<!-- Navigatiebalk -->
+<nav class="hidden lg:flex">
+  <ul class="flex space-x-4 md:space-x-10 text-base md:text-xl lg:text-2xl text-gray-800 font-semibold">
+    <li><NuxtLink to="/" class="hover:text-[#C8A2C8] font-zen_loop transition">Home</NuxtLink></li>
+    <li><NuxtLink to="/over-ons" class="hover:text-[#C8A2C8] font-zen_loop transition">Over ons</NuxtLink></li>
+    <li><NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] font-zen_loop transition">Onze diensten</NuxtLink></li>
+    <li><NuxtLink to="/vacatures" class="hover:text-[#C8A2C8] font-zen_loop transition">Vacatures</NuxtLink></li>
+  </ul>
+</nav>
+
+
+
 
         <!-- Hamburger Menu (Mobile) -->
         <button @click="menuOpen = !menuOpen" class="lg:hidden text-gray-800 focus:outline-none">
