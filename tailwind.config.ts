@@ -7,6 +7,8 @@ export default {
         playwrite_italia_moderna: ['Playwrite Italia Moderna'],
         passions_conflict: ['Passions Conflict'],
         zen_loop: ['Zen Loop'],
+        dosis: ['Dosis'],
+        pt_sans_narrow: ['PT Sans Narrow'],
 
 
       },

@@ -54,21 +54,21 @@
     <footer class="relative bg-[rgb(214,201,174)] py-6 md:py-10 border-t-4 border-gray-500 text-gray-500 w-full">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="flex flex-col space-y-3 text-left">
+          <div class="font-zen_loop flex flex-col space-y-3 text-left">
             <NuxtLink to="#" class="text-lg font-semibold hover:text-[#A8E6CF] transition">▻ Vind jouw Gezinsondersteuner bij jou in de buurt</NuxtLink>
             <NuxtLink to="#" class="text-lg font-semibold hover:text-[#A8E6CF] transition">▻ Vraag de informatiebrochure aan</NuxtLink>
             <NuxtLink to="#" class="text-lg font-semibold hover:text-[#A8E6CF] transition">▻ Schrijf je hier in voor een kennismakingsgesprek</NuxtLink>
           </div>
 
           <!-- Linksectie midden -->
-          <div class="grid grid-cols-2 gap-4 text-sm text-gray-500">
+          <div class="font-dosis grid grid-cols-2 gap-4 text-sm text-gray-500">
             <div class="flex flex-col space-y-2">
               <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Allround Gezinsondersteuning</NuxtLink>
               <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Oppasservice</NuxtLink>
               <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Consulting & Coaching</NuxtLink>
               <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Tarieven</NuxtLink>
             </div>
-            <div class="flex flex-col space-y-2">
+            <div class=" font-dosis flex flex-col space-y-2">
               <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Over ons</NuxtLink>
               <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Algemene voorwaarden</NuxtLink>
               <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Herroepingsrecht</NuxtLink>
@@ -88,7 +88,7 @@
               <Icon name="mdi:pinterest" class="text-lg" />
             </a>
 
-            <NuxtLink to="#" class="text-xs text-gray-600 hover:text-[#A8E6CF] transition">
+            <NuxtLink to="#" class="text-xs font-dosis text-gray-600 hover:text-[#A8E6CF] transition">
           Privacy, cookies & meer
         </NuxtLink>
           </div>
@@ -108,6 +108,7 @@
 
 <script setup>
 import { ref } from 'vue';
+
 const menuOpen = ref(false);
 const showMessage = () => alert("Welkom op onze pagina, als je vragen hebt, neem dan contact met ons op! :)");
 </script>
