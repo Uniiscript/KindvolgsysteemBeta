@@ -4,10 +4,13 @@
     <header class="bg-[rgb(214,201,174)] sticky top-0 z-50 shadow-lg border-b-4 border-gray-800 py-2 md:py-6 h-[65px] md:h-[120px] flex items-center px-3 md:px-6">
       <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
         <!-- Logo en Bedrijfsnaam -->
-        <div class="flex items-center space-x-4">
-          <img src="/LSClogo.png" alt="Little Steps Care logo" class="h-[45px] md:h-[120px] w-auto object-contain opacity-100" />
-          <p class="text-base md:text-5xl font-meow_script text-gray-800 ml-2 md:ml-4">Little Steps Care</p>
-        </div>
+<div class="flex items-center space-x-4">
+  <img src="/LSClogo.png" alt="Little Steps Care logo" class="h-[45px] md:h-[120px] w-auto object-contain opacity-100" />
+  <p class="text-lg sm:text-xl md:text-5xl font-meow_script text-gray-800 ml-2 md:ml-4">
+    Little Steps Care
+  </p>
+</div>
+
 
 <!-- Navigatiebalk -->
 <nav class="hidden lg:flex">
