@@ -11,27 +11,33 @@
   </p>
 </div>
 
-
-<!-- Navigatiebalk -->
-<nav class="hidden lg:flex">
-  <ul class="flex space-x-4 md:space-x-10 text-base md:text-xl lg:text-2xl text-gray-800 font-semibold">
-    <li><NuxtLink to="/" class="hover:text-[#C8A2C8] font-zen_loop transition">Home</NuxtLink></li>
-    <li><NuxtLink to="/over-ons" class="hover:text-[#C8A2C8] font-zen_loop transition">Over ons</NuxtLink></li>
-    <li><NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] font-zen_loop transition">Onze diensten</NuxtLink></li>
-    <li><NuxtLink to="/vacatures" class="hover:text-[#C8A2C8] font-zen_loop transition">Vacatures</NuxtLink></li>
-  </ul>
-</nav>
-
-
-
+ <!-- Navigatiebalk (Desktop) -->
+      <nav class="hidden lg:flex">
+        <ul class="flex space-x-4 md:space-x-10 text-base md:text-xl lg:text-2xl text-gray-800 font-semibold">
+          <li><NuxtLink to="/" class="hover:text-[#C8A2C8] font-zen_loop transition">Home</NuxtLink></li>
+          <li><NuxtLink to="/over-ons" class="hover:text-[#C8A2C8] font-zen_loop transition">Over ons</NuxtLink></li>
+          <li><NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] font-zen_loop transition">Onze diensten</NuxtLink></li>
+          <li><NuxtLink to="/vacatures" class="hover:text-[#C8A2C8] font-zen_loop transition">Vacatures</NuxtLink></li>
+        </ul>
+      </nav>
 
         <!-- Hamburger Menu (Mobile) -->
-        <button @click="menuOpen = !menuOpen" class="lg:hidden text-gray-800 focus:outline-none">
-          <svg class="w-5 h-5 md:w-8 md:h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
+      <button @click="menuOpen = !menuOpen" class="lg:hidden text-gray-800 focus:outline-none">
+        <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-300" :class="{ 'rotate-90': menuOpen }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobiele Navigatie -->
+    <nav v-if="menuOpen" class="lg:hidden bg-white shadow-md border-t border-gray-300">
+      <ul class="flex flex-col space-y-4 p-6 text-lg text-gray-800 font-semibold">
+        <li><NuxtLink @click="menuOpen = false" to="/" class="block hover:text-[#C8A2C8] transition">Home</NuxtLink></li>
+        <li><NuxtLink @click="menuOpen = false" to="/over-ons" class="block hover:text-[#C8A2C8] transition">Over ons</NuxtLink></li>
+        <li><NuxtLink @click="menuOpen = false" to="/onze-diensten" class="block hover:text-[#C8A2C8] transition">Onze diensten</NuxtLink></li>
+        <li><NuxtLink @click="menuOpen = false" to="/vacatures" class="block hover:text-[#C8A2C8] transition">Vacatures</NuxtLink></li>
+      </ul>
+    </nav>
     </header>
 
     <!-- Hoofdinhoud -->
@@ -104,4 +110,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+// Reactieve state voor het menu
+const menuOpen = ref(false);
 </script>
