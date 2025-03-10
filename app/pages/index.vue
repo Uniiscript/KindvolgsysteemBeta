@@ -5,12 +5,6 @@
       <h1 class="text-4xl font-zen_loop text-gray-900">
         Zorg met een ❤️ voor jouw gezin
       </h1>
-      <p class="text-lg font-dosis text-gray-700 mt-4">
-        Professionele gezinsondersteuning, oppasservice en coaching op maat. Wij helpen ouders en kinderen met liefdevolle en deskundige begeleiding.
-      </p>
-      <NuxtLink to="/contact" class="mt-6 inline-block px-6 py-3 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-lg hover:bg-purple-500 transition">
-        Plan een gratis kennismaking
-      </NuxtLink>
     </header>
 
     <!-- Over Ons -->
@@ -18,8 +12,34 @@
       <div class="bg-white shadow-xl border border-purple-300 rounded-2xl p-6 hover:shadow-2xl transition">
         <h2 class="text-2xl font-zen_loop text-gray-800 mb-3">Onze Missie</h2>
         <p class="font-dosis text-gray-700">
-          Little Steps Care is ontstaan uit passie voor gezinsondersteuning. Met jarenlange ervaring als oppas en inzichten uit opvoedkunde, helpen wij gezinnen balans te vinden met maatwerk ondersteuning.
+          Wij bieden liefdevolle en professionele opvang en gezinsondersteuning op maat.
+
+          Little Steps Care is ontstaan vanuit mijn jarenlange ervaring als oppas en de waardevolle inzichten die ik van mijn moeder heb meegekregen. Wij geloven dat elk gezin uniek is en dat kleine hulpjes in het dagelijks leven een groot verschil kunnen maken.
+
+          Ons platform biedt een breed scala aan diensten, van algemene gezinsondersteuning en betrouwbare oppasservice tot persoonlijk advies en consultancy. We werken samen met professionals die ik persoonlijk ken en vertrouw, zodat we de best mogelijke begeleiding kunnen garanderen.
+
+          Bij ons draait alles om maatwerk en het vinden van het juiste pakket voor jouw gezin. Of je nu kiest voor het ‘Basis Oppas Pakket’, het ‘Activiteiten Pakket’, het ‘Avond Pakket’, een ‘Overnachting Pakket’, of een speciaal pakket met een ‘Specialistische Nanny’ of ‘Consultancy’ – elk pakket is zorgvuldig samengesteld om perfect aan te sluiten bij jullie wensen en behoeften.
         </p>
+      </div>
+    </section>
+
+    <!-- Waarom kiezen voor onze Nannies? -->
+    <section class="mt-16 w-full max-w-4xl">
+      <h2 class="text-3xl font-zen_loop text-gray-900 text-center mb-8">
+        Waarom kiezen voor onze Nannies?
+      </h2>
+      <div class="flex flex-col md:flex-row bg-white shadow-lg border border-gray-300 rounded-2xl p-6 items-center md:items-start">
+        <img src="/Nanny.jpeg" alt="Nanny met kind" class="w-full md:w-1/2 rounded-lg shadow-md">
+        <div class="md:ml-6 mt-6 md:mt-0 text-center md:text-left">
+          <p class="font-dosis text-gray-700">
+            Bij onze oppasservice bieden we méér dan alleen oppas – we creëren een warme, veilige en stimulerende omgeving waarin jouw kind zich optimaal kan ontwikkelen.
+            Onze Nannies zijn niet alleen zorgvuldig geselecteerd op ervaring en betrouwbaarheid, maar ze bieden ook persoonlijke aandacht, educatieve activiteiten en ondersteuning op maat voor elk gezin.
+          </p>
+          <p class="mt-4 font-dosis text-gray-700">
+            Wat ons uniek maakt? Wij koppelen gezinnen aan Nannies die niet alleen passen bij hun opvangbehoeften, maar ook aansluiten bij hun opvoedstijl en waarden.
+            Of het nu gaat om een vaste routine, ontwikkelingsgerichte spelletjes of flexibiliteit in opvanguren – wij zorgen ervoor dat ouders met een gerust hart hun kind kunnen toevertrouwen aan een liefdevolle en professionele oppas.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -30,8 +50,8 @@
         <NuxtLink v-for="(service, index) in services" :key="index" :to="service.link" class="block" aria-label="Meer over {{ service.title }}">
           <article class="bg-white shadow-lg border border-gray-300 rounded-2xl p-6 transition-transform transform hover:scale-105 hover:bg-purple-50 hover:border-purple-400">
             <h3 class="text-2xl font-zen_loop text-gray-800 mb-2">{{ service.title }}</h3>
-            <p class="font-dosis text-gray-600 ">{{ service.description }}</p>
-            <button class="mt-4 px-4 py-2 bg-[#C8A2C8] text-white font-semibold rounded-lg hover:bg-purple-500 transition">
+            <p class="font-dosis text-gray-600">{{ service.description }}</p>
+            <button class="mt-4 px-4 py-2 bg-[#C8A2C8] text-white font-semibold rounded-lg hover:bg-[#A983A2] transition">
               Lees meer
             </button>
           </article>
@@ -58,37 +78,33 @@
       </div>
     </section>
 
-    <!-- Veelgestelde vragen -->
-    <section class="mt-16 w-full max-w-3xl">
-      <h2 class="text-3xl font-zen_loop text-gray-900 text-center">Veelgestelde Vragen</h2>
-      <div class="mt-8 space-y-4">
-        <details class="bg-white shadow-md border border-gray-300 rounded-xl p-4">
-          <summary class="text-lg font-zen_loop text-gray-800 cursor-pointer">Hoe werkt de oppasservice?</summary>
-          <p class="mt-2 font-dosis text-gray-600">Onze oppassers zijn ervaren en gescreend. Je kunt eenvoudig een aanvraag indienen via onze website.</p>
-        </details>
-        <details class="bg-white shadow-md border border-gray-300 rounded-xl p-4">
-          <summary class="text-lg font-zen_loop text-gray-800 cursor-pointer">Wat houdt gezinsondersteuning in?</summary>
-          <p class="mt-2 font-dosis text-gray-600">Wij bieden begeleiding en coaching voor ouders en kinderen, gericht op harmonie en balans binnen het gezin.</p>
-        </details>
-        <details class="bg-white shadow-md border border-gray-300 rounded-xl p-4">
-          <summary class="text-lg font-zen_loop text-gray-800 cursor-pointer">Hoe kan ik een kennismaking plannen?</summary>
-          <p class="mt-2 font-dosis text-gray-600">Klik op de knop ‘Plan een gratis kennismaking’ en kies een moment dat jou uitkomt.</p>
-        </details>
-      </div>
-    </section>
+   <!-- Contact CTA -->
+<section class="mt-16 w-full text-center">
+  <h2 class="text-3xl font-zen_loop text-gray-900">
+    Ben jij helemaal enthousiast geworden, en benieuwd naar de mogelijkheden?
+  </h2>
+  <p class="text-lg font-dosis text-gray-700 mt-2">
+    Neem contact op via onderstaand contactformulier en wij nemen zo spoedig mogelijk contact met je op!
+  </p>
+  <button
+    @click="showContactForm = true"
+    class="mt-6 inline-block px-6 py-3 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-lg hover:bg-purple-500 transition"
+  >
+    Contactformulier
+  </button>
+</section>
 
-    <!-- Contact CTA -->
-    <section class="mt-16 w-full text-center">
-      <h2 class="text-3xl font-zen_loop text-gray-900">Ben jij helemaal enthousiast geworden?</h2>
-      <p class="text-lg font-dosis text-gray-700 mt-2">Neem contact op en ontdek hoe wij jou kunnen helpen!</p>
-      <NuxtLink to="/contact" class="mt-6 inline-block px-6 py-3 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-lg hover:bg-purple-500 transition">
-        Neem contact op
-      </NuxtLink>
-    </section>
+<!-- Contact Form Popup -->
+<ContactFormPopup v-if="showContactForm" @close="showContactForm = false" />
+
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+const showContactForm = ref(false); // Declare the showContactForm ref
+
 const services = [
   { title: "Gezinsondersteuning", description: "Individueel afgestemde begeleiding voor gezinnen en ouders.", link: "/gezinsondersteuning" },
   { title: "Oppasservice", description: "Betrouwbare en deskundige oppassers met extra begeleiding voor je kind.", link: "/oppasservice" },
