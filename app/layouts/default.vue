@@ -101,7 +101,7 @@
       </div>
 
       <!-- Logo & Bedrijfsnaam rechts onderin -->
-      <div class="flex items-center cursor-pointer space-x-2" @click="showMessage">
+      <div class="flex items-center cursor-pointer space-x-2">
         <img src="/LSCLogoIcon.jpeg" alt="Little Steps Care Logo" class="h-6 md:h-10 w-auto object-contain opacity-100" />
         <p class="text-sm md:text-xl font-playwrite-italia-moderna bg-gradient-to-r from-[#A8E6CF] via-gray-500 to-[#A8E6CF] bg-clip-text text-transparent">
           LITTLE STEPS CARE
@@ -115,8 +115,6 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-
+<script setup lang="ts">
 const menuOpen = ref(false);
 </script>
