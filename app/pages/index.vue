@@ -1,10 +1,27 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 
 const services = [
-	{ title: 'Gezinsondersteuning', description: 'Individueel afgestemde begeleiding voor gezinnen en ouders.', link: '/gezinsondersteuning' },
-	{ title: 'Oppasservice', description: 'Betrouwbare en deskundige oppassers met extra begeleiding voor je kind.', link: '/oppasservice' },
-	{ title: 'Consultancy & Coaching', description: 'Professioneel advies en ondersteuning voor opvoeding en gezinsbalans.', link: '/consultingencoaching' },
-]
+  { title: 'Gezinsondersteuning', description: 'Individueel afgestemde begeleiding voor gezinnen en ouders.', link: '/gezinsondersteuning' },
+  { title: 'Oppasservice', description: 'Betrouwbare en deskundige oppassers met extra begeleiding voor je kind.', link: '/oppasservice' },
+  { title: 'Consultancy & Coaching', description: 'Professioneel advies en ondersteuning voor opvoeding en gezinsbalans.', link: '/consultingencoaching' },
+];
+
+// Reviews
+const reviews = ref([
+  { name: "Sanne & Mark", text: "Onze oppas van Little Steps Care was geweldig! Ze dacht echt mee met onze opvoeding en de kinderen vonden haar fantastisch!" },
+  { name: "Eva", text: "Dankzij de coaching van LSC hebben we veel meer rust in huis. Hun persoonlijke aanpak is echt uniek!" },
+  { name: "Lisa & Tom", text: "Onze nanny voelde meteen als familie. We kunnen ons geen betere hulp wensen!" },
+]);
+
+const currentReviewIndex = ref(0);
+
+// Automatische carousel
+setInterval(() => {
+  currentReviewIndex.value = (currentReviewIndex.value + 1) % reviews.value.length;
+}, 5000);
+
+const showContactForm = ref(false);
 </script>
 
 <template>
@@ -109,6 +126,15 @@ const services = [
       </div>
     </section>
 
+    <div class="flex w-full flex-col items-center py-12">
+    <h2 class="font-zen_loop text-3xl text-gray-900">
+      Wat ouders zeggen over ons ❤️
+    </h2>
+
+    <!-- Reviews Carousel Component -->
+    <ReviewCarousel />
+  </div>
+
      <!-- Contact CTA -->
     <section class="mt-16 w-full text-center">
       <h2 class="font-zen_loop text-3xl text-gray-900">
@@ -127,5 +153,9 @@ const services = [
 
     <!-- Contact Form Popup -->
     <ContactFormPopup v-if="showContactForm" @close="showContactForm = false" />
+
+
   </div>
+
+
 </template>

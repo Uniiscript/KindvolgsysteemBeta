@@ -59,7 +59,7 @@
       </li>
 
       <li><NuxtLink @click="menuOpen = false" to="/tarieven" class="block hover:text-[#C8A2C8] transition">Tarieven</NuxtLink></li>
-      <li><NuxtLink @click="menuOpen = false" to="/werken-bij" class="block hover:text-[#C8A2C8] transition">Ons team</NuxtLink></li>
+      <li><NuxtLink @click="menuOpen = false" to="/werken-bij" class="block hover:text-[#C8A2C8] transition">Ons Team</NuxtLink></li>
     </ul>
 
     <!-- Sluitknop -->
@@ -80,33 +80,35 @@
 
     <!-- Linksectie links -->
     <div class="font-zen_loop flex flex-col space-y-3 text-left">
-      <NuxtLink to="#" class="text-lg font-semibold hover:text-[#A8E6CF] transition">
+      <NuxtLink to="/underconstruction" class="text-lg font-semibold hover:text-[#A8E6CF] transition">
         ▻ Vind jouw Gezinsondersteuner bij jou in de buurt
       </NuxtLink>
-      <NuxtLink to="#" class="text-lg font-semibold hover:text-[#A8E6CF] transition">
+      <NuxtLink to="/underconstruction" class="text-lg font-semibold hover:text-[#A8E6CF] transition">
         ▻ Vraag de informatiebrochure aan
       </NuxtLink>
-      <NuxtLink to="#" class="text-lg font-semibold hover:text-[#A8E6CF] transition">
+      <NuxtLink to="/underconstruction" class="text-lg font-semibold hover:text-[#A8E6CF] transition">
         ▻ Schrijf je hier in voor een kennismakingsgesprek
       </NuxtLink>
     </div>
 
-    <!-- Linksectie midden -->
-    <div class="font-dosis grid grid-cols-2 gap-4 text-sm text-gray-500">
-      <div class="flex flex-col space-y-2">
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Allround Gezinsondersteuning</NuxtLink>
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Oppasservice</NuxtLink>
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Consulting & Coaching</NuxtLink>
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Tarieven</NuxtLink>
-      </div>
-      <div class="flex flex-col space-y-2">
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Over ons</NuxtLink>
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Algemene voorwaarden</NuxtLink>
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Herroepingsrecht</NuxtLink>
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Werken bij LSC</NuxtLink>
-        <NuxtLink to="#" class="hover:text-[#A8E6CF] transition">Bestaande klant</NuxtLink>
-      </div>
-    </div>
+   <!-- Linksectie midden -->
+<div class="font-dosis grid grid-cols-2 gap-4 text-sm text-gray-500">
+  <div class="flex flex-col space-y-2">
+    <NuxtLink to="/gezinsondersteuning" class="hover:text-[#A8E6CF] transition">Gezinsondersteuning</NuxtLink>
+    <NuxtLink to="/oppasservice" class="hover:text-[#A8E6CF] transition">Oppasservice</NuxtLink>
+    <NuxtLink to="/consultingencoaching" class="hover:text-[#A8E6CF] transition">Consulting & Coaching</NuxtLink>
+    <NuxtLink to="/tarieven" class="hover:text-[#A8E6CF] transition">Pakketten en tarieven</NuxtLink>
+  </div>
+  <div class="flex flex-col space-y-2">
+    <NuxtLink to="/oudersoverons" class="hover:text-[#A8E6CF] transition">Ouders over ons</NuxtLink>
+    <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Algemene voorwaarden</NuxtLink>
+    <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Herroepingsrecht</NuxtLink>
+    <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Werken bij LSC</NuxtLink>
+    <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Inloggen voor ouders</NuxtLink>
+    <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Inloggen voor nannies en consultants</NuxtLink>
+  </div>
+</div>
+
 
     <!-- Social Media & Logo (rechts) -->
     <div class="flex flex-col items-end space-y-3">
@@ -120,14 +122,25 @@
       </div>
 
       <!-- Logo & Bedrijfsnaam rechts onderin -->
-      <div class="flex items-center cursor-pointer space-x-2">
-        <img src="/LSCLogoIcon.jpeg" alt="Little Steps Care Logo" class="h-6 md:h-10 w-auto object-contain opacity-100" />
-        <p class="text-sm md:text-xl font-playwrite-italia-moderna bg-gradient-to-r from-[#A8E6CF] via-gray-500 to-[#A8E6CF] bg-clip-text text-transparent">
-          LITTLE STEPS CARE
-        </p>
-      </div>
-    </div>
+<div
+  class="relative flex items-center cursor-pointer space-x-2 group"
+  @click="scrollToTop"
+>
+  <img src="/LSCLogoIcon.jpeg" alt="Little Steps Care Logo" class="h-6 md:h-10 w-auto object-contain opacity-100" />
+  <p
+    class="text-sm md:text-xl font-playwrite-italia-moderna bg-gradient-to-r from-[#A8E6CF] via-gray-500 to-[#A8E6CF] bg-clip-text text-transparent transition-opacity group-hover:opacity-80"
+  >
+    LITTLE STEPS CARE
+  </p>
 
+  <!-- Tooltip bij hover -->
+  <span
+    class="absolute left-1/2 -top-3 -translate-x-1/2 bg-gray-400 text-white text-[8px] px-1 py-1 rounded-lg opacity-0 transition-opacity group-hover:opacity-100"
+  >
+    Scroll back to top
+  </span>
+</div>
+</div>
   </div>
 </footer>
 
@@ -139,4 +152,9 @@ import { ref } from 'vue';
 
 const menuOpen = ref(false);
 const dropdownOpen = ref(false);
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 </script>
