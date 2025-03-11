@@ -1,54 +1,73 @@
 <template>
   <div class="min-h-screen flex flex-col bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] border border-transparent md:border-gray-300">
-    <!-- Header Component met Navigatiebalk -->
     <header class="bg-[rgb(214,201,174)] sticky top-0 z-50 shadow-lg border-b-4 border-gray-500 py-2 md:py-2 flex items-center px-3 md:px-6 rounded-b-3xl">
-      <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-        <!-- Logo en Bedrijfsnaam -->
-        <div class="flex items-center space-x-4">
-          <img src="/LSClogo.png" alt="Little Steps Care logo" class="h-[45px] md:h-[120px] w-auto object-contain opacity-100" />
-          <div class="flex flex-col">
-            <p class="text-lg sm:text-xl md:text-5xl font-meow_script text-gray-500 ml-2 md:ml-4">
-              Little Steps Care
-            </p>
-            <p class="text-sm font-dosis text-gray-700 mt-1 md:mt-2 ml-2 md:ml-4">
-              Professionele gezinsondersteuning met oppasservice, consulting ÉN coaching op maat.
-            </p>
-          </div>
-        </div>
-
-        <!-- Navigatiebalk (Desktop) -->
-        <nav class="hidden lg:flex">
-          <ul class="flex space-x-4 md:space-x-10 text-base md:text-xl lg:text-2xl text-gray-500 font-semibold">
-            <li><NuxtLink to="/" class="hover:text-[#C8A2C8] font-zen_loop transition">Home</NuxtLink></li>
-            <li><NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] font-zen_loop transition">Onze diensten</NuxtLink></li>
-            <li><NuxtLink to="/tarieven" class="hover:text-[#C8A2C8] font-zen_loop transition">Tarieven</NuxtLink></li>
-            <li><NuxtLink to="/werken-bij" class="hover:text-[#C8A2C8] font-zen_loop transition">Werken bij</NuxtLink></li>
-          </ul>
-        </nav>
-
-        <!-- Hamburger Menu (Mobile) -->
-        <button @click="menuOpen = !menuOpen" class="lg:hidden text-gray-800 focus:outline-none">
-          <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-300" :class="{ 'rotate-90': menuOpen }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
+  <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
+    <!-- Logo en Bedrijfsnaam -->
+    <div class="flex items-center space-x-4">
+      <img src="/LSClogo.png" alt="Little Steps Care logo" class="h-[45px] md:h-[120px] w-auto object-contain opacity-100" />
+      <div class="flex flex-col">
+        <p class="text-lg sm:text-xl md:text-5xl font-meow_script text-gray-500 ml-2 md:ml-4">
+          Little Steps Care
+        </p>
+        <p class="text-sm font-dosis text-gray-700 mt-1 md:mt-2 ml-2 md:ml-4">
+          Professionele gezinsondersteuning met oppasservice, consulting ÉN coaching op maat.
+        </p>
       </div>
+    </div>
 
-      <!-- Mobiele Navigatie -->
-      <nav v-if="menuOpen" class="fixed top-16 right-4 w-64 max-w-xs bg-[#fdf6f9] border border-gray-300 rounded-lg shadow-xl transition-all duration-300 transform scale-95">
-        <ul class="flex flex-col space-y-4 p-4 text-lg font-semibold text-gray-500">
-          <li><NuxtLink @click="menuOpen = false" to="/" class="block hover:text-[#C8A2C8] transition">Home</NuxtLink></li>
-          <li><NuxtLink @click="menuOpen = false" to="/over-ons" class="block hover:text-[#C8A2C8] transition">Onze diensten</NuxtLink></li>
-          <li><NuxtLink @click="menuOpen = false" to="/onze-diensten" class="block hover:text-[#C8A2C8] transition">Tarievenn</NuxtLink></li>
-          <li><NuxtLink @click="menuOpen = false" to="/vacatures" class="block hover:text-[#C8A2C8] transition">Werken bij</NuxtLink></li>
+    <!-- Navigatiebalk (Desktop) -->
+    <nav class="hidden lg:flex">
+      <ul class="flex space-x-4 md:space-x-10 text-base md:text-xl lg:text-2xl text-gray-500 font-semibold">
+        <li><NuxtLink to="/" class="hover:text-[#C8A2C8] font-zen_loop transition">Home</NuxtLink></li>
+
+  <!-- Dropdown menu -->
+        <li class="relative group" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+          <NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] font-zen_loop transition">Onze diensten</NuxtLink>
+          <ul v-show="dropdownOpen" class="absolute flex flex-col bg-white rounded-2xl border border-gray-300 p-6 shadow-lg transition-transform hover:scale-105 hover:border-purple-400 hover:bg-purple-50 mt-2 w-64">
+            <li><NuxtLink to="/gezinsondersteuning" class="block px-4 py-3 text-lg font-zen_loop text-gray-800 hover:bg-gray-100 rounded-lg transition">Gezinsondersteuning</NuxtLink></li>
+            <li><NuxtLink to="/oppasservice" class="block px-4 py-3 text-lg font-zen_loop text-gray-800 hover:bg-gray-100 rounded-lg transition">Oppasservice</NuxtLink></li>
+            <li><NuxtLink to="/consultingencoaching" class="block px-4 py-3 text-lg font-zen_loop text-gray-800 hover:bg-gray-100 rounded-lg transition">Consulting & Coaching</NuxtLink></li>
+          </ul>
+        </li>
+
+        <li><NuxtLink to="/tarieven" class="hover:text-[#C8A2C8] font-zen_loop transition">Tarieven</NuxtLink></li>
+        <li><NuxtLink to="/ons-team" class="hover:text-[#C8A2C8] font-zen_loop transition">Ons team</NuxtLink></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <button @click="menuOpen = !menuOpen" class="lg:hidden text-gray-800 focus:outline-none">
+      <svg class="w-7 h-7 md:w-8 md:h-8 transition-transform duration-300" :class="{ 'rotate-90': menuOpen }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobiele Navigatie -->
+  <nav v-if="menuOpen" class="fixed top-16 right-4 w-64 max-w-xs bg-[#fdf6f9] border border-gray-300 rounded-lg shadow-xl transition-all duration-300 transform scale-95">
+    <ul class="flex flex-col space-y-4 p-4 text-lg font-semibold text-gray-500">
+      <li><NuxtLink @click="menuOpen = false" to="/" class="block hover:text-[#C8A2C8] transition">Home</NuxtLink></li>
+
+      <!-- Dropdown menu voor mobiel -->
+      <li class="relative">
+        <button @click="dropdownOpen = !dropdownOpen" class="block text-left w-full hover:text-[#C8A2C8] transition">Onze diensten</button>
+        <ul v-if="dropdownOpen" class="ml-4 mt-2 space-y-2 text-sm border-l pl-3 border-gray-300">
+          <li><NuxtLink @click="menuOpen = false" to="/gezinsondersteuning" class="block hover:text-[#C8A2C8]">Gezinsondersteuning</NuxtLink></li>
+          <li><NuxtLink @click="menuOpen = false" to="/oppasservice" class="block hover:text-[#C8A2C8]">Oppasservice</NuxtLink></li>
+          <li><NuxtLink @click="menuOpen = false" to="/consultingencoaching" class="block hover:text-[#C8A2C8]">Consulting & Coaching</NuxtLink></li>
         </ul>
+      </li>
 
-        <!-- Sluitknop -->
-        <button @click="menuOpen = false" class="absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-2xl">
-          ✕
-        </button>
-      </nav>
-    </header>
+      <li><NuxtLink @click="menuOpen = false" to="/tarieven" class="block hover:text-[#C8A2C8] transition">Tarieven</NuxtLink></li>
+      <li><NuxtLink @click="menuOpen = false" to="/werken-bij" class="block hover:text-[#C8A2C8] transition">Werken bij</NuxtLink></li>
+    </ul>
+
+    <!-- Sluitknop -->
+    <button @click="menuOpen = false" class="absolute top-2 right-3 text-gray-500 hover:text-gray-800 text-2xl">
+      ✕
+    </button>
+  </nav>
+</header>
 
     <!-- Hoofdinhoud -->
     <div class="flex-grow px-3 md:px-6">
@@ -116,5 +135,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const menuOpen = ref(false);
+const dropdownOpen = ref(false);
 </script>

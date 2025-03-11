@@ -49,33 +49,50 @@ const showContactForm = ref(false);
         <li>✔️ Oudercoaching op maat</li>
       </ul>
     </section>
+<!-- 🎯 Thema’s waarop wij ondersteunen -->
+<section class="mt-16 w-full max-w-5xl text-center">
+  <h2 class="font-zen_loop text-3xl text-gray-900">🎯 Thema’s waarop wij ondersteunen</h2>
+  <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">👶 Eerste opvang</h3>
+      <p class="mt-2 font-dosis text-gray-600">Samen zorgen voor een soepele overgang.</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">🏫 Schoolgesprekken</h3>
+      <p class="mt-2 font-dosis text-gray-600">Hoe voer je effectieve gesprekken met school?</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">🗣️ Communicatie met je kind</h3>
+      <p class="mt-2 font-dosis text-gray-600">Hoe stel je de juiste vragen?</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">😴 Slapen</h3>
+      <p class="mt-2 font-dosis text-gray-600">Rustige avonden en betere nachtrust.</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">👴 Opa’s & Oma’s</h3>
+      <p class="mt-2 font-dosis text-gray-600">Balans vinden tussen verwennen en opvoeden.</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">🍽️ Eten</h3>
+      <p class="mt-2 font-dosis text-gray-600">Gezonde eetgewoonten en plezier aan tafel.</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">🛠️ Zelfstandigheid</h3>
+      <p class="mt-2 font-dosis text-gray-600">Leren eten, slapen, spelen, aankleden en helpen in huis.</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">💖 Emoties</h3>
+      <p class="mt-2 font-dosis text-gray-600">Emoties uiten en leren begrijpen.</p>
+    </div>
+    <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
+      <h3 class="text-xl font-zen_loop text-gray-800">👨‍👩‍👧‍👦 Opvoeding doe je samen</h3>
+      <p class="mt-2 font-dosis text-gray-600">Samen op één lijn: wat wil je voor je kind, hoe aanpakken, en wie betrekken?</p>
+    </div>
+  </div>
+</section>
 
-    <!-- 🎯 Thema’s waarop wij ondersteunen -->
-    <section class="mt-16 w-full max-w-5xl text-center">
-      <h2 class="font-zen_loop text-3xl text-gray-900">🎯 Thema’s waarop wij ondersteunen</h2>
-      <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
-          <h3 class="text-xl font-zen_loop text-gray-800">👶 Eerste opvang</h3>
-          <p class="mt-2 font-dosis text-gray-600">Samen zorgen voor een soepele overgang.</p>
-        </div>
-        <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
-          <h3 class="text-xl font-zen_loop text-gray-800">🏫 Schoolgesprekken</h3>
-          <p class="mt-2 font-dosis text-gray-600">Hoe voer je effectieve gesprekken met school?</p>
-        </div>
-        <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
-          <h3 class="text-xl font-zen_loop text-gray-800">🗣️ Communicatie met je kind</h3>
-          <p class="mt-2 font-dosis text-gray-600">Hoe stel je de juiste vragen?</p>
-        </div>
-        <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
-          <h3 class="text-xl font-zen_loop text-gray-800">😴 Slapen</h3>
-          <p class="mt-2 font-dosis text-gray-600">Rustige avonden en betere nachtrust.</p>
-        </div>
-        <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">
-          <h3 class="text-xl font-zen_loop text-gray-800">👴 Opa’s & Oma’s</h3>
-          <p class="mt-2 font-dosis text-gray-600">Balans vinden tussen verwennen en opvoeden.</p>
-        </div>
-      </div>
-    </section>
+
 
     <!-- 📞 Call-to-Action -->
     <section class="mt-16 text-center">
