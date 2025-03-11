@@ -59,7 +59,7 @@
       </li>
 
       <li><NuxtLink @click="menuOpen = false" to="/tarieven" class="block hover:text-[#C8A2C8] transition">Tarieven</NuxtLink></li>
-      <li><NuxtLink @click="menuOpen = false" to="/werken-bij" class="block hover:text-[#C8A2C8] transition">Werken bij</NuxtLink></li>
+      <li><NuxtLink @click="menuOpen = false" to="/werken-bij" class="block hover:text-[#C8A2C8] transition">Ons team</NuxtLink></li>
     </ul>
 
     <!-- Sluitknop -->
