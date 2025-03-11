@@ -135,15 +135,15 @@ const submitForm = async () => {
     children: children.value,
   };
 
-  try {
-    // Stuur formulier naar je backend
-    const response = await fetch("http://localhost:3001/send-email", {  // Pas de URL aan naar je backend
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+  // try {
+  //   // Stuur formulier naar je backend
+  //   const response = await fetch("http://localhost:3001/send-email", {  // Pas de URL aan naar je backend
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(formData),
+  //   });
 
     if (response.ok) {
       alert("Formulier succesvol verzonden! 🚀");
@@ -158,9 +158,9 @@ const submitForm = async () => {
     } else {
       alert("Er ging iets mis bij het verzenden van het formulier.");
     }
-  } catch (error) {
-    console.error("Fout bij verzenden formulier:", error);
-    alert("Er is een fout opgetreden. Probeer het later opnieuw.");
-  }
+  // } catch (error) {
+  //   console.error("Fout bij verzenden formulier:", error);
+  //   alert("Er is een fout opgetreden. Probeer het later opnieuw.");
+  // }
 };
 </script>
