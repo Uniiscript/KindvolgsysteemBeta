@@ -1,6 +1,6 @@
 <template>
   <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg max-h-[80vh] overflow-y-auto">
       <h2 class="text-2xl font-semibold text-center mb-4">Contactformulier</h2>
       <form @submit.prevent="submitForm" class="space-y-4">
 
@@ -52,7 +52,7 @@
         <!-- Uitgerekende datum -->
         <div v-if="expecting">
           <label class="block font-medium">Uitgerekende datum:</label>
-          <input v-model="dueDate" type="date" class="w-full p-2 border rounded" @input="calculatePregnancyDuration" />
+          <input v-model="dueDate" type="date" class="w-full p-2 border rounded" :min="today" :max="maxDueDate" @input="calculatePregnancyDuration" required />
           <p v-if="pregnancyDuration" class="text-green-600 font-medium">Gefeliciteerd! U bent nu {{ pregnancyDuration }} zwanger.</p>
         </div>
 
@@ -65,13 +65,15 @@
           </div>
           <div>
             <label class="block font-medium">Geboortedatum:</label>
-            <input v-model="child.birthdate" type="date" class="w-full p-2 border rounded" @input="calculateAge(index)" required />
+            <input v-model="child.birthdate" type="date" class="w-full p-2 border rounded" :min="minBirthdate" :max="today" @input="calculateAge(index)" required />
             <p v-if="child.age" class="text-blue-600 font-medium">Leeftijd: {{ child.age }}</p>
           </div>
         </div>
 
         <!-- Verzendknop -->
-        <button type="submit" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">Versturen</button>
+        <button type="submit" @click="execute" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
+          Versturen
+        </button>
       </form>
 
       <!-- Sluitknop -->
@@ -81,7 +83,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue"; // Alleen Vue importeren is voldoende
+import { ref } from "vue";
 
 const parentName = ref("");
 const contactOptions = ref({ phone: false, email: false });
@@ -92,6 +94,11 @@ const expecting = ref(false);
 const dueDate = ref("");
 const pregnancyDuration = ref("");
 const children = ref([]);
+
+// Bereken de datums
+const today = new Date().toISOString().split("T")[0]; // Vandaag's datum in YYYY-MM-DD formaat
+const maxDueDate = new Date(new Date().setMonth(new Date().getMonth() + 10)).toISOString().split("T")[0]; // 10 maanden vanaf vandaag
+const minBirthdate = "2010-01-01"; // Minimaal geboortejaar vanaf 2010
 
 const toggleContact = (type) => {
   contactOptions.value[type] = !contactOptions.value[type];
@@ -121,9 +128,7 @@ const calculateAge = (index) => {
   children.value[index].age = `${ageYears} jaar, ${ageMonths} maanden en ${ageDays} dagen`;
 };
 
-// Submit Form function
 const submitForm = async () => {
-  // Verzamel formuliergegevens
   const formData = {
     parentName: parentName.value,
     contactOptions: contactOptions.value,
@@ -135,32 +140,36 @@ const submitForm = async () => {
     children: children.value,
   };
 
-  // try {
-  //   // Stuur formulier naar je backend
-  //   const response = await fetch("http://localhost:3001/send-email", {  // Pas de URL aan naar je backend
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(formData),
-  //   });
+  try {
+    const response = await fetch("http://localhost:3003/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
 
     if (response.ok) {
       alert("Formulier succesvol verzonden! 🚀");
-      // Reset formulier na succes
-      parentName.value = "";
-      phone.value = "";
-      email.value = "";
-      numChildren.value = 0;
-      expecting.value = false;
-      dueDate.value = "";
-      children.value = [];
+      resetForm();
     } else {
       alert("Er ging iets mis bij het verzenden van het formulier.");
     }
-  // } catch (error) {
-  //   console.error("Fout bij verzenden formulier:", error);
-  //   alert("Er is een fout opgetreden. Probeer het later opnieuw.");
-  // }
+  } catch (error) {
+    console.error("Fout bij verzenden formulier:", error);
+    alert("Er is een fout opgetreden. Probeer het later opnieuw.");
+  }
 };
+
+// Reset het formulier na verzenden
+const resetForm = () => {
+  parentName.value = "";
+  phone.value = "";
+  email.value = "";
+  numChildren.value = 0;
+  expecting.value = false;
+  dueDate.value = "";
+  children.value = [];
+};
+
+// useFetch om de API te triggeren
+const { execute } = await useFetch("/api/send", { immediate: false });
 </script>

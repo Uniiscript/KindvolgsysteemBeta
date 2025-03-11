@@ -1,7 +1,4 @@
 <script setup lang="ts">
-const { execute } = await useFetch('/api/send', {immediate: false})
-
-const showContactForm = ref(false)
 
 const services = [
 	{ title: 'Gezinsondersteuning', description: 'Individueel afgestemde begeleiding voor gezinnen en ouders.', link: '/gezinsondersteuning' },
@@ -18,8 +15,6 @@ const services = [
         Zorg met een ❤️ voor jouw gezin
       </h1>
     </header>
-
-    <button @click="execute()">Send Test email</button>
 
     <!-- Over Ons -->
     <section class="mt-12 max-w-3xl text-center">
@@ -114,16 +109,16 @@ const services = [
       </div>
     </section>
 
-    <!-- Contact CTA -->
+     <!-- Contact CTA -->
     <section class="mt-16 w-full text-center">
       <h2 class="font-zen_loop text-3xl text-gray-900">
-        Ben jij helemaal enthousiast geworden, en benieuwd naar de mogelijkheden?
+        Ben jij enthousiast geworden en benieuwd naar de mogelijkheden?
       </h2>
       <p class="mt-2 font-dosis text-lg text-gray-700">
         Neem contact op via onderstaand contactformulier en wij nemen zo spoedig mogelijk contact met je op!
       </p>
       <button
-        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-purple-500"
+        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-[#A983A2]"
         @click="showContactForm = true"
       >
         Contactformulier
