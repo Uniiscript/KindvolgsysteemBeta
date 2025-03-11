@@ -3,7 +3,7 @@
 const services = [
 	{ title: 'Gezinsondersteuning', description: 'Individueel afgestemde begeleiding voor gezinnen en ouders.', link: '/gezinsondersteuning' },
 	{ title: 'Oppasservice', description: 'Betrouwbare en deskundige oppassers met extra begeleiding voor je kind.', link: '/oppasservice' },
-	{ title: 'Consultancy & Coaching', description: 'Professioneel advies en ondersteuning voor opvoeding en gezinsbalans.', link: '/consultancy' },
+	{ title: 'Consultancy & Coaching', description: 'Professioneel advies en ondersteuning voor opvoeding en gezinsbalans.', link: '/consultingencoaching' },
 ]
 </script>
 
@@ -34,26 +34,6 @@ const services = [
       </div>
     </section>
 
-    <!-- Waarom kiezen voor onze Nannies? -->
-    <section class="mt-16 w-full max-w-4xl">
-      <h2 class="mb-8 text-center font-zen_loop text-3xl text-gray-900">
-        Waarom kiezen voor onze Nannies?
-      </h2>
-      <div class="flex flex-col items-center rounded-2xl border border-gray-300 bg-white p-6 shadow-lg md:flex-row md:items-start">
-        <img src="/Nanny.jpeg" alt="Nanny met kind" class="w-full rounded-lg shadow-md md:w-1/2">
-        <div class="mt-6 text-center md:ml-6 md:mt-0 md:text-left">
-          <p class="font-dosis text-gray-700">
-            Bij onze oppasservice bieden we méér dan alleen oppas – we creëren een warme, veilige en stimulerende omgeving waarin jouw kind zich optimaal kan ontwikkelen.
-            Onze Nannies zijn niet alleen zorgvuldig geselecteerd op ervaring en betrouwbaarheid, maar ze bieden ook persoonlijke aandacht, educatieve activiteiten en ondersteuning op maat voor elk gezin.
-          </p>
-          <p class="mt-4 font-dosis text-gray-700">
-            Wat ons uniek maakt? Wij koppelen gezinnen aan Nannies die niet alleen passen bij hun opvangbehoeften, maar ook aansluiten bij hun opvoedstijl en waarden.
-            Of het nu gaat om een vaste routine, ontwikkelingsgerichte spelletjes of flexibiliteit in opvanguren – wij zorgen ervoor dat ouders met een gerust hart hun kind kunnen toevertrouwen aan een liefdevolle en professionele oppas.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- Diensten -->
     <section class="mt-16 w-full max-w-5xl">
       <h2 class="mb-8 text-center font-zen_loop text-3xl text-gray-900">
@@ -76,10 +56,30 @@ const services = [
       </div>
     </section>
 
+    <!-- Waarom kiezen voor onze Nannies? -->
+    <section class="mt-16 w-full max-w-4xl">
+      <h2 class="mb-8 text-center font-zen_loop text-3xl text-gray-900">
+        Wat maakt onze Nannies en Consultants uniek?
+      </h2>
+      <div class="flex flex-col items-center rounded-2xl border border-gray-300 bg-white p-6 shadow-lg md:flex-row md:items-start">
+        <img src="/Nanny.jpeg" alt="Nanny met kind" class="w-full rounded-lg shadow-md md:w-1/2">
+        <div class="mt-6 text-center md:ml-6 md:mt-0 md:text-left">
+
+<p class="mt-4 font-dosis text-gray-700">Wij kijken niet alleen naar beschikbaarheid, maar naar de perfecte match tussen gezin en Nanny of Consultant. Onze aanpak is persoonlijk en praktisch:</p>
+<p class="mt-4 font-dosis text-gray-700">✔️ We sluiten aan bij jullie opvoedstijl en ondersteunen waar nodig.</p>
+<p class="mt-4 font-dosis text-gray-700">✔️ We bieden begeleiding op maat – van vaste routines tot nieuwe inzichten.</p>
+<p class="mt-4 font-dosis text-gray-700">✔️ We denken mee, kijken mee én doen mee in de praktijk, en helpen bij dagelijkse opvoedsituaties.</p>
+<p class="mt-4 font-dosis text-gray-700">✔️ We zorgen voor continuïteit en een veilige, vertrouwde omgeving voor je kind.</p>
+
+<p class="mt-4 font-dosis text-gray-700">Of het nu gaat om de eerste stap naar kinderopvang, schoolovergangen, opvoedvragen of de juiste communicatie met je kind, wij zijn er om je te helpen. Met zorg, aandacht en de juiste ondersteuning – stap voor stap. 💜</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Waarom Ons? -->
     <section class="mt-16 w-full max-w-4xl text-center">
       <h2 class="font-zen_loop text-3xl text-gray-900">
-        Waarom Kiezen Voor Ons?
+        Waarom kiezen voor Little Steps Care?
       </h2>
       <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
         <div class="rounded-xl border border-gray-300 bg-white p-6 shadow-md">

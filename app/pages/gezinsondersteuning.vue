@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { ref } from "vue";
+
+const showContactForm = ref(false);
+</script>
+
 <template>
   <div class="flex w-full flex-col items-center py-12">
     <!-- 🌟 Hero Sectie -->

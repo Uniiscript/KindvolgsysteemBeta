@@ -20,9 +20,9 @@
         <nav class="hidden lg:flex">
           <ul class="flex space-x-4 md:space-x-10 text-base md:text-xl lg:text-2xl text-gray-500 font-semibold">
             <li><NuxtLink to="/" class="hover:text-[#C8A2C8] font-zen_loop transition">Home</NuxtLink></li>
-            <li><NuxtLink to="/over-ons" class="hover:text-[#C8A2C8] font-zen_loop transition">Onze diensten</NuxtLink></li>
-            <li><NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] font-zen_loop transition">Tarieven</NuxtLink></li>
-            <li><NuxtLink to="/vacatures" class="hover:text-[#C8A2C8] font-zen_loop transition">Werken bij</NuxtLink></li>
+            <li><NuxtLink to="/onze-diensten" class="hover:text-[#C8A2C8] font-zen_loop transition">Onze diensten</NuxtLink></li>
+            <li><NuxtLink to="/tarieven" class="hover:text-[#C8A2C8] font-zen_loop transition">Tarieven</NuxtLink></li>
+            <li><NuxtLink to="/werken-bij" class="hover:text-[#C8A2C8] font-zen_loop transition">Werken bij</NuxtLink></li>
           </ul>
         </nav>
 
@@ -38,9 +38,9 @@
       <nav v-if="menuOpen" class="fixed top-16 right-4 w-64 max-w-xs bg-[#fdf6f9] border border-gray-300 rounded-lg shadow-xl transition-all duration-300 transform scale-95">
         <ul class="flex flex-col space-y-4 p-4 text-lg font-semibold text-gray-500">
           <li><NuxtLink @click="menuOpen = false" to="/" class="block hover:text-[#C8A2C8] transition">Home</NuxtLink></li>
-          <li><NuxtLink @click="menuOpen = false" to="/over-ons" class="block hover:text-[#C8A2C8] transition">Over ons</NuxtLink></li>
-          <li><NuxtLink @click="menuOpen = false" to="/onze-diensten" class="block hover:text-[#C8A2C8] transition">Onze diensten</NuxtLink></li>
-          <li><NuxtLink @click="menuOpen = false" to="/vacatures" class="block hover:text-[#C8A2C8] transition">Vacatures</NuxtLink></li>
+          <li><NuxtLink @click="menuOpen = false" to="/over-ons" class="block hover:text-[#C8A2C8] transition">Onze diensten</NuxtLink></li>
+          <li><NuxtLink @click="menuOpen = false" to="/onze-diensten" class="block hover:text-[#C8A2C8] transition">Tarievenn</NuxtLink></li>
+          <li><NuxtLink @click="menuOpen = false" to="/vacatures" class="block hover:text-[#C8A2C8] transition">Werken bij</NuxtLink></li>
         </ul>
 
         <!-- Sluitknop -->
