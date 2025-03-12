@@ -17,7 +17,7 @@ const reviews = ref([
 const currentReviewIndex = ref(0);
 
 // Automatische carousel
-setInterval(() => {
+onNuxtReady(() => {
   currentReviewIndex.value = (currentReviewIndex.value + 1) % reviews.value.length;
 }, 5000);
 

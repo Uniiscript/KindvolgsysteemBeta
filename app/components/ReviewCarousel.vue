@@ -42,9 +42,9 @@ const reviews = ref([
 const currentReviewIndex = ref(0);
 
 // Automatische carousel
-let interval: ReturnType<typeof setInterval>;
+let interval: ReturnType<typeof onNuxtReady>;
 onMounted(() => {
-  interval = setInterval(() => {
+  interval = onNuxtReady(() => {
     nextReview();
   }, 5000);
 });
