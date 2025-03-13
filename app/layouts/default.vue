@@ -105,7 +105,7 @@
     <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Herroepingsrecht</NuxtLink>
     <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Werken bij LSC</NuxtLink>
     <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Inloggen voor ouders</NuxtLink>
-    <NuxtLink to="/underconstruction" class="hover:text-[#A8E6CF] transition">Inloggen voor nannies en consultants</NuxtLink>
+    <NuxtLink to="/ouderportaal/inloggenpreview" class="hover:text-[#A8E6CF] transition">Inloggen voor nannies en consultants</NuxtLink>
   </div>
 </div>
 
@@ -153,7 +153,7 @@ import { ref } from 'vue';
 const menuOpen = ref(false);
 const dropdownOpen = ref(false);
 
-const scrollToTop = () => {
+function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 

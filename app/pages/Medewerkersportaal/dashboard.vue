@@ -60,11 +60,6 @@
         </button>
       </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="w-full max-w-5xl text-center py-6 bg-white mt-12 shadow-md rounded-2xl border border-gray-300">
-      <p class="text-gray-600 font-dosis">© 2025 Little Steps Care. Alle rechten voorbehouden.</p>
-    </footer>
   </div>
 </template>
 
@@ -99,7 +94,7 @@ function saveJournalEntry() {
   journalEntry.value = "";
 }
 
-// Draggable secties met iconen en aangepaste fonts
+// Secties met iconen en aangepaste fonts
 const sections = ref([
   {
     id: "aankomendeDiensten",
