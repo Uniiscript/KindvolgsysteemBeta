@@ -11,7 +11,7 @@
     <!-- Video Preview -->
     <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mb-6 border border-gray-300 text-center">
       <video controls class="w-full rounded-lg">
-        <source src="../OuderPortaalPreview.mp4" type="video/mp4" />
+        <source src="/videos/OuderPortaalPreview.mp4" type="video/mp4" />
         Je browser ondersteunt deze video niet.
       </video>
       <p class="text-gray-600 font-dosis mt-2">Een eerste blik op het OuderPortaal.</p>

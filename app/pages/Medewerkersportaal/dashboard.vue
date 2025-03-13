@@ -131,5 +131,13 @@ const sections = ref([
     content: importantMessages,
     emptyMessage: "Geen nieuwe mededelingen.",
   },
+  {
+    id: "toekomstigeSlot1",
+    title: "Toekomstige Extra Sectie",
+    icon: "material-symbols:add-box-outline",
+    content: [],
+    emptyMessage: "Binnenkort beschikbaar.",
+  },
+
 ]);
 </script>
