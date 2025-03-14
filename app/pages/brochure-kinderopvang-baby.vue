@@ -8,38 +8,7 @@
       </p>
     </header>
 
-    <!-- Inleiding -->
-    <section class="mb-6">
-      <h2 class="text-xl font-zen_loop text-gray-700">Een grote stap voor ouder & kind</h2>
-      <p class="text-gray-700 font-dosis mt-2">
-        De afgelopen maanden heb je veel meegemaakt met je kleintje. Misschien was dit je eerste kindje,
-        of beleef je dit opnieuw op een andere manier. De stap naar de kinderopvang is een <strong>grote mijlpaal</strong>
-        en kan zowel spannend als emotioneel zijn.
-      </p>
-      <p class="text-gray-700 font-dosis mt-2">
-        Het is helemaal normaal om vragen en twijfels te hebben. Hoe zal je baby reageren? Hoe wordt er gezorgd?
-        En hoe combineer je dit met je eigen opvoedstijl?
-        In deze brochure helpen we je op weg met <strong>praktische tips en inzichten</strong>.
-      </p>
-    </section>
-
-    <!-- Waarom kinderopvang? -->
-    <section class="mb-6">
-      <h2 class="text-xl font-zen_loop text-gray-700">Waarom kies je voor kinderopvang?</h2>
-      <p class="text-gray-700 font-dosis mt-2">
-        Er zijn verschillende redenen waarom ouders voor een kinderopvang kiezen. Dit kan zijn:
-      </p>
-      <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-1">
-        <li>Terugkeer naar werk of studie</li>
-        <li>Sociale interactie en ontwikkeling voor je baby</li>
-        <li>Ondersteuning bij een gestructureerd dagritme</li>
-        <li>Extra stimulatie en spelervaringen</li>
-      </ul>
-      <p class="text-gray-700 font-dosis mt-2">
-        Denk goed na over wat jij belangrijk vindt voor je kindje. Iedere kinderopvang heeft een eigen <strong>beleid</strong> en aanpak.
-        Vraag daarom altijd naar hoe zij werken en of dit aansluit bij jouw wensen.
-      </p>
-    </section>
+   
 
     <!-- Voorbereiding: Veelgestelde vragen -->
     <section class="mb-6">
