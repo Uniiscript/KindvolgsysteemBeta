@@ -82,6 +82,27 @@
       </ul>
     </section>
 
+    <section>
+  <h3 class="text-lg font-zen_loop text-gray-700 mt-4">🧸 Zelfstandig Spelen & Voorbereiding op de Opvang</h3>
+  <p class="text-gray-700 font-dosis mt-2">
+    Op de opvang krijgt je baby steeds meer kleine momentjes om zelfstandig te spelen en te ontdekken.
+    Dit is een **belangrijke vaardigheid** die helpt bij de ontwikkeling van motoriek, concentratie en zelfvertrouwen.
+    Je kunt je baby hier thuis al op voorbereiden door kort te oefenen met **momentjes alleen spelen** in een vertrouwde omgeving.
+  </p>
+  <p class="text-gray-700 font-dosis mt-2">
+    **Twee eenvoudige manieren om te beginnen:**
+  </p>
+  <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-1">
+    <li>**Korte speelmomenten op de rug** – Leg je baby op een speelkleed met een paar zachte speeltjes om zich heen en blijf in de buurt.
+    Maak contact door te praten en aan te moedigen, maar laat je kindje **zelf ontdekken**.</li>
+    <li>**Wegloopmomentjes** – Blijf eerst dichtbij, maar loop af en toe kort een paar stapjes weg.
+    Zeg bijvoorbeeld: _"Mama gaat even iets pakken, ik ben zo terug."_ Dit helpt je baby te wennen aan het idee dat jij er nog bent, ook als je even uit het zicht bent.</li>
+  </ul>
+  <p class="text-gray-700 font-dosis mt-2">
+    Door hier **rustig en stapsgewijs** mee te oefenen, zal de overgang naar de opvang makkelijker en vertrouwder aanvoelen voor je baby. ❤️
+  </p>
+</section>
+
     <!-- Kleding & voorbereiding -->
     <section class="mb-6">
       <h2 class="text-xl font-zen_loop text-gray-700">Wat neem je mee?</h2>
