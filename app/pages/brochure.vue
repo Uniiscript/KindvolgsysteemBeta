@@ -20,8 +20,6 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-
 const currentPage = ref(0);
 
 const pages = ref([
@@ -82,17 +80,17 @@ const pages = ref([
   }
 ]);
 
-const nextPage = () => {
+function nextPage () {
   if (currentPage.value < pages.value.length - 1) {
     currentPage.value++;
   }
-};
+}
 
-const prevPage = () => {
+function prevPage () {
   if (currentPage.value > 0) {
     currentPage.value--;
   }
-};
+}
 </script>
 
 <style>
