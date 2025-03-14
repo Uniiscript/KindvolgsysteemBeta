@@ -62,7 +62,7 @@
       <h3 class="text-lg font-zen_loop text-gray-700 mt-4">💡 Tips voor het afscheid</h3>
       <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-2">
         <li><strong>Praat met de leidster</strong> waar je kindje bij is, zo voelt je kindje dat het oké is.</li>
-        <li><strong>Neem altijd afscheid en vertel wat je doet</strong>** – zeg bijvoorbeeld: _"Mama komt je straks weer ophalen na je slaapje."_</li>
+        <li><strong>Neem altijd afscheid en vertel wat je doet</strong> – zeg bijvoorbeeld: _"Mama komt je straks weer ophalen na je slaapje."_</li>
         <li><strong>Houd het afscheid kort</strong> – je kindje voelt wat jij voelt. Huilen of niet huilen is allebei normaal.</li>
         <li><strong>Bel na 5 minuten even op</strong> om te vragen hoe het gaat. Dit is helemaal normaal en mag gewoon! ❤️</li>
       </ul>

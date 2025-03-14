@@ -21,12 +21,12 @@
     <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mb-6 border border-gray-300">
       <h2 class="text-xl md:text-2xl font-zen_loop text-gray-700">Wat krijg je als medewerker?</h2>
       <ul class="mt-4 space-y-2 text-gray-700 font-dosis">
-        <li>✅ **Overzichtelijke planning** met al je opdrachten en afspraken.</li>
-        <li>✅ **Direct contact** met ouders via het portaal, zonder gedoe.</li>
-        <li>✅ **Eigen dashboard** met urenregistratie en belangrijke documenten.</li>
-        <li>✅ **Toegang tot gezinsgegevens**, zodat je altijd weet wat nodig is.</li>
-        <li>✅ **Mogelijkheid om verslagen en notities bij te houden** per kind.</li>
-        <li>✅ **Extra functies** zoals dagjournaling en to-do lijsten om je werk efficiënt te plannen.</li>
+        <li>✅ <strong>Overzichtelijke planning</strong> met al je opdrachten en afspraken.</li>
+        <li>✅ <strong>Direct contact</strong> met ouders via het portaal, zonder gedoe.</li>
+        <li>✅ <strong>Eigen dashboard</strong> met urenregistratie en belangrijke documenten.</li>
+        <li>✅ <strong>Toegang tot gezinsgegevens</strong>, zodat je altijd weet wat nodig is.</li>
+        <li>✅ <strong>Mogelijkheid om verslagen en notities bij te houden</strong> per kind.</li>
+        <li>✅ <strong>Extra functies</strong> zoals dagjournaling en to-do lijsten om je werk efficiënt te plannen.</li>
       </ul>
     </section>
 
@@ -34,9 +34,9 @@
     <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mb-6 border border-gray-300">
       <h2 class="text-xl md:text-2xl font-zen_loop text-gray-700">Waarom het MedewerkersPortaal?</h2>
       <p class="text-gray-700 font-dosis mt-2">
-        Het MedewerkersPortaal helpt jou om **efficiënter te werken en georganiseerd te blijven**.
-        Met een **overzichtelijke planning, documentbeheer en communicatieopties** heb je alles wat je nodig hebt om ouders en kinderen zo goed mogelijk te ondersteunen.
-        Alles is **veilig, snel en gemakkelijk** toegankelijk vanuit één systeem.
+        Het MedewerkersPortaal helpt jou om <strong>efficiënter te werken en georganiseerd te blijven</strong>.
+        Met een <strong>overzichtelijke planning, documentbeheer en communicatieopties</strong> heb je alles wat je nodig hebt om ouders en kinderen zo goed mogelijk te ondersteunen.
+        Alles is <strong>veilig, snel en gemakkelijk</strong> toegankelijk vanuit één systeem.
       </p>
     </section>
 

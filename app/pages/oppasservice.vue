@@ -34,8 +34,8 @@ const showContactForm = ref(false);
       <ul class="mt-4 text-gray-700 text-lg">
         <li>✔️ <strong>Kennismaking</strong> – Een rustige eerste ontmoeting om de klik te voelen en routines te bespreken.</li>
         <li>✔️ <strong>Ouders ondersteunen</strong> – Niet alleen oppassen, maar ook adviseren en helpen bij opvoedvragen.</li>
-        <li>✔️ **Maatwerk in contact** – Wij vragen hoe ouders het prettig vinden om updates te ontvangen.</li>
-        <li>✔️ **Structuur & routines** – We bespreken gewoontes uitvoerig zodat het oppassen soepel verloopt.</li>
+        <li>✔️ <strong>Maatwerk in contact</strong> – Wij vragen hoe ouders het prettig vinden om updates te ontvangen.</li>
+        <li>✔️ <strong>Structuur & routines</strong> – We bespreken gewoontes uitvoerig zodat het oppassen soepel verloopt.</li>
       </ul>
     </section>
 
@@ -46,9 +46,9 @@ const showContactForm = ref(false);
         Wij begrijpen dat elke ouder andere behoeften heeft als het gaat om contact tijdens het oppassen. Daarom stellen wij zelf de vragen die ouders misschien niet durven te stellen:
       </p>
       <ul class="mt-4 text-gray-700 text-lg">
-        <li>✔️ **Updates bij baby’s** – Wil je een berichtje als je baby een flesje op heeft of slaapt?</li>
-        <li>✔️ **Verslag bij thuiskomst** – Wij noteren belangrijke momenten, zodat je niets mist.</li>
-        <li>✔️ **Foto’s en updates** – Wil je af en toe een foto ontvangen van je spelende kind?</li>
+        <li>✔️ <strong>Updates bij baby’s</strong> – Wil je een berichtje als je baby een flesje op heeft of slaapt?</li>
+        <li>✔️ <strong>Verslag bij thuiskomst</strong> – Wij noteren belangrijke momenten, zodat je niets mist.</li>
+        <li>✔️ <strong>Foto’s en updates</strong> – Wil je af en toe een foto ontvangen van je spelende kind?</li>
       </ul>
     </section>
 

@@ -12,7 +12,7 @@
     <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mb-6 border border-gray-300 text-center">
       <h2 class="text-xl md:text-2xl font-meow_script text-gray-800">Waarom slaapbegeleiding?</h2>
       <p class="text-gray-700 font-dosis mt-2">
-        Slaap is essentieel voor zowel kinderen als ouders. Met onze op maat gemaakte **slaappakketten** helpen we jou en je kindje aan een betere nachtrust.
+        Slaap is essentieel voor zowel kinderen als ouders. Met onze op maat gemaakte <strong>slaappakketten</strong> helpen we jou en je kindje aan een betere nachtrust.
         Van eenmalig advies tot intensieve begeleiding: kies wat bij jullie past!
       </p>
     </section>
@@ -81,9 +81,9 @@
           <p class="text-gray-600 font-dosis mt-2">Voor ouders die hulp willen bij de overstap naar de kinderopvang.</p>
           <ul class="mt-4 text-gray-700 font-dosis space-y-2">
             <li>✔️ 1x intakegesprek (45 min)</li>
-            <li>✔️ **Brochure met alle tips & tricks** over kinderopvang</li>
+            <li>✔️ <strong>Brochure met alle tips & tricks</strong> over kinderopvang</li>
             <li>✔️ WhatsApp begeleiding vanaf de eerste opvangdag (4 weken)</li>
-            <li>✔️ Advies over **eten, slapen en zelfstandig spelen**</li>
+            <li>✔️ Advies over <strong>eten, slapen en zelfstandig spelen</strong></li>
           </ul>
           <p class="text-lg font-semibold text-gray-800 mt-4">€199,-</p>
         </div>

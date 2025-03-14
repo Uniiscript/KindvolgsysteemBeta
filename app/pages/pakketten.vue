@@ -12,7 +12,7 @@
     <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mb-6 border border-gray-300 text-center">
       <h2 class="text-xl md:text-2xl font-meow_script text-gray-800">Waarom slaapbegeleiding?</h2>
       <p class="text-gray-700 font-dosis mt-2">
-        Slaap is essentieel voor zowel kinderen als ouders. Met onze op maat gemaakte **slaappakketten** helpen we jou en je kindje aan een betere nachtrust.
+        Slaap is essentieel voor zowel kinderen als ouders. Met onze op maat gemaakte <strong>slaappakketten</strong> helpen we jou en je kindje aan een betere nachtrust.
         Van eenmalig advies tot intensieve begeleiding: kies wat bij jullie past!
       </p>
     </section>
@@ -68,11 +68,11 @@
           <ul class="mt-4 text-gray-700 font-dosis space-y-2">
             <li>✔️ 1x uitgebreide intake (90 min)</li>
             <li>✔️ Persoonlijk slaapplan</li>
-            <li>✔️ **Meekijken, observeren & feedback** tijdens slaaproutine</li>
+            <li>✔️ <strong>Meekijken, observeren & feedback</strong> tijdens slaaproutine</li>
             <li>✔️ Live begeleiding voor ouder en kind</li>
             <li>✔️ Dagelijks WhatsApp support (6 weken)</li>
             <li>✔️ 3x opvolggesprek (45 min)</li>
-            <li>✔️ **Individueel aanpassingsplan** op basis van observaties</li>
+            <li>✔️ <strong>Aanpassingsplan</strong> op basis van observaties</li>
           </ul>
           <p class="text-lg font-semibold text-gray-800 mt-4">€349,-</p>
         </div>
@@ -83,9 +83,9 @@
     <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mt-6 border border-gray-300">
       <h2 class="text-xl md:text-2xl font-zen_loop text-gray-800 text-center">Extra's</h2>
       <ul class="mt-4 text-gray-700 font-dosis space-y-2 text-center">
-        <li>🍼 **Los opvolggesprek (30 min):** €39,-</li>
-        <li>📞 **Extra week WhatsApp support:** €29,-</li>
-        <li>💤 **Avondbegeleiding bij bedtijd (2 uur):** €99,-</li>
+        <li>🍼 <strong>Los opvolggesprek (30 min):</strong> €39,-</li>
+        <li>📞 <strong>Extra week WhatsApp support:</strong> €29,-</li>
+        <li>💤 <strong>Avondbegeleiding bij bedtijd (2 uur):</strong> €99,-</li>
       </ul>
     </section>
 
