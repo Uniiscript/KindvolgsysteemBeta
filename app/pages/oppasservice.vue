@@ -32,8 +32,8 @@ const showContactForm = ref(false);
         Wat ons onderscheidt van reguliere oppasservices? Wij nemen de tijd om écht te begrijpen wat jouw gezin nodig heeft.
       </p>
       <ul class="mt-4 text-gray-700 text-lg">
-        <li>✔️ **Kennismaking** – Een rustige eerste ontmoeting om de klik te voelen en routines te bespreken.</li>
-        <li>✔️ **Ouders ondersteunen** – Niet alleen oppassen, maar ook adviseren en helpen bij opvoedvragen.</li>
+        <li>✔️ <strong>Kennismaking</strong> – Een rustige eerste ontmoeting om de klik te voelen en routines te bespreken.</li>
+        <li>✔️ <strong>Ouders ondersteunen</strong> – Niet alleen oppassen, maar ook adviseren en helpen bij opvoedvragen.</li>
         <li>✔️ **Maatwerk in contact** – Wij vragen hoe ouders het prettig vinden om updates te ontvangen.</li>
         <li>✔️ **Structuur & routines** – We bespreken gewoontes uitvoerig zodat het oppassen soepel verloopt.</li>
       </ul>
