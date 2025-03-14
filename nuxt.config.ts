@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
   nitro: {
     routeRules: {
-      '/**': { static: true },
+      '/': { static: true },
       '/.env': { redirect: { to: REDIRECT_INTRUDERS_GIF, statusCode: 302 } },
       '/.info.php': { redirect: { to: REDIRECT_INTRUDERS_GIF, statusCode: 302 } },
       '/.phpinfo.php': { redirect: { to: REDIRECT_INTRUDERS_GIF, statusCode: 302 } },
