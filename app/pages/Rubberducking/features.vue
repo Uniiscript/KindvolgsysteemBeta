@@ -50,7 +50,7 @@ const features = {
     },
     {
       title: "🍼 NannyCare",
-      description: "Nannies kunnen hun beschikbaarheid, regio en tarieven invoeren, terwijl ouders eenvoudig een gekwalificeerde nanny in de buurt kunnen vinden en boeken.",
+      description: "Nannies kunnen hun beschikbaarheid, regio en  invoeren, terwijl ouders eenvoudig een gekwalificeerde nanny in de buurt kunnen vinden en boeken.",
       color: "bg-green-200"
     },
     {

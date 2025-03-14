@@ -30,7 +30,7 @@
           </ul>
         </li>
 
-        <li><NuxtLink to="/tarieven" class="hover:text-[#C8A2C8] font-zen_loop transition">Tarieven</NuxtLink></li>
+        <li><NuxtLink to="/pakketten " class="hover:text-[#C8A2C8] font-zen_loop transition">Pakketten</NuxtLink></li>
         <li><NuxtLink to="/ons-team" class="hover:text-[#C8A2C8] font-zen_loop transition">Ons team</NuxtLink></li>
       </ul>
     </nav>
@@ -58,8 +58,8 @@
         </ul>
       </li>
 
-      <li><NuxtLink @click="menuOpen = false" to="/tarieven" class="block hover:text-[#C8A2C8] transition">Tarieven</NuxtLink></li>
-      <li><NuxtLink @click="menuOpen = false" to="/werken-bij" class="block hover:text-[#C8A2C8] transition">Ons Team</NuxtLink></li>
+      <li><NuxtLink @click="menuOpen = false" to="/pakketten" class="block hover:text-[#C8A2C8] transition">Pakketten</NuxtLink></li>
+      <li><NuxtLink @click="menuOpen = false" to="/ons-team" class="block hover:text-[#C8A2C8] transition">Ons Team</NuxtLink></li>
     </ul>
 
     <!-- Sluitknop -->
@@ -97,7 +97,7 @@
     <NuxtLink to="/gezinsondersteuning" class="hover:text-[#A8E6CF] transition">Gezinsondersteuning</NuxtLink>
     <NuxtLink to="/oppasservice" class="hover:text-[#A8E6CF] transition">Oppasservice</NuxtLink>
     <NuxtLink to="/consultingencoaching" class="hover:text-[#A8E6CF] transition">Consulting & Coaching</NuxtLink>
-    <NuxtLink to="/tarieven" class="hover:text-[#A8E6CF] transition">Pakketten en tarieven</NuxtLink>
+    <NuxtLink to="/pakketten" class="hover:text-[#A8E6CF] transition">Pakketten en tarieven</NuxtLink>
   </div>
   <div class="flex flex-col space-y-2">
     <NuxtLink to="/oudersoverons" class="hover:text-[#A8E6CF] transition">Ouders over ons</NuxtLink>

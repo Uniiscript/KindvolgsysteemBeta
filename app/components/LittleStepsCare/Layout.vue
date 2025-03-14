@@ -65,8 +65,8 @@
         <div class="flex flex-col space-y-2">
           <NuxtLink to="#" class="hover:text-purple-500 transition">Allround Gezinsondersteuning</NuxtLink>
           <NuxtLink to="#" class="hover:text-purple-500 transition">Oppasservice</NuxtLink>
-          <NuxtLink to="#" class="hover:text-purple-500 transition">Consulting & Coaching</NuxtLink>
-          <NuxtLink to="#" class="hover:text-purple-500 transition">Tarieven</NuxtLink>
+          <NuxtLink to="#" class="hover:text-purple-500 transition">Consulting & coaching</NuxtLink>
+          <NuxtLink to="#" class="hover:text-purple-500 transition">Pakketten & tarieven</NuxtLink>
         </div>
         <div class="flex flex-col space-y-2">
           <NuxtLink to="#" class="hover:text-purple-500 transition">Over ons</NuxtLink>

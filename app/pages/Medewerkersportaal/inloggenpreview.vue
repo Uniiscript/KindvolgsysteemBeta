@@ -42,7 +42,7 @@
 
     <!-- Call to Action -->
     <section class="text-center w-full max-w-3xl">
-      <NuxtLink to="/werken-bij" class="px-6 py-3 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition">
+      <NuxtLink to="/ons-team" class="px-6 py-3 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition">
         Word medewerker & ontdek het MedewerkersPortaal
       </NuxtLink>
     </section>
