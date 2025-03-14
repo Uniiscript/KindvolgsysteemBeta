@@ -4,7 +4,7 @@
     <header class="text-center mb-6">
       <h1 class="text-3xl md:text-4xl font-zen_loop text-gray-800">De Eerste Kleine Stapjes naar de Kinderopvang</h1>
       <p class="text-lg font-dosis text-gray-700 mt-2">
-        Praktische tips & adviezen voor baby's vanaf 2,5 maand - <strong>De Newborn Fase</strong>
+        Praktische tips & adviezen voor baby's vanaf 2,5 maand - De Newborn Fase
       </p>
     </header>
 
@@ -44,95 +44,56 @@
     <!-- Voorbereiding: Veelgestelde vragen -->
     <section class="mb-6">
       <h2 class="text-xl font-zen_loop text-gray-700">Hoe bereid je je kindje voor?</h2>
-
       <h3 class="text-lg font-zen_loop text-gray-700 mt-4">🍼 Flesvoeding & Borstvoeding</h3>
       <p class="text-gray-700 font-dosis mt-2">
         Drinkt je kindje alleen uit de borst? Oefen al <strong>voor de start van de opvang</strong> met drinken uit een flesje.
         Laat je partner of een ander vertrouwd persoon ook eens een flesje geven, zodat je baby went aan drinken zonder mama.
       </p>
-      </section>
-
-      <!-- De eerste dag -->
-    <section class="mb-6">
-      <h2 class="text-xl font-zen_loop text-gray-700">De eerste dag</h2>
       <p class="text-gray-700 font-dosis mt-2">
-        De eerste dag is een spannende ervaring. Je voelt misschien <strong>een mix van emoties</strong>, en dat is helemaal oké!
+        Oefen het drinken uit een flesje gedurende de dag, zodat je baby flexibel wordt in verschillende voedmomenten.
+        Dit kan helpen om een soepele overgang naar de opvang te maken.
       </p>
-
-      <h3 class="text-lg font-zen_loop text-gray-700 mt-4">💡 Tips voor het afscheid</h3>
-      <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-2">
-        <li><strong>Praat met de leidster</strong> waar je kindje bij is, zo voelt je kindje dat het oké is.</li>
-        <li><strong>Neem altijd afscheid en vertel wat je doet</strong> – zeg bijvoorbeeld: _"Mama komt je straks weer ophalen na je slaapje."_</li>
-        <li><strong>Houd het afscheid kort</strong> – je kindje voelt wat jij voelt. Huilen of niet huilen is allebei normaal.</li>
-        <li><strong>Bel na 5 minuten even op</strong> om te vragen hoe het gaat. Dit is helemaal normaal en mag gewoon! ❤️</li>
-      </ul>
     </section>
 
-    <section>
-      <h3 class="text-lg font-zen_loop text-gray-700 mt-4">😴 Slapen bij de opvang</h3>
+    <!-- Zelfstandig slapen -->
+    <section class="mb-6">
+      <h2 class="text-xl font-zen_loop text-gray-700">Zelfstandig Slapen</h2>
       <p class="text-gray-700 font-dosis mt-2">
-        Op de opvang slapen baby's vaak in een eigen bedje en kunnen ze niet in slaap worden gewiegd.
-        Oefen daarom met <strong>je baby op verschillende manieren in slaap laten vallen</strong>:
+        Op de opvang slapen baby's vaak in een eigen bedje en worden ze niet in slaap gewiegd.
+        Oefen daarom alvast met <strong>zelfstandig in slaap vallen</strong>:
       </p>
       <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-1">
-        <li>Probeer je kindje <strong>niet slapend wegleggen</strong> in het eigen bedje. Probeer wakker maar slaperig in bed te leggen.</li>
-        <li>Oefen met in slaap vallen op de <strong>rug</strong>, zodat je baby niet afhankelijk wordt van gewiegd worden.</li>
-        <li>Begin met een vast slaapritueel dat ook op de opvang kan worden toegepast. (<strong>wanneer je kindje naar 2 vaste slaapjes gaat overdag</strong>)</li>
+        <li>Leg je kindje <strong>wakker maar slaperig</strong> in bed, zodat het leert zelfstandig in slaap te vallen.</li>
+        <li>Oefen met slapen op de <strong>rug</strong>, zodat je baby niet afhankelijk wordt van gewiegd worden.</li>
+        <li>Begin met een vast slaapritueel dat ook op de opvang kan worden toegepast.</li>
         <li>Laat je kindje wennen aan slapen in een slaapzak als de opvang die gebruikt.</li>
       </ul>
     </section>
 
-    <section>
-  <h3 class="text-lg font-zen_loop text-gray-700 mt-4">🧸 Zelfstandig Spelen & Voorbereiding op de Opvang</h3>
-  <p class="text-gray-700 font-dosis mt-2">
-    Op de opvang krijgt je baby steeds meer kleine momentjes om zelfstandig te spelen en te ontdekken.
-    Dit is een <strong>belangrijke vaardigheid</strong> die helpt bij de ontwikkeling van motoriek, concentratie en zelfvertrouwen.
-    Je kunt je baby hier thuis al op voorbereiden door kort te oefenen met <strong>momentjes alleen spelen</strong> in een vertrouwde omgeving.
-  </p>
-  <p class="text-gray-700 font-dosis mt-2">
-  <strong>Twee eenvoudige manieren om te beginnen</strong>:
-  </p>
-  <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-1">
-    <li><strong>Korte speelmomenten op de rug</strong> – Leg je baby op een speelkleed met een paar zachte speeltjes om zich heen en blijf in de buurt.
-    Maak contact door te praten en aan te moedigen, maar laat je kindje <strong>zelf ontdekken</strong>.</li>
-    <li><strong>Wegloopmomentjes</strong> – Blijf eerst dichtbij, maar loop af en toe kort een paar stapjes weg.
-    Zeg bijvoorbeeld: _"Mama gaat even iets pakken, ik ben zo terug."_ Dit helpt je baby te wennen aan het idee dat jij er nog bent, ook als je even uit het zicht bent.</li>
-  </ul>
-  <p class="text-gray-700 font-dosis mt-2">
-    Door hier <strong>rustig en stapsgewijs</strong> mee te oefenen, zal de overgang naar de opvang makkelijker en vertrouwder aanvoelen voor je baby. ❤️
-  </p>
-</section>
+    <!-- Zelfstandig spelen -->
+    <section class="mb-6">
+      <h2 class="text-xl font-zen_loop text-gray-700">Zelfstandig Spelen</h2>
+      <p class="text-gray-700 font-dosis mt-2">
+        Op de opvang krijgt je baby steeds meer momentjes om zelfstandig te spelen en te ontdekken.
+        Dit helpt bij de motorische en cognitieve ontwikkeling.
+      </p>
+      <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-1">
+        <li>Leg je baby altijd <strong>op de rug</strong> tijdens het spelen, zodat het de ledematen vrij kan bewegen.</li>
+        <li>Houd het speeloppervlak veilig en overzichtelijk, zonder afleiding boven het hoofd.</li>
+        <li>Moedig je baby aan, maar laat het zelf ontdekken en experimenteren.</li>
+      </ul>
+    </section>
 
-    <!-- Kleding & voorbereiding -->
+    <!-- Wat neem je mee? -->
     <section class="mb-6">
       <h2 class="text-xl font-zen_loop text-gray-700">Wat neem je mee?</h2>
       <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-1">
         <li>Minimaal twee extra setjes kleding</li>
         <li>Kleding met drukknopen aan de onderkant voor <strong>makkelijke verschoning</strong></li>
         <li>Een vertrouwd knuffeltje of doekje</li>
-        <li>Eigen speen en fles<strong>(gelabeld met naam)</strong></li>
+        <li>Eigen speen en fles<strong> (gelabeld met naam)</strong></li>
         <li>Een slaapzak als je kindje daar thuis aan gewend is</li>
       </ul>
-    </section>
-
-    <!-- Extra Tips -->
-    <section class="mb-6">
-      <h2 class="text-xl font-zen_loop text-gray-700">Extra Tips</h2>
-      <ul class="list-disc ml-5 text-gray-700 font-dosis mt-2 space-y-1">
-        <li>Begin een week van tevoren met het aanpassen van het slaapritme.</li>
-        <li>Laat je baby alvast wennen aan de pedagogisch medewerkers door een wenperiode.</li>
-      </ul>
-    </section>
-
-    <!-- Afsluiting -->
-    <section class="text-center mt-6">
-      <p class="text-lg font-dosis text-gray-700">
-        Een goede voorbereiding maakt de overgang makkelijker.
-        Heb je nog vragen? Neem gerust contact met ons op! ❤️
-      </p>
-      <NuxtLink to="/pakketten" class="mt-4 px-6 py-3 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition">
-        Bekijk onze speciale pakketten
-      </NuxtLink>
     </section>
   </div>
 </template>
