@@ -2,9 +2,15 @@
   <div class="max-w-4xl mx-auto p-6 bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] shadow-lg rounded-2xl border border-gray-300">
     <!-- Paginanavigatie -->
     <div class="flex justify-between mb-6">
-      <button @click="prevPage" :disabled="currentPage === 0" class="px-4 py-2 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition">Vorige</button>
-      <span class="text-lg font-semibold text-gray-800 font-zen_loop">{{ pages[currentPage].title }}</span>
-      <button @click="nextPage" :disabled="currentPage === pages.length - 1" class="px-4 py-2 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition">Volgende</button>
+      <button @click="prevPage" :disabled="currentPage === 0" class="px-4 py-2 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition md:text-sm md:px-3 md:py-1">
+        <span class="hidden md:inline">Vorige</span>
+        <span class="md:hidden">&#60;</span>
+      </button>
+      <span class="text-2xl md:text-3xl font-bold text-gray-800 font-zen_loop">{{ pages[currentPage].title }}</span>
+      <button @click="nextPage" :disabled="currentPage === pages.length - 1" class="px-4 py-2 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition md:text-sm md:px-3 md:py-1">
+        <span class="hidden md:inline">Volgende</span>
+        <span class="md:hidden">&#62;</span>
+      </button>
     </div>
 
     <!-- Dynamische content per pagina -->
@@ -22,7 +28,6 @@ const pages = ref([
   {
     title: "De Eerste Kleine Stapjes naar de Kinderopvang",
     content: `
-      <h1 class='text-3xl md:text-4xl font-zen_loop text-gray-800 text-center mb-4'>De Eerste Kleine Stapjes naar de Kinderopvang</h1>
       <p class='text-lg font-dosis text-gray-700 text-center'>Praktische tips & adviezen voor baby's vanaf 2,5 maand - De Newborn Fase</p>
       <section class="mb-6">
         <h2 class="text-xl font-zen_loop text-gray-700">Een grote stap voor ouder & kind</h2>
