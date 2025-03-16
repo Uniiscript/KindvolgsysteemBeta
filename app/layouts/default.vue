@@ -26,39 +26,19 @@ function scrollToTop() {
 
         <!-- Navigatiebalk (Desktop) -->
         <nav class="hidden lg:flex">
-          <ul class="flex space-x-4 text-base font-semibold text-gray-500 md:space-x-10 md:text-xl lg:text-2xl">
+          <ul class="flex text-base font-semibold text-gray-500 md:space-x-10 md:text-xl lg:space-x-16 lg:text-2xl">
             <li>
               <NuxtLink to="/" class="font-zen_loop transition hover:text-[#C8A2C8]">
                 Home
               </NuxtLink>
             </li>
-
-            <!-- Dropdown menu -->
-            <li class="group relative" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+            <li>
               <NuxtLink to="/onze-diensten" class="font-zen_loop transition hover:text-[#C8A2C8]">
                 Onze diensten
               </NuxtLink>
-              <ul v-show="dropdownOpen" class="absolute mt-2 flex w-64 flex-col rounded-2xl border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:border-purple-400 hover:bg-purple-50">
-                <li>
-                  <NuxtLink to="/gezinsondersteuning" class="block rounded-lg px-4 py-3 font-zen_loop text-lg text-gray-800 transition hover:bg-gray-100">
-                    Gezinsondersteuning
-                  </NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="/oppasservice" class="block rounded-lg px-4 py-3 font-zen_loop text-lg text-gray-800 transition hover:bg-gray-100">
-                    Oppasservice
-                  </NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="/consultingencoaching" class="block rounded-lg px-4 py-3 font-zen_loop text-lg text-gray-800 transition hover:bg-gray-100">
-                    Consulting & Coaching
-                  </NuxtLink>
-                </li>
-              </ul>
             </li>
-
             <li>
-              <NuxtLink to="/pakketten " class="font-zen_loop transition hover:text-[#C8A2C8]">
+              <NuxtLink to="/pakketten" class="font-zen_loop transition hover:text-[#C8A2C8]">
                 Pakketten
               </NuxtLink>
             </li>

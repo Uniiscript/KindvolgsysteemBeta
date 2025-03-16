@@ -34,7 +34,7 @@ function calculateAge(birthdate: string) {
       <li>📅 Werkbare dagen: ovb</li>
     </ul>
     <p class="my-4 text-lg font-semibold text-gray-800">
-      💰 vanaf €20,5- per uur
+      💰 vanaf €20,5 per uur
     </p>
 
     <NuxtLink to="/staff/sam" class="mt-4 rounded-lg bg-purple-300 px-4 py-2 font-semibold text-white transition hover:bg-purple-400">
