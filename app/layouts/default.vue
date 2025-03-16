@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 const menuOpen = ref(false)
 const dropdownOpen = ref(false)
 
@@ -33,6 +31,30 @@ function scrollToTop() {
               <NuxtLink to="/" class="font-zen_loop transition hover:text-[#C8A2C8]">
                 Home
               </NuxtLink>
+            </li>
+
+            <!-- Dropdown menu -->
+            <li class="group relative" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
+              <NuxtLink to="/onze-diensten" class="font-zen_loop transition hover:text-[#C8A2C8]">
+                Onze diensten
+              </NuxtLink>
+              <ul v-show="dropdownOpen" class="absolute mt-2 flex w-64 flex-col rounded-2xl border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:border-purple-400 hover:bg-purple-50">
+                <li>
+                  <NuxtLink to="/gezinsondersteuning" class="block rounded-lg px-4 py-3 font-zen_loop text-lg text-gray-800 transition hover:bg-gray-100">
+                    Gezinsondersteuning
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/oppasservice" class="block rounded-lg px-4 py-3 font-zen_loop text-lg text-gray-800 transition hover:bg-gray-100">
+                    Oppasservice
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/consultingencoaching" class="block rounded-lg px-4 py-3 font-zen_loop text-lg text-gray-800 transition hover:bg-gray-100">
+                    Consulting & Coaching
+                  </NuxtLink>
+                </li>
+              </ul>
             </li>
 
             <li>
@@ -109,7 +131,7 @@ function scrollToTop() {
     </header>
 
     <!-- Hoofdinhoud -->
-    <div class="grow px-3 md:px-6">
+    <div class="py-4">
       <slot />
     </div>
 
@@ -118,19 +140,19 @@ function scrollToTop() {
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-3">
         <!-- Linksectie links -->
         <div class="flex flex-col space-y-3 text-left font-zen_loop">
-          <NuxtLink to="/underconstruction" class="text-xl font-semibold transition hover:text-[#A8E6CF]">
+          <NuxtLink to="/underconstruction" class="text-lg font-semibold transition hover:text-[#A8E6CF]">
             ▻ Vind jouw Gezinsondersteuner bij jou in de buurt
           </NuxtLink>
-          <NuxtLink to="/underconstruction" class="text-xl font-semibold transition hover:text-[#A8E6CF]">
+          <NuxtLink to="/underconstruction" class="text-lg font-semibold transition hover:text-[#A8E6CF]">
             ▻ Vraag de informatiebrochure aan
           </NuxtLink>
-          <NuxtLink to="/underconstruction" class="text-xl font-semibold transition hover:text-[#A8E6CF]">
+          <NuxtLink to="/underconstruction" class="text-lg font-semibold transition hover:text-[#A8E6CF]">
             ▻ Schrijf je hier in voor een kennismakingsgesprek
           </NuxtLink>
         </div>
 
         <!-- Linksectie midden -->
-        <div class="grid grid-cols-2 gap-4 font-dosis text-gray-500">
+        <div class="grid grid-cols-2 gap-4 font-dosis text-sm text-gray-500">
           <div class="flex flex-col space-y-2">
             <NuxtLink to="/gezinsondersteuning" class="transition hover:text-[#A8E6CF]">
               Gezinsondersteuning
@@ -171,10 +193,10 @@ function scrollToTop() {
         <div class="flex flex-col items-end space-y-3">
           <div class="flex space-x-3">
             <a href="https://www.instagram.com/little.steps.care" target="_blank" class="flex items-center rounded-full bg-[#A8E6CF] p-2 text-white transition hover:bg-[#6FBFA4]">
-              <Icon name="mdi:instagram" class="size-8" />
+              <Icon name="mdi:instagram" class="text-lg" />
             </a>
             <a href="https://www.pinterest.com/littlestepscare4you" target="_blank" class="flex items-center rounded-full bg-[#A8E6CF] p-2 text-white transition hover:bg-[#6FBFA4]">
-              <Icon name="mdi:pinterest" class="size-8" />
+              <Icon name="mdi:pinterest" class="text-lg" />
             </a>
           </div>
 
@@ -183,7 +205,7 @@ function scrollToTop() {
             class="group relative flex cursor-pointer items-center space-x-2"
             @click="scrollToTop"
           >
-            <img src="/LSCLogoIcon.jpeg" alt="Little Steps Care Logo" class="size-12 object-contain opacity-100">
+            <img src="/LSCLogoIcon.jpeg" alt="Little Steps Care Logo" class="h-6 w-auto object-contain opacity-100 md:h-10">
             <p
               class="font-playwrite-italia-moderna bg-gradient-to-r from-[#A8E6CF] via-gray-500 to-[#A8E6CF] bg-clip-text text-sm text-transparent transition-opacity group-hover:opacity-80 md:text-xl"
             >
