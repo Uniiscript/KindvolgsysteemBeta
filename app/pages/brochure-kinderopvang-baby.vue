@@ -8,8 +8,6 @@
       </p>
     </header>
 
-   
-
     <!-- Voorbereiding: Veelgestelde vragen -->
     <section class="mb-6">
       <h2 class="text-xl font-zen_loop text-gray-700">Hoe bereid je je kindje voor?</h2>

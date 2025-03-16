@@ -30,7 +30,7 @@
             <li>✔️ Adviesplan op maat</li>
             <li>✔️ E-mail support (1 week)</li>
           </ul>
-          <p class="text-lg font-semibold text-gray-800 mt-4">€75,-</p>
+          <p class="text-lg font-semibold text-gray-800 mt-4">€99,-</p>
         </div>
 
         <!-- Premium Pakket -->
@@ -55,7 +55,7 @@
             <li>✔️ Persoonlijk slaapplan</li>
             <li>✔️ Dagelijks WhatsApp support (4 weken)</li>
             <li>✔️ 2x opvolggesprek (45 min)</li>
-            <li>✔️ Extra tips & begeleiding</li>
+            <li>✔️ Extra tips & 1x Live begeleiding</li>
             <li>✔️ Observatie & feedback tijdens slaaproutine</li>
           </ul>
           <p class="text-lg font-semibold text-gray-800 mt-4">€249,-</p>
@@ -69,10 +69,10 @@
             <li>✔️ 1x uitgebreide intake (90 min)</li>
             <li>✔️ Persoonlijk slaapplan</li>
             <li>✔️ <strong>Meekijken, observeren & feedback</strong> tijdens slaaproutine</li>
-            <li>✔️ Live begeleiding voor ouder en kind</li>
+            <li>✔️ 2x Live begeleiding</li>
             <li>✔️ Dagelijks WhatsApp support (6 weken)</li>
             <li>✔️ 3x opvolggesprek (45 min)</li>
-            <li>✔️ <strong>Aanpassingsplan</strong> op basis van observaties</li>
+            <li>✔️ <strong>Aanpassingsplan</strong> op basis van observaties en begeleiding</li>
           </ul>
           <p class="text-lg font-semibold text-gray-800 mt-4">€349,-</p>
         </div>

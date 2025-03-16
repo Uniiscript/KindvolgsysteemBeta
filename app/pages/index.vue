@@ -18,8 +18,10 @@ const currentReviewIndex = ref(0);
 
 // Automatische carousel
 onNuxtReady(() => {
-  currentReviewIndex.value = (currentReviewIndex.value + 1) % reviews.value.length;
-}, 5000);
+  setInterval(() => {
+    currentReviewIndex.value = (currentReviewIndex.value + 1) % reviews.value.length;
+  }, 5000);
+});
 
 const showContactForm = ref(false);
 </script>
@@ -28,8 +30,8 @@ const showContactForm = ref(false);
   <div class="flex w-full flex-col items-center py-12">
     <!-- Hero Sectie -->
     <header class="max-w-3xl text-center">
-      <h1 class="font-zen_loop text-4xl text-gray-900">
-        Zorg met een ❤️ voor jouw gezin
+      <h1 class="font-zen_loop text-4xl text-gray-500">
+        <strong>Zorg met een ❤️ voor jouw gezin</strong>
       </h1>
     </header>
 
