@@ -1,8 +1,7 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-r from-purple-100 via-yellow-100 to-pink-100 p-6">
-    <!-- Header -->
+  <div><!-- Header -->
     <header class="text-center py-6 mb-8">
-      <h1 class="text-4xl font-bold text-gray-800">Mijn Reis als Pedagogisch Medewerker, Leidinggevende en Oppas</h1>
+      <h1 class="text-4xl font-bold text-gray-800">Mijn Reis als Pedagogisch Medewerker, Leidinggevende en Oppas, en nu mijn eigen bedrijf!</h1>
     </header>
 
     <!-- Verhaal -->
@@ -111,7 +110,7 @@
         </div>
       </div>
     </section>
-  </div>
+    </div>
 </template>
 
 <script lang="ts" setup>
