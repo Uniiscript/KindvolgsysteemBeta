@@ -1,23 +1,23 @@
 <template>
   <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
     <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg max-h-[80vh] overflow-y-auto">
-      <h2 class="text-2xl font-semibold text-center mb-4">Contactformulier</h2>
+      <h2 class="text-4xl font-zen_loop text-center mb-4">Contactformulier</h2>
       <form @submit.prevent="submitForm" class="space-y-4">
 
         <!-- Naam ouder -->
         <div>
-          <label class="block font-medium">Naam ouder:</label>
+          <label class="block font-dosis">Naam ouder:</label>
           <input v-model="parentName" type="text" class="w-full p-2 border rounded" required />
         </div>
 
         <!-- Contactmogelijkheden -->
         <div>
-          <label class="block font-medium">Contactmogelijkheden:</label>
+          <label class="block font-dosis">Contactmogelijkheden:</label>
           <div class="flex space-x-4">
-            <label class="flex items-center">
+            <label class="flex items-center text-dosis">
               <input type="checkbox" @change="toggleContact('phone')" /> Telefoon
             </label>
-            <label class="flex items-center">
+            <label class="flex items-center text-dosis">
               <input type="checkbox" @change="toggleContact('email')" /> E-mail
             </label>
           </div>
@@ -25,25 +25,25 @@
 
         <!-- Telefoonnummer -->
         <div v-if="contactOptions.phone">
-          <label class="block font-medium">Telefoonnummer:</label>
+          <label class="block font-dosis">Telefoonnummer:</label>
           <input v-model="phone" type="tel" class="w-full p-2 border rounded" :required="contactOptions.phone" />
         </div>
 
         <!-- E-mailadres -->
         <div v-if="contactOptions.email">
-          <label class="block font-medium">E-mailadres:</label>
+          <label class="block font-dosis">E-mailadres:</label>
           <input v-model="email" type="email" class="w-full p-2 border rounded" :required="contactOptions.email" />
         </div>
 
         <!-- Aantal kinderen -->
         <div>
-          <label class="block font-medium">Aantal kinderen:</label>
+          <label class="block font-dosis">Aantal kinderen:</label>
           <input v-model.number="numChildren" type="number" min="0" class="w-full p-2 border rounded" @input="updateChildrenFields" required />
         </div>
 
         <!-- In verwachting optie -->
         <div v-if="numChildren >= 0">
-          <label class="flex items-center space-x-2">
+          <label class="flex items-center space-x-2 font-dosis">
             <input type="checkbox" v-model="expecting" />
             <span>In verwachting</span>
           </label>
@@ -51,33 +51,33 @@
 
         <!-- Uitgerekende datum -->
         <div v-if="expecting">
-          <label class="block font-medium">Uitgerekende datum:</label>
+          <label class="block font-dosis">Uitgerekende datum:</label>
           <input v-model="dueDate" type="date" class="w-full p-2 border rounded" :min="today" :max="maxDueDate" @input="calculatePregnancyDuration" required />
           <p v-if="pregnancyDuration" class="text-green-600 font-medium">Gefeliciteerd! U bent nu {{ pregnancyDuration }} zwanger.</p>
         </div>
 
         <!-- Kinderen gegevens -->
         <div v-for="(child, index) in children" :key="index" class="p-4 bg-gray-100 rounded-lg">
-          <h3 class="font-semibold">Kind {{ index + 1 }}</h3>
+          <h3 class="font-dosis">Kind {{ index + 1 }}</h3>
           <div>
-            <label class="block font-medium">Naam kind:</label>
+            <label class="block font-dosis">Naam kind:</label>
             <input v-model="child.name" type="text" class="w-full p-2 border rounded" required />
           </div>
           <div>
-            <label class="block font-medium">Geboortedatum:</label>
+            <label class="block font-dosis">Geboortedatum:</label>
             <input v-model="child.birthdate" type="date" class="w-full p-2 border rounded" :min="minBirthdate" :max="today" @input="calculateAge(index)" required />
-            <p v-if="child.age" class="text-blue-600 font-medium">Leeftijd: {{ child.age }}</p>
+            <p v-if="child.age" class="text-blue-600 font-dosis">Leeftijd: {{ child.age }}</p>
           </div>
         </div>
 
         <!-- Verzendknop -->
-        <button type="submit" @click="execute" class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
+        <button type="submit" @click="execute" class="w-full bg-purple-600 text-white text-2xl font-zen_loop py-2 rounded-lg hover:bg-purple-700 transition">
           Versturen
         </button>
       </form>
 
       <!-- Sluitknop -->
-      <button @click="$emit('close')" class="mt-4 w-full text-gray-600 hover:underline">Sluiten</button>
+      <button @click="$emit('close')" class="mt-4 w-full text-gray-600 font-zen_loop text-2xl hover:underline">Sluiten</button>
     </div>
   </div>
 </template>
