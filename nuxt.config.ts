@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@pinia/nuxt',
     '@nuxt/fonts',
-    '@nuxtjs/i18n',
+    // '@nuxtjs/i18n',
     'shadcn-nuxt',
   ],
   devServer: { https: false, port: 3000 },
@@ -55,9 +55,9 @@ export default defineNuxtConfig({
     headNext: true,
     viewTransition: true,
   },
-  i18n: {
-     vueI18n: './config/i18n.config.ts'
-  },
+  // i18n: {
+  //    vueI18n: './config/i18n.config.ts'
+  // },
   fonts: {
     experimental: {
       processCSSVariables: true,
