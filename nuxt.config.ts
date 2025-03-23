@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/fonts',
     '@nuxtjs/i18n',
+    'shadcn-nuxt',
   ],
   devServer: { https: false, port: 3000 },
   eslint: {

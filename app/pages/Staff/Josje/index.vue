@@ -1,116 +1,106 @@
 <template>
-  <div><!-- Header -->
-    <header class="text-center py-6 mb-8">
-      <h1 class="text-4xl font-bold text-gray-800">Mijn Reis als Pedagogisch Medewerker, Leidinggevende en Oppas, en nu mijn eigen bedrijf!</h1>
+  <div class="px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <header class="text-center py-6 mb-12 max-w-3xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 leading-snug font-zen_loop">
+        Mijn Reis als Pedagogisch Medewerker, Leidinggevende en Oppas, en nu mijn eigen bedrijf!
+      </h1>
     </header>
 
     <!-- Verhaal -->
-    <section class="bg-white shadow-lg rounded-2xl p-6 mb-12">
-      <p class="text-lg text-gray-700 mb-4">
+    <section class="bg-white shadow-lg rounded-2xl p-6 sm:p-10 mb-16 max-w-3xl mx-auto">
+      <p class="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed font-dosis">
         Tijdens mijn werk als pedagogisch medewerker, leidinggevende en oppas heb ik veel gesprekken gevoerd met ouders. Wat mij al snel duidelijk werd, is wat ik echt voor gezinnen zou willen betekenen. Voor mij is oppassen nooit zomaar 'op passen'. Het gaat verder dan dat. Het is voor mij vanzelfsprekend om meer te doen, uit mezelf, omdat ik het leuk vind en het kind erdoor verder kan ontwikkelen. Maar vooral omdat ik ouders zonder zorgen de deur uit wil laten gaan, wetende dat hun kind in de allerbeste handen is.
       </p>
 
-      <ul class="list-disc pl-6 text-lg text-gray-700 mb-6">
-        <li>Afwasje na het avondeten, speelgoed ordenen of gewoon opruimen als de kleine op bed ligt – niet omdat het moet, maar omdat ik vind dat het erbij hoort.</li>
-        <li>Het zijn de kleine dingen zoals een vaatwasser inruimen of een taak overnemen van de ouders die de ouders ontzorgen.</li>
-        <li>In de afgelopen jaren heb ik meer dan 15 gezinnen geholpen en blijf ik nog altijd in contact met één van mijn eerste oppasadresjes.</li>
-        <li>Ik mocht een eindmusical meemaken en kinderen van school halen. Ik heb het opgroeien van een kind van 0-12 jaar mogen ervaren – een prachtige ervaring!</li>
-      </ul>
+   <ul class="list-disc pl-6 text-base sm:text-lg text-gray-700 mb-6 space-y-3 font-dosis">
+  <li>Ik heb een kindje voor het eerst naar groep 1 mogen brengen – een bijzonder moment vol vertrouwen van de ouders.</li>
+  <li>Ik haalde kindjes van school en kookte daarna gezellig met ze thuis, iets wat vaak hét hoogtepunt van de dag was.</li>
+  <li>We gingen samen op avontuur naar Monkey Town, speelden actief en kwamen thuis vol verhalen en blije gezichten.</li>
+  <li>Ik bracht kinderen naar sportclubs en bleef aanmoedigen langs de lijn, zodat ouders even konden bijkomen of weg konden zijn.</li>
+  <li>Ik heb een keer overnacht waarbij ouders 24 uur weg waren – bij terugkomst konden de ouders het zo weer van mij overnemen.</li>
+  <li>Ik mocht aanwezig zijn bij een eindmusical – een emotioneel moment, want bij dit meisje begon ik met oppassen toen ze nog niet eens kon zitten. De cirkel voelde rond.</li>
+  <li>In mijn adviserende en observerende rol heb ik meerdere oudergesprekken gevoerd - ouders konden na deze gesprekken aan de slag met de antwoorden, aan de hand van de vragen die zij mij stelden.</li>
+</ul>
 
-      <p class="text-lg text-gray-700">
-        Door deze ervaringen merkte ik dat ik veel meer kon betekenen voor ouders. In de gesprekken die ik met hen voerde, hoorde ik regelmatig dat ik iets met mijn ervaringen moest doen. Dit heeft me doen inzien dat ik de pedagogiek en het oudercontact naar een hoger niveau wilde tillen. En zo ontstond vorig jaar Little Steps Care – een platform dat ouders echt ondersteunt en begeleidt, op een manier die ik als oppas altijd al heb gewild.
-      </p>
+
+
+      <p class="text-base sm:text-lg text-gray-700 leading-relaxed font-dosis">
+  In die meer dan tien jaar heb ik zóveel ouders en kinderen mogen ontmoeten. Juist hun waardering, vertrouwen en aanmoediging hebben ervoor gezorgd dat ik dit ben gaan doorpakken – voor hén, en voor anderen die dezelfde steun verdienen. Door al deze ervaringen merkte ik dat ik veel meer kon betekenen voor gezinnen. In de gesprekken die ik met ouders voerde, hoorde ik regelmatig dat ik écht iets met mijn ervaring moest doen. Dit heeft me doen inzien dat ik de pedagogiek en het oudercontact naar een hoger niveau wilde tillen. En zo ontstond vorig jaar <strong>Little Steps Care</strong> – een platform dat ouders echt ondersteunt en begeleidt, op een manier die ik als oppas altijd al heb gewild.
+</p>
     </section>
 
-    <!-- CV/Gedetailleerde Informatie -->
-    <section class="bg-white shadow-lg rounded-2xl p-6">
-      <h2 class="text-3xl font-semibold text-gray-800 mb-6">Over Josje</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <!-- Over Josje -->
+    <section class="bg-white shadow-lg rounded-2xl p-6 sm:p-10 max-w-4xl mx-auto mb-16">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8 font-zen_loop">Over Josje</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
         <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Opleiding & Ervaring</h3>
-          <ul class="list-disc pl-6 text-lg text-gray-700">
-            <li>Pedagogisch Medewerker – 5+ jaar ervaring met het begeleiden van kinderen van 0-12 jaar.</li>
-            <li>Leidinggevende ervaring – Leiding geven en begeleiden van teams in de kinderopvangsector.</li>
-            <li>Ervaring als Oppas – Meer dan 15 gezinnen geholpen met persoonlijke zorg en begeleiding.</li>
-            <li>Specialisatie in het creëren van een veilige en stimulerende omgeving voor kinderen.</li>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4 font-zen_loop">Opleiding & Ervaring</h3>
+          <ul class="list-disc pl-6 text-base text-gray-700 space-y-3 font-dosis">
+            <li>Pedagogisch Medewerker – 10+ jaar ervaring...</li>
+            <li>Leidinggevende ervaring in kinderopvangsector.</li>
+            <li>Oppaservaring bij meer dan 15 gezinnen - 15+ jaar ervaring.</li>
+            <li>How2Talk2Kids en Pikler specialisatie betreft opvoeding en ontwikkelings methodes voor Ouder & Kind.</li>
+            <li>Babyscholing afgerond '25.</li>
+            <li>EHBK ervaring</li>
           </ul>
         </div>
         <div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Persoonlijke Vaardigheden</h3>
-          <ul class="list-disc pl-6 text-lg text-gray-700">
-            <li>Empathisch en zorgzaam – Ik weet precies wat ouders nodig hebben om zich volledig te kunnen ontspannen.</li>
-            <li>Flexibel en oplossingsgericht – Ik kan snel schakelen en ben altijd bereid om die extra stap te zetten.</li>
-            <li>Communicatief sterk – Ik zorg ervoor dat ouders altijd goed geïnformeerd zijn en dat kinderen zich gehoord voelen.</li>
-            <li>Betrouwbaar en verantwoordelijk – Voor mij is het vanzelfsprekend om verantwoordelijkheid te nemen en ouders te ontzorgen.</li>
+          <h3 class="text-lg font-semibold text-gray-800 mb-4 font-zen_loop">Persoonlijke Vaardigheden</h3>
+          <ul class="list-disc pl-6 text-base text-gray-700 space-y-3 font-dosis">
+            <li>Empathisch en zorgzaam.</li>
+            <li>Flexibel en oplossingsgericht.</li>
+            <li>Communicatief sterk.</li>
+            <li>Betrouwbaar en verantwoordelijk.</li>
+            <li>Gestructureerd en gedisciplineerd.</li>
           </ul>
         </div>
       </div>
 
-      <h3 class="text-xl font-semibold text-gray-800 mt-8">Mijn Missie</h3>
-      <p class="text-lg text-gray-700">
-        Mijn missie is om ouders de steun en begeleiding te bieden die ze nodig hebben, zodat zij met een gerust hart hun kinderen kunnen achterlaten. Ik wil een bijdrage leveren aan de ontwikkeling van kinderen en ouders ondersteunen bij het vinden van balans in hun gezinsleven. Met Little Steps Care wil ik deze missie verder brengen en ouders écht helpen door middel van persoonlijke en professionele zorg.
+      <h3 class="text-lg font-semibold text-gray-800 mt-10 mb-3 font-zen_loop">Mijn Missie</h3>
+      <p class="text-base text-gray-700 leading-relaxed font-dosis">
+        Mijn missie is om ouders de steun en begeleiding te bieden die ze nodig hebben, wil ik het verschil maken in het dagelijks leven van gezinnen. Niet door enkel aanwezig te zijn, maar door écht mee te denken, mee te voelen en te ontzorgen op de momenten dat het er het meest toe doet.
       </p>
     </section>
 
     <!-- Reviews Carousel -->
-    <section class="bg-white shadow-lg rounded-2xl p-6 mb-12">
-      <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Wat Ouders Zeggen</h2>
+    <section class="bg-white shadow-lg rounded-2xl p-6 sm:p-10 max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8 text-center font-zen_loop">Wat Ouders Zeggen</h2>
 
-      <!-- Carousel -->
       <div class="relative">
         <div class="carousel-wrapper overflow-hidden">
-          <div class="carousel flex space-x-6">
-            <!-- Review 1 -->
-            <div class="review-card bg-gray-100 p-6 rounded-lg shadow-lg max-w-xs">
-              <div class="flex items-center mb-4">
-                <div class="text-lg font-semibold text-gray-800">Sophie, Oudergroep</div>
-              </div>
-              <p class="text-gray-700 mb-4">
-                "Josje is een geweldige oppas. Ze is altijd betrokken en zorgt ervoor dat mijn kinderen zich veilig en gelukkig voelen. Ze gaat altijd een stap verder en ontzorgt ons op momenten dat het nodig is. We kunnen haar echt aanbevelen!"
-              </p>
-              <div class="stars flex">
-                <span class="text-yellow-400">★★★★★</span>
-              </div>
-            </div>
-
-            <!-- Review 2 -->
-            <div class="review-card bg-gray-100 p-6 rounded-lg shadow-lg max-w-xs">
-              <div class="flex items-center mb-4">
-                <div class="text-lg font-semibold text-gray-800">Mark, Oudergroep</div>
-              </div>
-              <p class="text-gray-700 mb-4">
-                "Wat een verschil maakt Josje! Niet alleen is ze professioneel, maar ze heeft ook een warme, persoonlijke benadering die wij erg waarderen. Ze is altijd op tijd, betrouwbaar en zorgt ervoor dat onze kinderen zich gehoord voelen."
-              </p>
-              <div class="stars flex">
-                <span class="text-yellow-400">★★★★★</span>
-              </div>
-            </div>
-
-            <!-- Review 3 -->
-            <div class="review-card bg-gray-100 p-6 rounded-lg shadow-lg max-w-xs">
-              <div class="flex items-center mb-4">
-                <div class="text-lg font-semibold text-gray-800">Eva, Oudergroep</div>
-              </div>
-              <p class="text-gray-700 mb-4">
-                "Josje is een fantastische oppas! Ze helpt ons niet alleen met de kinderen, maar zorgt er ook voor dat het huishouden draait. We zijn ontzettend dankbaar voor haar."
-              </p>
-              <div class="stars flex">
-                <span class="text-yellow-400">★★★★★</span>
-              </div>
+          <div
+            class="carousel flex space-x-6 transition-transform duration-500 ease-in-out"
+            :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
+          >
+            <div
+              v-for="(review, index) in reviews"
+              :key="index"
+              class="review-card bg-gray-100 p-6 rounded-xl shadow-md max-w-xs flex-shrink-0"
+            >
+              <div class="text-lg font-semibold-zen_loop text-gray-800 mb-2">{{ review.name }}, Oudergroep</div>
+              <p class="text-gray-700 font-dosis mb-4 text-sm leading-relaxed">{{ review.text }}</p>
+              <div class="stars text-yellow-400 text-lg">★★★★★</div>
             </div>
           </div>
         </div>
 
-        <!-- Carousel Navigation -->
-        <div class="absolute top-1/2 transform -translate-y-1/2 left-2">
-          <button class="carousel-prev p-2 bg-gray-200 rounded-full shadow-lg">←</button>
-        </div>
-        <div class="absolute top-1/2 transform -translate-y-1/2 right-2">
-          <button class="carousel-next p-2 bg-gray-200 rounded-full shadow-lg">→</button>
-        </div>
+        <!-- Navigatieknoppen -->
+        <button
+          @click="prevReview"
+          class="absolute top-1/2 left-0 -translate-y-1/2 p-3 bg-white border shadow rounded-full hover:bg-gray-100 transition"
+        >
+          ←
+        </button>
+        <button
+          @click="nextReview"
+          class="absolute top-1/2 right-0 -translate-y-1/2 p-3 bg-white border shadow rounded-full hover:bg-gray-100 transition"
+        >
+          →
+        </button>
       </div>
     </section>
-    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -118,17 +108,17 @@ const currentIndex = ref(0);
 const reviews = [
   {
     name: 'Sophie',
-    text: 'Josje is een geweldige oppas. Ze is altijd betrokken en zorgt ervoor dat mijn kinderen zich veilig en gelukkig voelen. Ze gaat altijd een stap verder en ontzorgt ons op momenten dat het nodig is. We kunnen haar echt aanbevelen!',
+    text: 'Josje is een geweldige oppas. Ze is altijd betrokken en zorgt ervoor dat mijn kinderen zich veilig en gelukkig voelen...',
     rating: 5
   },
   {
     name: 'Mark',
-    text: 'Wat een verschil maakt Josje! Niet alleen is ze professioneel, maar ze heeft ook een warme, persoonlijke benadering die wij erg waarderen. Ze is altijd op tijd, betrouwbaar en zorgt ervoor dat onze kinderen zich gehoord voelen.',
+    text: 'Wat een verschil maakt Josje! Niet alleen is ze professioneel, maar ze heeft ook een warme, persoonlijke benadering...',
     rating: 5
   },
   {
     name: 'Eva',
-    text: 'Josje is een fantastische oppas! Ze helpt ons niet alleen met de kinderen, maar zorgt er ook voor dat het huishouden draait. We zijn ontzettend dankbaar voor haar.',
+    text: 'Josje is een fantastische oppas! Ze helpt ons niet alleen met de kinderen, maar zorgt er ook voor dat het huishouden draait...',
     rating: 5
   }
 ];

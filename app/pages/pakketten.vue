@@ -25,7 +25,7 @@
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition">
           <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">✨ Basis Pakket</h3>
           <p class="text-gray-600 font-dosis mt-2">Voor ouders die eenmalig advies willen.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
             <li>✔️ 1x intakegesprek (45 min)</li>
             <li>✔️ Adviesplan op maat</li>
             <li>✔️ E-mail support (1 week)</li>
@@ -37,7 +37,7 @@
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition">
           <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">🌙 Premium Pakket</h3>
           <p class="text-gray-600 font-dosis mt-2">Begeleiding met opvolging en ondersteuning.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
             <li>✔️ 1x intakegesprek (60 min)</li>
             <li>✔️ Persoonlijk slaapplan</li>
             <li>✔️ WhatsApp support (2 weken)</li>
@@ -50,7 +50,7 @@
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition">
           <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">🌟 Deluxe Pakket</h3>
           <p class="text-gray-600 font-dosis mt-2">Persoonlijke begeleiding voor intensieve hulp.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
             <li>✔️ 1x intakegesprek (90 min)</li>
             <li>✔️ Persoonlijk slaapplan</li>
             <li>✔️ Dagelijks WhatsApp support (4 weken)</li>
@@ -65,7 +65,7 @@
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition lg:col-span-3">
           <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">🌟✨ VIP Deluxe Pakket</h3>
           <p class="text-gray-600 font-dosis mt-2">Live observatie en begeleiding tijdens de slaaproutine.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
             <li>✔️ 1x uitgebreide intake (90 min)</li>
             <li>✔️ Persoonlijk slaapplan</li>
             <li>✔️ <strong>Meekijken, observeren & feedback</strong> tijdens slaaproutine</li>
@@ -82,7 +82,7 @@
     <!-- Extra Diensten -->
     <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mt-6 border border-gray-300">
       <h2 class="text-xl md:text-2xl font-zen_loop text-gray-800 text-center">Extra's</h2>
-      <ul class="mt-4 text-gray-700 font-dosis space-y-2 text-center">
+      <ul class="mt-4 text-gray-700 font-dosis space-y-2 text-center flex flex-col min-h-60">
         <li>🍼 <strong>Los opvolggesprek (30 min):</strong> €39,-</li>
         <li>📞 <strong>Extra week WhatsApp support:</strong> €29,-</li>
         <li>💤 <strong>Avondbegeleiding bij bedtijd (2 uur):</strong> €99,-</li>
