@@ -19,7 +19,7 @@
           <!-- Ticket Option -->
           <div class="w-80 p-6 bg-blue-200 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
             <h3 class="text-xl font-bold text-center text-blue-900 mb-2">🎟️ Ticket Aanmaken</h3>
-            <p class="text-gray-700 text-center mb-4">Maak een ticket aan voor technische ondersteuning of vragen over onze diensten.</p>
+            <p class="text-gray-700 text-center mb-4">Maak een ticket aan voor technische ondersteuning of vragen over Onze visie.</p>
             <a href="#" class="block text-center text-blue-800 hover:text-blue-600 font-semibold">
               Klik hier om een ticket aan te maken
             </a>

@@ -56,7 +56,7 @@ const showContactForm = ref(false);
     <!-- Diensten -->
     <section class="mt-16 w-full max-w-5xl">
       <h2 class="mb-8 text-center font-zen_loop text-3xl text-gray-900">
-        Onze Diensten
+        Onze visie
       </h2>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         <NuxtLink v-for="(service, index) in services" :key="index" :to="service.link" class="block" aria-label="Meer over {{ service.title }}">

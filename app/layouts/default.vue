@@ -33,8 +33,8 @@ function scrollToTop() {
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/onze-diensten" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                Onze diensten
+              <NuxtLink to="/onze-visie" class="font-zen_loop transition hover:text-[#C8A2C8]">
+                Onze visie
               </NuxtLink>
             </li>
             <li>
@@ -70,7 +70,7 @@ function scrollToTop() {
           <!-- Dropdown menu voor mobiel -->
           <li class="relative">
             <button class="block w-full text-left transition hover:text-[#C8A2C8]" @click="dropdownOpen = !dropdownOpen">
-              Onze diensten
+              Onze visie
             </button>
             <ul v-if="dropdownOpen" class="ml-4 mt-2 space-y-2 border-l border-gray-300 pl-3 text-sm">
               <li>

@@ -21,7 +21,7 @@
           <ul class="flex space-x-2 md:space-x-8 text-sm md:text-xl text-gray-800 font-semibold">
             <li><NuxtLink to="/" class="hover:text-purple-500 transition">Home</NuxtLink></li>
             <li><NuxtLink to="/over-ons" class="hover:text-purple-500 transition">Over ons</NuxtLink></li>
-            <li><NuxtLink to="/onze-diensten" class="hover:text-purple-500 transition">Onze diensten</NuxtLink></li>
+            <li><NuxtLink to="/onze-visie" class="hover:text-purple-500 transition">Onze visie</NuxtLink></li>
             <li><NuxtLink to="/vacatures" class="hover:text-purple-500 transition">Vacatures</NuxtLink></li>
           </ul>
         </nav>
@@ -32,7 +32,7 @@
         <ul class="text-center text-base text-gray-800 font-semibold space-y-2">
           <li><NuxtLink to="/" class="block hover:text-purple-500 transition" @click="menuOpen = false">Home</NuxtLink></li>
           <li><NuxtLink to="/over-ons" class="block hover:text-purple-500 transition" @click="menuOpen = false">Over ons</NuxtLink></li>
-          <li><NuxtLink to="/onze-diensten" class="block hover:text-purple-500 transition" @click="menuOpen = false">Onze diensten</NuxtLink></li>
+          <li><NuxtLink to="/onze-visie" class="block hover:text-purple-500 transition" @click="menuOpen = false">Onze visie</NuxtLink></li>
           <li><NuxtLink to="/vacatures" class="block hover:text-purple-500 transition" @click="menuOpen = false">Werken bij</NuxtLink></li>
         </ul>
       </div>
