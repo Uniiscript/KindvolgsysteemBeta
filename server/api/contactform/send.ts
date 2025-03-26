@@ -62,7 +62,7 @@ export default defineEventHandler(async (event) => {
   `;
 
   const { data, error } = await resend.emails.send({
-    from: `${body.parentName} <${body.email}>`,
+    from: `${body.parentName} <onboarding@resend.dev>`,
     to: ['little.steps.care4you@gmail.com'],
     subject: 'Nieuwe inzending contactformulier 🎉',
     html: emailHtml,
