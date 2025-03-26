@@ -90,6 +90,7 @@
 
 <script setup>
 import { ref } from 'vue';
+
 const emit = defineEmits(['close']);
 
 const parentName = ref('');
@@ -189,13 +190,7 @@ const submitForm = async () => {
   };
 
   try {
-    await fetch('/api/contactform', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-
-    await fetch('/api/send-mail', {
+    await fetch('/api/contactform/send', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),

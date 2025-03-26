@@ -1,4 +1,3 @@
-// server/api/send-mail.ts
 import { Resend } from 'resend';
 
 export default defineEventHandler(async (event) => {
@@ -62,22 +61,17 @@ export default defineEventHandler(async (event) => {
     </div>
   `;
 
-  try {
-    const { data: _data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev', // ✅ geverifieerd bij Resend
-      to: ['Little Steps Care | Josje Hage - Owner LSC <contact@littlestepscare.nl>'], // ✅ geverifieerd bij Resend
-      subject: 'Nieuwe inzending contactformulier 🎉',
-      html: emailHtml,
-    });
+  const { data, error } = await resend.emails.send({
+    from: 'Little Steps Care <contact@littlestepscare.nl>',
+    to: ['little.steps.care4you@gmail.com'],
+    subject: 'Nieuwe inzending contactformulier 🎉',
+    html: emailHtml,
+  });
 
-    if (error) {
-      console.error(error);
-      return { success: false, error };
-    }
-
-    return { success: true };
-  } catch (e) {
-    console.error(e);
-    return { success: false, error: e };
+  if (error) {
+    console.error('Fout bij verzenden van e-mail:', error);
+    return { success: false, error };
   }
+
+  return { success: true, data };
 });
