@@ -64,8 +64,8 @@ export default defineEventHandler(async (event) => {
 
   try {
     const { data: _data, error } = await resend.emails.send({
-      from: 'contact@jouwdomein.nl', // ✅ geverifieerd bij Resend
-      to: ['jijzelf@domein.nl'],     // 📨 jouw e-mailadres
+      from: 'josjehage@gmail.com', // ✅ geverifieerd bij Resend
+      to: ['littlestepscare4you@gmail.com'],     // 📨 jouw e-mailadres
       subject: 'Nieuwe inzending contactformulier 🎉',
       html: emailHtml,
     });
