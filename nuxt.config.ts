@@ -47,6 +47,7 @@ export default defineNuxtConfig({
     githubClientId: process.env.GITHUB_CLIENT_ID,
     githubClientSecret: process.env.GITHUB_CLIENT_SECRET,
     githubRedirectUri: process.env.GITHUB_REDIRECT_URI,
+    resendApiKey: process.env.RESEND_API_KEY,
   },
   experimental: {
     writeEarlyHints: true,
