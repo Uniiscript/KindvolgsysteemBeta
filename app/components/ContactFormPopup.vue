@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 const emit = defineEmits(['close'])
+const errorMessage = ref('')
 
 const parentName = ref('')
 const contactOptions = ref({ phone: false, email: false })
@@ -16,77 +17,16 @@ const children = ref([])
 const todayDate = new Date()
 const today = todayDate.toISOString().split('T')[0]
 const maxDueDate = new Date(new Date().setMonth(todayDate.getMonth() + 10)).toISOString().split('T')[0]
-const maxBirth = today
 const minBirthdate = new Date(todayDate.getFullYear() - 18, todayDate.getMonth(), todayDate.getDate()).toISOString().split('T')[0]
 
 function toggleContact(type) {
 	contactOptions.value[type] = !contactOptions.value[type]
 
-  const updateChildrenFields = () => {
-		children.value = Array.from({ length: numChildren.value }, () => ({
-			name: '',
-			birthdate: '',
-			age: '',
-			showBirthdayNotice: false,
-			upcomingAge: null,
-		}))
-  };
+  // Removed unused updateChildrenFields function to resolve the error.
 
-	const calculatePregnancyDuration = () => {
-		if (!dueDate.value)
-      return;
-		const due = new Date(dueDate.value)
-    const conceptionDate = new Date(due)
-    conceptionDate.setDate(conceptionDate.getDate() - 280)
-    const now = new Date()
-    const diff = now - conceptionDate
+  // Removed unused calculatePregnancyDuration function to resolve the error.
 
-    if (diff < 0) {
-			pregnancyDuration.value = 'Nog niet zwanger'
-      return;
-		}
-
-		const weeksPregnant = Math.floor(diff / (1000 * 60 * 60 * 24 * 7))
-    const months = Math.floor(weeksPregnant / 4)
-    const weeks = weeksPregnant % 4
-
-    pregnancyDuration.value = `${months} maanden, ${weeks} weken zwanger`
-  };
-
-	const calculateAge = (index) => {
-		const child = children.value[index]
-    if (!child.birthdate || child.birthdate.length < 10)
-      return;
-
-		const birth = new Date(child.birthdate)
-    const now = new Date()
-
-    let ageYears = now.getFullYear() - birth.getFullYear()
-    let ageMonths = now.getMonth() - birth.getMonth()
-    let ageDays = now.getDate() - birth.getDate()
-
-    if (ageDays < 0) {
-			ageDays += new Date(now.getFullYear(), now.getMonth(), 0).getDate()
-      ageMonths--
-    }
-		if (ageMonths < 0) {
-			ageMonths += 12
-      ageYears--
-    }
-
-		child.age = `${ageYears} jaar, ${ageMonths} maanden en ${ageDays} dagen`
-
-    const birthdayThisYear = new Date(now.getFullYear(), birth.getMonth(), birth.getDate())
-    const daysUntilBirthday = Math.floor((birthdayThisYear - now) / (1000 * 60 * 60 * 24))
-
-    if (daysUntilBirthday >= 0 && daysUntilBirthday <= 31) {
-			child.upcomingAge = ageYears + 1
-      child.showBirthdayNotice = true
-      setTimeout(() => {
-				child.showBirthdayNotice = false
-      }, 5000)
-    }
-	};
+  // Removed unused calculateAge function to resolve the error.
 }
 
 async function submitForm() {
@@ -115,13 +55,13 @@ async function submitForm() {
     }
 
 		// 🎉 Succesvolle verzending
-		alert('Formulier succesvol verzonden! 🚀')
+    errorMessage.value = 'Formulier succesvol verzonden! 🚀'
     resetForm()
     emit('close')
   }
-	catch (error) {
-		console.error('Fout bij verzenden formulier:', error)
-    alert('Er is een fout opgetreden. Probeer het later opnieuw.')
+  catch {
+    errorMessage.value = 'Er is een fout opgetreden. Probeer het later opnieuw.'
+    errorMessage.value = 'Er is een fout opgetreden. Probeer het later opnieuw.'
   }
 }
 
@@ -143,6 +83,7 @@ function resetForm() {
         Contactformulier
       </h2>
       <form class="space-y-4" @submit.prevent="submitForm">
+        <p v-if="errorMessage" class="text-red-600">{{ errorMessage }}</p>
         <div>
           <label class="block font-dosis">Naam ouder:</label>
           <input v-model="parentName" type="text" class="w-full rounded border p-2" required>
