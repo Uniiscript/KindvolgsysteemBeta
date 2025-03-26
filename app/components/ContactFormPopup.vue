@@ -20,53 +20,119 @@ const maxDueDate = new Date(new Date().setMonth(todayDate.getMonth() + 10)).toIS
 const minBirthdate = new Date(todayDate.getFullYear() - 18, todayDate.getMonth(), todayDate.getDate()).toISOString().split('T')[0]
 
 function toggleContact(type) {
-	contactOptions.value[type] = !contactOptions.value[type]
+  contactOptions.value[type] = !contactOptions.value[type]
+}
 
-  // Removed unused updateChildrenFields function to resolve the error.
+function updateChildrenFields() {
+  children.value = Array.from({ length: numChildren.value }, () => ({
+    name: '',
+    birthdate: '',
+    age: '',
+    showBirthdayNotice: false,
+    upcomingAge: null,
+    birthdayCountdown: 0,
+  }))
+}
 
-  // Removed unused calculatePregnancyDuration function to resolve the error.
+function calculatePregnancyDuration() {
+  if (!dueDate.value)
+		return
 
-  // Removed unused calculateAge function to resolve the error.
+  const due = new Date(dueDate.value)
+  const conceptionDate = new Date(due)
+  conceptionDate.setDate(conceptionDate.getDate() - 280)
+  const now = new Date()
+  const diff = now - conceptionDate
+
+  if (diff < 0) {
+    pregnancyDuration.value = 'Nog niet zwanger'
+    return
+  }
+
+  const weeksPregnant = Math.floor(diff / (1000 * 60 * 60 * 24 * 7))
+  const months = Math.floor(weeksPregnant / 4)
+  const weeks = weeksPregnant % 4
+
+  pregnancyDuration.value = `${months} maanden, ${weeks} weken zwanger`
+}
+
+function calculateAge(index) {
+  const child = children.value[index]
+  if (!child.birthdate || child.birthdate.length < 10)
+		return
+
+  const birth = new Date(child.birthdate)
+  const now = new Date()
+
+  let ageYears = now.getFullYear() - birth.getFullYear()
+  let ageMonths = now.getMonth() - birth.getMonth()
+  let ageDays = now.getDate() - birth.getDate()
+
+  if (ageDays < 0) {
+    ageDays += new Date(now.getFullYear(), now.getMonth(), 0).getDate()
+    ageMonths--
+  }
+  if (ageMonths < 0) {
+    ageMonths += 12
+    ageYears--
+  }
+
+  child.age = `${ageYears} jaar, ${ageMonths} maanden en ${ageDays} dagen`
+
+  const nextBirthday = new Date(now.getFullYear(), birth.getMonth(), birth.getDate())
+  if (nextBirthday < now) {
+    nextBirthday.setFullYear(now.getFullYear() + 1)
+  }
+
+  const daysUntilBirthday = Math.floor((nextBirthday - now) / (1000 * 60 * 60 * 24))
+
+  if (daysUntilBirthday >= 0 && daysUntilBirthday <= 31) {
+    child.upcomingAge = ageYears + 1
+    child.birthdayCountdown = daysUntilBirthday
+    child.showBirthdayNotice = true
+
+    setTimeout(() => {
+      child.showBirthdayNotice = false
+    }, 8000)
+  }
 }
 
 async function submitForm() {
-	const formData = {
-		parentName: parentName.value,
-		contactOptions: contactOptions.value,
-		phone: phone.value,
-		email: email.value,
-		numChildren: numChildren.value,
-		expecting: expecting.value,
-		dueDate: dueDate.value,
-		children: children.value,
-	};
+  const formData = {
+    parentName: parentName.value,
+    contactOptions: contactOptions.value,
+    phone: phone.value,
+    email: email.value,
+    numChildren: numChildren.value,
+    expecting: expecting.value,
+    dueDate: dueDate.value,
+    children: children.value,
+  }
 
-	try {
-		const res = await fetch('/api/contactform/send', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(formData),
-		})
+  try {
+    const res = await fetch('/api/contactform/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    })
 
     const result = await res.json()
 
     if (!res.ok || !result.success) {
-			throw new Error(result.error || 'Onbekende fout')
+      throw new Error(result.error || 'Onbekende fout')
     }
 
-		// 🎉 Succesvolle verzending
     errorMessage.value = 'Formulier succesvol verzonden! 🚀'
     resetForm()
     emit('close')
   }
-  catch {
-    errorMessage.value = 'Er is een fout opgetreden. Probeer het later opnieuw.'
+	catch {
     errorMessage.value = 'Er is een fout opgetreden. Probeer het later opnieuw.'
   }
 }
 
 function resetForm() {
-	parentName.value = ''
+  parentName.value = ''
   phone.value = ''
   email.value = ''
   numChildren.value = 0
@@ -83,7 +149,9 @@ function resetForm() {
         Contactformulier
       </h2>
       <form class="space-y-4" @submit.prevent="submitForm">
-        <p v-if="errorMessage" class="text-red-600">{{ errorMessage }}</p>
+        <p v-if="errorMessage" class="text-red-600">
+          {{ errorMessage }}
+        </p>
         <div>
           <label class="block font-dosis">Naam ouder:</label>
           <input v-model="parentName" type="text" class="w-full rounded border p-2" required>
@@ -160,7 +228,8 @@ function resetForm() {
               v-if="child.showBirthdayNotice"
               class="absolute inset-x-0 top-0 animate-bounce rounded-t-lg bg-yellow-200 py-2 text-center text-yellow-900 shadow"
             >
-              🎉 Wat leuk! {{ child.name || 'Je kind' }} wordt bijna {{ child.upcomingAge }} jaar!
+              🎉 Wat leuk! {{ child.name || 'Je kind' }} is bijna jarig over
+              {{ child.birthdayCountdown }} dagen, alvast gefeliciteerd en wie weet tot snel!
             </div>
           </transition>
         </div>
