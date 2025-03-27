@@ -124,11 +124,11 @@ async function submitForm() {
 
 		resetForm()
 		emit('close')
-		// OF gebruik een toast of een aparte melding buiten het formulier
+    // OF gebruik een toast of een aparte melding buiten het formulier
+  } catch (err) {
+    console.error('Fout bij verzenden:', err)
+    errorMessage.value = `Fout: ${err.message || 'Probeer het later opnieuw.'}`
   }
-  catch {
-		errorMessage.value = 'Er is een fout opgetreden. Probeer het later opnieuw.'
-	}
 }
 
 function resetForm() {
