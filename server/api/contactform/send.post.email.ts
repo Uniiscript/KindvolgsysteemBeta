@@ -1,23 +1,27 @@
-import { Resend } from 'resend';
+import { Resend } from 'resend'
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
-  const config = useRuntimeConfig();
-  const resend = new Resend(config.RESEND_API_KEY);
+  if (event.method !== 'POST') {
+    return sendError(event, createError({ statusCode: 405, statusMessage: 'Method Not Allowed' }))
+	}
 
-  interface Child {
-    name: string;
-    birthdate: string;
-    age: string;
+  const body = await readBody(event)
+	const config = useRuntimeConfig()
+	const resend = new Resend(config.RESEND_API_KEY)
+
+	interface Child {
+    name: string
+    birthdate: string
+    age: string
   }
 
   const contact = Object.keys(body.contactOptions || {})
-    .filter((k) => body.contactOptions[k])
-    .join(', ');
+    .filter(k => body.contactOptions[k])
+    .join(', ')
 
-  const children = (body.children as Child[]) || [];
+	const children = (body.children as Child[]) || []
 
-  const childrenHtml = children
+	const childrenHtml = children
     .map(
       (child, i) => `
         <li style="margin-bottom: 10px;">
@@ -26,11 +30,11 @@ export default defineEventHandler(async (event) => {
           Geboortedatum: ${child.birthdate}<br/>
           Leeftijd: ${child.age}
         </li>
-      `
-    )
-    .join('');
+      `,
+		)
+    .join('')
 
-  const emailHtml = `
+	const emailHtml = `
     <div style="font-family: sans-serif; color: #333; max-width: 600px;">
       <h2 style="color: #8e44ad;">🎉 Nieuwe contactformulier-inzending</h2>
 
@@ -66,12 +70,12 @@ export default defineEventHandler(async (event) => {
     to: ['little.steps.care4you@gmail.com'],
     subject: 'Nieuwe inzending contactformulier 🎉',
     html: emailHtml,
-  });
+  })
 
-  if (error) {
-    console.error('Fout bij verzenden van e-mail:', error);
-    return { success: false, error };
-  }
+	if (error) {
+    console.error('Fout bij verzenden van e-mail:', error)
+		return { success: false, error }
+	}
 
-  return { success: true, data };
-});
+  return { success: true, data }
+})
