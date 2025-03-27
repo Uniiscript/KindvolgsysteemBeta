@@ -72,10 +72,13 @@ export default defineEventHandler(async (event) => {
     html: emailHtml,
   })
 
-	if (error) {
+  if (error) {
     console.error('Fout bij verzenden van e-mail:', error)
-		return { success: false, error }
-	}
+    return {
+      success: false,
+      error: error.message || 'Onbekende fout in e-mailverzending',
+		}
+  }
 
   return { success: true, data }
 })
