@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const menuOpen = ref(false)
+const portaalOpen = ref(false) // Voeg deze variabele toe voor de dropdown
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -46,6 +47,30 @@ function scrollToTop() {
                 <strong>Ons Team</strong>
               </NuxtLink>
             </li>
+
+            <!-- Portaal Button met dropdown -->
+            <li class="relative">
+              <button
+                class="font-zen_loop transition hover:text-[#C8A2C8]"
+                @click="portaalOpen = !portaalOpen"
+              >
+                <strong>Portaal</strong>
+              </button>
+
+              <!-- Dropdown Menu voor Inloggen -->
+              <ul v-if="portaalOpen" class="absolute right-0 mt-2 w-48 transition-all">
+                <li>
+                  <NuxtLink to="/medewerkersportaal/inloggenpreview" class="block rounded-xl px-4 py-2 text-sm font-dosis bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] text-gray-500 transition-colors hover:bg-gray-200">
+                    Medewerkerportaal
+                  </NuxtLink>
+                </li>
+                <li>
+                  <NuxtLink to="/ouderportaal/inloggenpreview" class="block rounded-xl px-4 py-2 text-sm font-dosis bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] text-gray-500 transition-colors hover:bg-gray-200">
+                    Ouderportaal
+                  </NuxtLink>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
 
@@ -79,6 +104,27 @@ function scrollToTop() {
             <NuxtLink to="/ons-team" class="block transition hover:text-[#C8A2C8]" @click="menuOpen = false">
               Ons Team
             </NuxtLink>
+          </li>
+          <!-- Mobile Portaal Dropdown -->
+          <li>
+            <button
+              class="block w-full px-4 py-2 text-left text-gray-500 hover:bg-gray-200"
+              @click="portaalOpen = !portaalOpen"
+            >
+              Portaal
+            </button>
+            <ul v-if="portaalOpen" class="ml-4 space-y-2">
+              <li>
+                <NuxtLink to="/medewerkersportaal/inloggenpreview" class="block px-4 py-2 text-gray-500 hover:bg-gray-200" @click="menuOpen = false">
+                  Inloggen Medewerkerportaal
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/ouderportaal/inloggenpreview" class="block px-4 py-2 text-gray-500 hover:bg-gray-200" @click="menuOpen = false">
+                  Inloggen Ouderportaal
+                </NuxtLink>
+              </li>
+            </ul>
           </li>
         </ul>
 

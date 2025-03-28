@@ -25,19 +25,19 @@
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition">
           <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">✨ Basis Pakket</h3>
           <p class="text-gray-600 font-dosis mt-2">Voor ouders die eenmalig advies willen.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
             <li>✔️ 1x intakegesprek (45 min)</li>
             <li>✔️ Adviesplan op maat</li>
             <li>✔️ E-mail support (1 week)</li>
           </ul>
-          <p class="text-lg font-dosis text-gray-800 mt-4">€99,-</p>
+          <p class="text-lg font-dosis text-gray-800 mt-4">€75,-</p>
         </div>
 
         <!-- Premium Pakket -->
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition">
           <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">🌙 Premium Pakket</h3>
           <p class="text-gray-600 font-dosis mt-2">Begeleiding met opvolging en ondersteuning.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
             <li>✔️ 1x intakegesprek (60 min)</li>
             <li>✔️ Persoonlijk slaapplan</li>
             <li>✔️ WhatsApp support (2 weken)</li>
@@ -50,43 +50,44 @@
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition">
           <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">🌟 Deluxe Pakket</h3>
           <p class="text-gray-600 font-dosis mt-2">Persoonlijke begeleiding voor intensieve hulp.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
             <li>✔️ 1x intakegesprek (90 min)</li>
             <li>✔️ Persoonlijk slaapplan</li>
             <li>✔️ Dagelijks WhatsApp support (4 weken)</li>
             <li>✔️ 2x opvolggesprek (45 min)</li>
-            <li>✔️ Extra tips & 1x Live begeleiding</li>
+            <li>✔️ Extra tips & begeleiding</li>
             <li>✔️ Observatie & feedback tijdens slaaproutine</li>
           </ul>
           <p class="text-lg font-dosis text-gray-800 mt-4">€249,-</p>
         </div>
 
-        <!-- Deluxe Pakket -->
+        <!-- Nieuw: Zelfstandig Slapen Pakket (Baby) -->
         <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition lg:col-span-3">
-          <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">🌟✨ VIP Deluxe Pakket</h3>
-          <p class="text-gray-600 font-dosis mt-2">Live observatie en begeleiding tijdens de slaaproutine.</p>
-          <ul class="mt-4 text-gray-700 font-dosis space-y-2 flex flex-col min-h-60">
-            <li>✔️ 1x uitgebreide intake (90 min)</li>
-            <li>✔️ Persoonlijk slaapplan</li>
-            <li>✔️ <strong>Meekijken, observeren & feedback</strong> tijdens slaaproutine</li>
-            <li>✔️ 2x Live begeleiding</li>
-            <li>✔️ Dagelijks WhatsApp support (6 weken)</li>
-            <li>✔️ 3x opvolggesprek (45 min)</li>
-            <li>✔️ <strong>Aanpassingsplan</strong> op basis van observaties en begeleiding</li>
+          <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">👶 Zelfstandig Slapen Pakket (Baby)</h3>
+          <p class="text-gray-600 font-dosis mt-2">Leer je baby vanaf 2,5 maand zelfstandig slapen.</p>
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
+            <li>✔️ 1x intakegesprek (60 min)</li>
+            <li>✔️ Stapsgewijs plan om te slapen zonder armpositie/kinderwagen</li>
+            <li>✔️ WhatsApp support (3 weken)</li>
+            <li>✔️ 2x opvolggesprek (30 min)</li>
+            <li>✔️ Inclusief consult over kinderopvang en slaaproutines</li>
           </ul>
-          <p class="text-lg font-dosis text-gray-800 mt-4">€349,-</p>
+          <p class="text-lg font-dosis text-gray-800 mt-4">€299,-</p>
+        </div>
+
+        <!-- Nieuw: Overgang naar Kinderopvang Pakket -->
+        <div class="bg-white shadow-md rounded-2xl p-6 border border-gray-300 hover:border-purple-400 hover:bg-purple-50 transition lg:col-span-3">
+          <h3 class="text-lg md:text-xl font-zen_loop text-gray-700">🏫 Overgang naar Kinderopvang Pakket</h3>
+          <p class="text-gray-600 font-dosis mt-2">Voor ouders die hulp willen bij de overstap naar de kinderopvang.</p>
+          <ul class="mt-4 text-gray-700 font-dosis space-y-2">
+            <li>✔️ 1x intakegesprek (45 min)</li>
+            <li>✔️ <strong>Brochure met alle tips & tricks</strong> over kinderopvang</li>
+            <li>✔️ WhatsApp begeleiding vanaf de eerste opvangdag (4 weken)</li>
+            <li>✔️ Advies over <strong>eten, slapen en zelfstandig spelen</strong></li>
+          </ul>
+          <p class="text-lg font-dosis text-gray-800 mt-4">€199,-</p>
         </div>
       </div>
-    </section>
-
-    <!-- Extra Diensten -->
-    <section class="w-full max-w-3xl bg-white shadow-md rounded-2xl p-6 mt-6 border border-gray-300">
-      <h2 class="text-xl md:text-2xl font-zen_loop text-gray-800 text-center">Extra's</h2>
-      <ul class="mt-4 text-gray-700 font-dosis space-y-2 text-center flex flex-col min-h-60">
-        <li>🍼 <strong>Los opvolggesprek (30 min):</strong> €39,-</li>
-        <li>📞 <strong>Extra week WhatsApp support:</strong> €29,-</li>
-        <li>💤 <strong>Avondbegeleiding bij bedtijd (2 uur):</strong> €99,-</li>
-      </ul>
     </section>
 
     <!-- Call to Action -->
