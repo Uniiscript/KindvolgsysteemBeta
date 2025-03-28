@@ -54,7 +54,7 @@
         ></textarea>
         <button
           @click="saveJournalEntry"
-          class="mt-4 px-4 py-2 bg-[#C8A2C8] text-white font-dosis font-zen_loop rounded-lg shadow-md hover:bg-[#A983A2] transition"
+          class="mt-4 px-4 py-2 bg-[#C8A2C8] text-white font-dosis rounded-lg shadow-md hover:bg-[#A983A2] transition"
         >
           Opslaan
         </button>

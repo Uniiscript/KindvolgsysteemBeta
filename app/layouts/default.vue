@@ -3,7 +3,7 @@ const menuOpen = ref(false)
 const portaalOpen = ref(false) // Voeg deze variabele toe voor de dropdown
 
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+	window.scrollTo({ top: 0, behavior: 'smooth' })
 };
 </script>
 
@@ -26,52 +26,60 @@ function scrollToTop() {
 
         <!-- Navigatiebalk (Desktop) -->
         <nav class="hidden lg:flex">
-          <ul class="flex font-dosis text-base text-gray-500 md:space-x-10 md:text-xl lg:space-x-16 lg:text-2xl">
-            <li>
-              <NuxtLink to="/" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                <strong>Home</strong>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/onze-visie" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                <strong>Onze visie</strong>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/pakketten" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                <strong>Pakketten</strong>
-              </NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/ons-team" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                <strong>Ons Team</strong>
-              </NuxtLink>
-            </li>
+<ul class="flex font-dosis text-base text-gray-500 md:space-x-10 md:text-xl lg:space-x-16 lg:text-2xl">
+  <li>
+    <NuxtLink to="/" class="font-zen_loop transition hover:text-[#C8A2C8]">
+      <strong>Home</strong>
+    </NuxtLink>
+  </li>
+  <li>
+    <NuxtLink to="/onze-visie" class="font-zen_loop transition hover:text-[#C8A2C8]">
+      <strong>Onze visie</strong>
+    </NuxtLink>
+  </li>
+  <li>
+    <NuxtLink to="/pakketten" class="font-zen_loop transition hover:text-[#C8A2C8]">
+      <strong>Pakketten</strong>
+    </NuxtLink>
+  </li>
+  <li>
+    <NuxtLink to="/ons-team" class="font-zen_loop transition hover:text-[#C8A2C8]">
+      <strong>Ons Team</strong>
+    </NuxtLink>
+  </li>
 
-            <!-- Portaal Button met dropdown -->
-            <li class="relative">
-              <button
-                class="font-zen_loop transition hover:text-[#C8A2C8]"
-                @click="portaalOpen = !portaalOpen"
-              >
-                <strong>Portaal</strong>
-              </button>
+  <!-- Portaal Button met dropdown -->
+  <li class="relative">
+    <button
+      class="font-zen_loop transition hover:text-[#C8A2C8]"
+      @click="portaalOpen = !portaalOpen"
+    >
+      <strong>Portaal</strong>
+    </button>
+    <!-- Dropdown Menu voor Inloggen -->
+    <ul v-if="portaalOpen" class="absolute right-0 mt-2 w-48 transition-all">
+      <li>
+        <NuxtLink
+          to="/medewerkersportaal/inloggenpreview"
+          class="block rounded-xl bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] px-4 py-2 font-dosis text-sm text-gray-500 transition hover:bg-[#C8A2C8] hover:text-[#C8A2C8]"
+          @click="portaalOpen = false"
+        >
+          Medewerkerportaal
+        </NuxtLink>
+      </li>
+      <li>
+        <NuxtLink
+          to="/ouderportaal/inloggenpreview"
+          class="block rounded-xl bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] px-4 py-2 font-dosis text-sm text-gray-500 transition hover:bg-[#C8A2C8] hover:text-[#C8A2C8]"
+          @click="portaalOpen = false"
+        >
+          Ouderportaal
+        </NuxtLink>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-              <!-- Dropdown Menu voor Inloggen -->
-              <ul v-if="portaalOpen" class="absolute right-0 mt-2 w-48 transition-all">
-                <li>
-                  <NuxtLink to="/medewerkersportaal/inloggenpreview" class="block rounded-xl px-4 py-2 text-sm font-dosis bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] text-gray-500 transition-colors hover:bg-gray-200">
-                    Medewerkerportaal
-                  </NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="/ouderportaal/inloggenpreview" class="block rounded-xl px-4 py-2 text-sm font-dosis bg-gradient-to-b from-[rgb(214,201,174)] to-[#A8E6CF] text-gray-500 transition-colors hover:bg-gray-200">
-                    Ouderportaal
-                  </NuxtLink>
-                </li>
-              </ul>
-            </li>
-          </ul>
         </nav>
 
         <!-- Hamburger Menu (Mobile) -->
