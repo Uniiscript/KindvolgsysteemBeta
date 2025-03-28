@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 const services = [
   { title: 'Gezinsondersteuning', description: 'Individueel afgestemde begeleiding voor gezinnen en ouders.', link: '/gezinsondersteuning' },
   { title: 'Oppasservice', description: 'Betrouwbare en deskundige oppassers met extra begeleiding voor je kind.', link: '/oppasservice' },
   { title: 'Consultancy & Coaching', description: 'Professioneel advies en ondersteuning voor opvoeding en gezinsbalans.', link: '/consultingencoaching' },
-];
+]
 
 // Reviews
 const reviews = ref([
-  { name: "Sanne & Mark", text: "Onze oppas van Little Steps Care was geweldig! Ze dacht echt mee met onze opvoeding en de kinderen vonden haar fantastisch!" },
-  { name: "Eva", text: "Dankzij de coaching van LSC hebben we veel meer rust in huis. Hun persoonlijke aanpak is echt uniek!" },
-  { name: "Lisa & Tom", text: "Onze nanny voelde meteen als familie. We kunnen ons geen betere hulp wensen!" },
-]);
+  { name: 'Sanne & Mark', text: 'Onze oppas van Little Steps Care was geweldig! Ze dacht echt mee met onze opvoeding en de kinderen vonden haar fantastisch!' },
+  { name: 'Eva', text: 'Dankzij de coaching van LSC hebben we veel meer rust in huis. Hun persoonlijke aanpak is echt uniek!' },
+  { name: 'Lisa & Tom', text: 'Onze nanny voelde meteen als familie. We kunnen ons geen betere hulp wensen!' },
+])
 
-const currentReviewIndex = ref(0);
+const currentReviewIndex = ref(0)
 
 // Automatische carousel
 onNuxtReady(() => {
   setInterval(() => {
-    currentReviewIndex.value = (currentReviewIndex.value + 1) % reviews.value.length;
-  }, 5000);
-});
+    currentReviewIndex.value = (currentReviewIndex.value + 1) % reviews.value.length
+	}, 5000)
+})
 
-const showContactForm = ref(false);
+const showContactForm = ref(false)
 </script>
 
 <template>
@@ -37,7 +37,7 @@ const showContactForm = ref(false);
 
     <!-- Over Ons -->
     <section class="mt-12 max-w-3xl text-center">
-      <div class="rounded-2xl border border-purple-300 bg-white p-6 shadow-xl transition hover:shadow-2xl">
+      <div class="rounded-2xl border border-gray-300 bg-gradient-to-br from-[#fef6e4] to-[#d8f3dc] p-6 shadow-xl">
         <h2 class="mb-3 font-zen_loop text-2xl text-gray-800">
           Onze Missie
         </h2>
@@ -60,14 +60,14 @@ const showContactForm = ref(false);
       </h2>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         <NuxtLink v-for="(service, index) in services" :key="index" :to="service.link" class="block" aria-label="Meer over {{ service.title }}">
-          <article class="rounded-2xl border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:border-purple-400 hover:bg-purple-50">
+          <article class="rounded-2xl border border-gray-300 bg-white p-6 shadow-lg transition-transform hover:scale-105 hover:border-[#C8A2C8] hover:bg-purple-50">
             <h3 class="mb-2 font-zen_loop text-2xl text-gray-800">
               {{ service.title }}
             </h3>
             <p class="font-dosis text-gray-600">
               {{ service.description }}
             </p>
-            <button class="mt-4 rounded-lg bg-[#C8A2C8] px-4 py-2 font-semibold text-white transition hover:bg-[#A983A2]">
+            <button class="mt-4 rounded-lg bg-[#C8A2C8] px-4 py-2 font-dosis text-white transition hover:bg-[#C8A2C8]">
               Lees meer
             </button>
           </article>
@@ -80,17 +80,28 @@ const showContactForm = ref(false);
       <h2 class="mb-8 text-center font-zen_loop text-3xl text-gray-900">
         Wat maakt onze Nannies en Consultants uniek?
       </h2>
-      <div class="flex flex-col items-center rounded-2xl border border-gray-300 bg-white p-6 shadow-lg md:flex-row md:items-start">
+      <div class="flex flex-col items-center rounded-2xl border border-gray-300 bg-gradient-to-br from-[#fef6e4] to-[#d8f3dc] p-6 shadow-lg md:flex-row md:items-start">
         <img src="/Nanny.jpeg" alt="Nanny met kind" class="w-full rounded-lg shadow-md md:w-1/2">
         <div class="mt-6 text-center md:ml-6 md:mt-0 md:text-left">
+          <p class="mt-4 font-dosis text-gray-700">
+            Wij kijken niet alleen naar beschikbaarheid, maar naar de perfecte match tussen gezin en Nanny of Consultant. Onze aanpak is persoonlijk en praktisch:
+          </p>
+          <p class="mt-4 font-dosis text-gray-700">
+            ✔️ We sluiten aan bij jullie opvoedstijl en ondersteunen waar nodig.
+          </p>
+          <p class="mt-4 font-dosis text-gray-700">
+            ✔️ We bieden begeleiding op maat – van vaste routines tot nieuwe inzichten.
+          </p>
+          <p class="mt-4 font-dosis text-gray-700">
+            ✔️ We denken mee, kijken mee én doen mee in de praktijk, en helpen bij dagelijkse opvoedsituaties.
+          </p>
+          <p class="mt-4 font-dosis text-gray-700">
+            ✔️ We zorgen voor continuïteit en een veilige, vertrouwde omgeving voor je kind.
+          </p>
 
-<p class="mt-4 font-dosis text-gray-700">Wij kijken niet alleen naar beschikbaarheid, maar naar de perfecte match tussen gezin en Nanny of Consultant. Onze aanpak is persoonlijk en praktisch:</p>
-<p class="mt-4 font-dosis text-gray-700">✔️ We sluiten aan bij jullie opvoedstijl en ondersteunen waar nodig.</p>
-<p class="mt-4 font-dosis text-gray-700">✔️ We bieden begeleiding op maat – van vaste routines tot nieuwe inzichten.</p>
-<p class="mt-4 font-dosis text-gray-700">✔️ We denken mee, kijken mee én doen mee in de praktijk, en helpen bij dagelijkse opvoedsituaties.</p>
-<p class="mt-4 font-dosis text-gray-700">✔️ We zorgen voor continuïteit en een veilige, vertrouwde omgeving voor je kind.</p>
-
-<p class="mt-4 font-dosis text-gray-700">Of het nu gaat om de eerste stap naar kinderopvang, schoolovergangen, opvoedvragen of de juiste communicatie met je kind, wij zijn er om je te helpen. Met zorg, aandacht en de juiste ondersteuning – stap voor stap. 💜</p>
+          <p class="mt-4 font-dosis text-gray-700">
+            Of het nu gaat om de eerste stap naar kinderopvang, schoolovergangen, opvoedvragen of de juiste communicatie met je kind, wij zijn er om je te helpen. Met zorg, aandacht en de juiste ondersteuning – stap voor stap. 💜
+          </p>
         </div>
       </div>
     </section>
@@ -129,15 +140,15 @@ const showContactForm = ref(false);
     </section>
 
     <div class="flex w-full flex-col items-center py-12">
-    <h2 class="font-zen_loop text-3xl text-gray-900">
-      Wat ouders zeggen over ons ❤️
-    </h2>
+      <h2 class="font-zen_loop text-3xl text-gray-900">
+        Wat ouders zeggen over ons ❤️
+      </h2>
 
-    <!-- Reviews Carousel Component -->
-    <ReviewCarousel />
-  </div>
+      <!-- Reviews Carousel Component -->
+      <ReviewCarousel />
+    </div>
 
-     <!-- Contact CTA -->
+    <!-- Contact CTA -->
     <section class="mt-16 w-full text-center">
       <h2 class="font-zen_loop text-3xl text-gray-900">
         Ben jij enthousiast geworden en benieuwd naar de mogelijkheden?
@@ -146,7 +157,7 @@ const showContactForm = ref(false);
         Neem contact op via onderstaand contactformulier en wij nemen zo spoedig mogelijk contact met je op!
       </p>
       <button
-        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-[#A983A2]"
+        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-dosis text-white shadow-lg transition hover:bg-[#A983A2]"
         @click="showContactForm = true"
       >
         Contactformulier
@@ -155,9 +166,5 @@ const showContactForm = ref(false);
 
     <!-- Contact Form Popup -->
     <ContactFormPopup v-if="showContactForm" @close="showContactForm = false" />
-
-
   </div>
-
-
 </template>

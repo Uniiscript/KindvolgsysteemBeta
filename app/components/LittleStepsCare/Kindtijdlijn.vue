@@ -7,7 +7,7 @@
       </header>
 
       <div class="p-6">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Dagritme Tijdlijn</h2>
+        <h2 class="text-2xl font-dosis text-gray-800 mb-4">Dagritme Tijdlijn</h2>
 
         <!-- Tijdlijn container -->
         <div
@@ -54,7 +54,7 @@
       <!-- Popup voor nieuwe activiteit -->
       <div v-if="popupVisible" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
         <div class="bg-white p-6 rounded-lg w-1/3">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Activiteit Bewerken</h3>
+          <h3 class="text-2xl font-dosis text-gray-800 mb-4">Activiteit Bewerken</h3>
           <div class="mb-4">
             <label class="block text-gray-700">Activiteit</label>
             <select v-model="selectedEvent.type" class="w-full rounded-lg border border-gray-300 p-2">

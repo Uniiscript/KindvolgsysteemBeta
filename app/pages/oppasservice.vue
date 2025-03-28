@@ -90,7 +90,7 @@ const showContactForm = ref(false);
         Plan een kennismaking en ontdek hoe wij jouw gezin kunnen ondersteunen met onze oppasservice.
       </p>
       <button
-        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-purple-500"
+        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-dosis text-white shadow-lg transition hover:bg-purple-500"
         @click="showContactForm = true"
       >
         Contactformulier

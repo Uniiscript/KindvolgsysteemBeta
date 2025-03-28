@@ -30,7 +30,7 @@
             <li>✔️ Adviesplan op maat</li>
             <li>✔️ E-mail support (1 week)</li>
           </ul>
-          <p class="text-lg font-semibold text-gray-800 mt-4">€99,-</p>
+          <p class="text-lg font-dosis text-gray-800 mt-4">€99,-</p>
         </div>
 
         <!-- Premium Pakket -->
@@ -43,7 +43,7 @@
             <li>✔️ WhatsApp support (2 weken)</li>
             <li>✔️ 1x opvolggesprek (30 min)</li>
           </ul>
-          <p class="text-lg font-semibold text-gray-800 mt-4">€149,-</p>
+          <p class="text-lg font-dosis text-gray-800 mt-4">€149,-</p>
         </div>
 
         <!-- VIP Pakket -->
@@ -58,7 +58,7 @@
             <li>✔️ Extra tips & 1x Live begeleiding</li>
             <li>✔️ Observatie & feedback tijdens slaaproutine</li>
           </ul>
-          <p class="text-lg font-semibold text-gray-800 mt-4">€249,-</p>
+          <p class="text-lg font-dosis text-gray-800 mt-4">€249,-</p>
         </div>
 
         <!-- Deluxe Pakket -->
@@ -74,7 +74,7 @@
             <li>✔️ 3x opvolggesprek (45 min)</li>
             <li>✔️ <strong>Aanpassingsplan</strong> op basis van observaties en begeleiding</li>
           </ul>
-          <p class="text-lg font-semibold text-gray-800 mt-4">€349,-</p>
+          <p class="text-lg font-dosis text-gray-800 mt-4">€349,-</p>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@
 
     <!-- Call to Action -->
     <section class="text-center w-full max-w-3xl mt-6">
-      <NuxtLink to="/contact" class="px-6 py-3 bg-[#C8A2C8] text-white font-semibold rounded-lg shadow-md hover:bg-[#A983A2] transition">
+      <NuxtLink to="/contact" class="px-6 py-3 bg-[#C8A2C8] text-white font-dosis rounded-lg shadow-md hover:bg-[#A983A2] transition">
         Kies jouw pakket & start vandaag
       </NuxtLink>
     </section>

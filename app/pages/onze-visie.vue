@@ -136,7 +136,7 @@ const leeftijdsgroepen = ref([
                 <span v-if="typeof deel === 'string'">{{ deel }}</span>
                 <button
                   v-else-if="deel.type === 'blw'"
-                  class="font-semibold text-[#C8A2C8] underline hover:text-[#a47fa9]"
+                  class="font-dosis text-[#C8A2C8] underline hover:text-[#a47fa9]"
                   @click="showBlw = true"
                 >
                   {{ deel.label }}

@@ -1,7 +1,7 @@
 <template>
   <div v-if="show" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
     <div class="bg-white p-6 rounded-lg shadow-xl w-96">
-      <h3 class="text-xl font-semibold text-center mb-4">{{ translations[selectedLanguage].login }}</h3>
+      <h3 class="text-xl font-dosis text-center mb-4">{{ translations[selectedLanguage].login }}</h3>
       <div class="space-y-4">
         <button @click="selectRole('LittleStepsCare')" class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600">
           LittleStepsCare

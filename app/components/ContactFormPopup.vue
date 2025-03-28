@@ -110,7 +110,7 @@ async function submitForm() {
 	}
 
 	try {
-		const res = await fetch('/api/contactform/send', {
+		const res = await fetch('/api/contactform/send.post', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(formData),

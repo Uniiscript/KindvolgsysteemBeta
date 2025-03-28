@@ -80,7 +80,7 @@ const showContactForm = ref(false);
         Wil je ontdekken hoe wij jouw gezin kunnen ondersteunen? Neem contact op en we kijken samen naar de beste aanpak.
       </p>
       <button
-        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-purple-500"
+        class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-dosis text-white shadow-lg transition hover:bg-purple-500"
         @click="showContactForm = true"
       >
         Contactformulier

@@ -9,7 +9,7 @@
     <main class="flex-grow px-8 py-6">
       <!-- Parent Information -->
       <section class="bg-white p-6 rounded-2xl shadow-xl mb-8">
-        <h2 class="text-2xl font-semibold text-teal-800 mb-4">Ouder Informatie</h2>
+        <h2 class="text-2xl font-dosis text-teal-800 mb-4">Ouder Informatie</h2>
         <div class="space-y-4">
           <div class="flex flex-col">
             <label for="firstName" class="text-lg font-medium text-teal-700">Voornaam</label>
@@ -40,7 +40,7 @@
 
       <!-- Family Information -->
       <section class="bg-white p-6 rounded-2xl shadow-xl mb-8">
-        <h2 class="text-2xl font-semibold text-teal-800 mb-4">Familie Informatie</h2>
+        <h2 class="text-2xl font-dosis text-teal-800 mb-4">Familie Informatie</h2>
         <div class="space-y-4">
           <!-- Add Parent Button -->
           <button @click="showPopup('addParent')" class="bg-teal-500 text-white p-3 rounded-lg shadow-md hover:bg-teal-600">Voeg Ouder Toe</button>
@@ -55,7 +55,7 @@
 
       <!-- Family Tree (Stamboom) Summary -->
       <section class="bg-white p-6 rounded-2xl shadow-xl">
-        <h2 class="text-2xl font-semibold text-teal-800 mb-4">Stamboom</h2>
+        <h2 class="text-2xl font-dosis text-teal-800 mb-4">Stamboom</h2>
         <!-- Family Members Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           <div v-for="(member, index) in familyTree" :key="member.id" class="relative flex flex-col items-center bg-teal-50 p-4 rounded-lg shadow-lg">
@@ -64,7 +64,7 @@
               &times;
             </button>
             <img v-if="member.profilePicture" :src="member.profilePicture" alt="Profile Picture" class="w-24 h-24 object-cover rounded-full mb-4" />
-            <h3 class="text-lg font-semibold text-teal-800">{{ member.name }}</h3>
+            <h3 class="text-lg font-dosis text-teal-800">{{ member.name }}</h3>
             <p class="text-sm text-gray-600">{{ member.role }}</p>
             <p class="text-sm text-gray-600">{{ member.phoneNumber ? `Telefoon: ${  member.phoneNumber}` : '' }}</p>
             <p class="text-sm text-gray-600" v-if="member.isExpecting">{{ calculateDueDate(member.dueDate) }}</p>
@@ -81,7 +81,7 @@
     <!-- Popup Modal -->
     <div v-if="isPopupVisible" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div class="bg-white p-8 rounded-2xl shadow-xl w-96">
-        <h3 class="text-xl font-semibold text-teal-800 mb-4">Voeg een {{ popupType }} toe</h3>
+        <h3 class="text-xl font-dosis text-teal-800 mb-4">Voeg een {{ popupType }} toe</h3>
         <form @submit.prevent="submitMemberInfo">
           <div v-if="popupType !== 'addChild'" class="flex flex-col mb-4">
             <label for="name" class="text-lg font-medium text-teal-700">Naam</label>

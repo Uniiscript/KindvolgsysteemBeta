@@ -23,7 +23,7 @@
         <div class="bg-white rounded-lg shadow-lg p-6">
           <h3 class="text-2xl font-bold text-stone-800 mb-4">Case Study: De Ontwikkeling van Sam</h3>
           <p class="text-stone-600 mb-4">Sam begon als verlegen peuter, maar dankzij onze interactieve en zorgzame aanpak is hij nu een zelfverzekerde kleuter. We hebben zijn zelfvertrouwen kunnen opbouwen door hem nieuwe uitdagingen aan te bieden en zijn creativiteit te stimuleren.</p>
-          <a href="#" class="text-stone-800 hover:text-stone-600 font-semibold">Lees meer</a>
+          <a href="#" class="text-stone-800 hover:text-stone-600 font-dosis">Lees meer</a>
         </div>
         <!-- Einde herhaalblok -->
       </div>

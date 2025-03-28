@@ -31,13 +31,13 @@
             <div class="carousel-item w-80 p-6 bg-green-200 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 scroll-snap-start">
               <h3 class="text-2xl font-bold text-stone-800 mb-4">Case Study: De Ontwikkeling van Sam</h3>
               <p class="text-stone-600 mb-4">Sam begon als verlegen peuter, maar dankzij onze interactieve en zorgzame aanpak is hij nu een zelfverzekerde kleuter. We hebben zijn zelfvertrouwen kunnen opbouwen door hem nieuwe uitdagingen aan te bieden en zijn creativiteit te stimuleren.</p>
-              <a href="#" class="text-stone-800 hover:text-stone-600 font-semibold">Lees meer</a>
+              <a href="#" class="text-stone-800 hover:text-stone-600 font-dosis">Lees meer</a>
             </div>
             <!-- Voeg meer items toe voor meer case studies -->
             <div class="carousel-item w-80 p-6 bg-yellow-200 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 scroll-snap-start">
               <h3 class="text-2xl font-bold text-stone-800 mb-4">Case Study: De Ontwikkeling van Laura</h3>
               <p class="text-stone-600 mb-4">Laura was altijd een beetje teruggetrokken, maar met de juiste zorg heeft ze enorme vooruitgang geboekt. Haar vertrouwen groeit dagelijks!</p>
-              <a href="#" class="text-stone-800 hover:text-stone-600 font-semibold">Lees meer</a>
+              <a href="#" class="text-stone-800 hover:text-stone-600 font-dosis">Lees meer</a>
             </div>
           </div>
         </div>

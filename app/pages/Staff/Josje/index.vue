@@ -32,10 +32,10 @@
 
     <!-- Over Josje -->
     <section class="bg-white shadow-lg rounded-2xl p-6 sm:p-10 max-w-4xl mx-auto mb-16">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8 font-zen_loop">Over Josje</h2>
+      <h2 class="text-2xl sm:text-3xl font-dosis text-gray-800 mb-8 font-zen_loop">Over Josje</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
         <div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-4 font-zen_loop">Opleiding & Ervaring</h3>
+          <h3 class="text-lg font-dosis text-gray-800 mb-4 font-zen_loop">Opleiding & Ervaring</h3>
           <ul class="list-disc pl-6 text-base text-gray-700 space-y-3 font-dosis">
             <li>Pedagogisch Medewerker – 10+ jaar ervaring...</li>
             <li>Leidinggevende ervaring in kinderopvangsector.</li>
@@ -46,7 +46,7 @@
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-4 font-zen_loop">Persoonlijke Vaardigheden</h3>
+          <h3 class="text-lg font-dosis text-gray-800 mb-4 font-zen_loop">Persoonlijke Vaardigheden</h3>
           <ul class="list-disc pl-6 text-base text-gray-700 space-y-3 font-dosis">
             <li>Empathisch en zorgzaam.</li>
             <li>Flexibel en oplossingsgericht.</li>
@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <h3 class="text-lg font-semibold text-gray-800 mt-10 mb-3 font-zen_loop">Mijn Missie</h3>
+      <h3 class="text-lg font-dosis text-gray-800 mt-10 mb-3 font-zen_loop">Mijn Missie</h3>
       <p class="text-base text-gray-700 leading-relaxed font-dosis">
         Mijn missie is om ouders de steun en begeleiding te bieden die ze nodig hebben, wil ik het verschil maken in het dagelijks leven van gezinnen. Niet door enkel aanwezig te zijn, maar door écht mee te denken, mee te voelen en te ontzorgen op de momenten dat het er het meest toe doet.
       </p>
@@ -65,7 +65,7 @@
 
     <!-- Reviews Carousel -->
     <section class="bg-white shadow-lg rounded-2xl p-6 sm:p-10 max-w-4xl mx-auto">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-8 text-center font-zen_loop">Wat Ouders Zeggen</h2>
+      <h2 class="text-2xl sm:text-3xl font-dosis text-gray-800 mb-8 text-center font-zen_loop">Wat Ouders Zeggen</h2>
 
       <div class="relative">
         <div class="carousel-wrapper overflow-hidden">
@@ -78,7 +78,7 @@
               :key="index"
               class="review-card bg-gray-100 p-6 rounded-xl shadow-md max-w-xs flex-shrink-0"
             >
-              <div class="text-lg font-semibold-zen_loop text-gray-800 mb-2">{{ review.name }}, Oudergroep</div>
+              <div class="text-lg font-dosis-zen_loop text-gray-800 mb-2">{{ review.name }}, Oudergroep</div>
               <p class="text-gray-700 font-dosis mb-4 text-sm leading-relaxed">{{ review.text }}</p>
               <div class="stars text-yellow-400 text-lg">★★★★★</div>
             </div>

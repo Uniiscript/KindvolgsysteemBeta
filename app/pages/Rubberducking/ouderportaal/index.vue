@@ -6,12 +6,12 @@
         <ul class="space-y-6">
           <!-- Jouw Gegevens Link -->
           <li>
-            <NuxtLink to="/jouw-gegevens" class="text-lg font-semibold hover:text-gray-200">Jouw Gegevens</NuxtLink>
+            <NuxtLink to="/jouw-gegevens" class="text-lg font-dosis hover:text-gray-200">Jouw Gegevens</NuxtLink>
           </li>
 
           <!-- Gezinsgegevens Dropdown -->
           <li>
-            <button class="text-lg font-semibold hover:text-gray-200 w-full text-left">
+            <button class="text-lg font-dosis hover:text-gray-200 w-full text-left">
               Gezinsgegevens
             </button>
             <ul class="pl-4 space-y-4">
@@ -23,7 +23,7 @@
 
           <!-- Bullet Journal Link -->
           <li>
-            <NuxtLink to="/bullet-journal" class="text-lg font-semibold hover:text-gray-200">Bullet Journal</NuxtLink>
+            <NuxtLink to="/bullet-journal" class="text-lg font-dosis hover:text-gray-200">Bullet Journal</NuxtLink>
           </li>
         </ul>
       </nav>
@@ -38,19 +38,19 @@
 
       <!-- Ouderportaal Overzicht -->
       <section class="text-center mb-8">
-        <h2 class="text-3xl font-semibold text-teal-800">Welkom bij jouw Ouderportaal</h2>
+        <h2 class="text-3xl font-dosis text-teal-800">Welkom bij jouw Ouderportaal</h2>
         <p class="text-lg text-gray-700 mt-4">Hier kun je alle gezinsleden zien en beheren, en belangrijke updates ontvangen.</p>
       </section>
 
       <!-- Summary Section -->
       <section class="text-center mb-10">
-        <h3 class="text-2xl font-semibold text-teal-700">Samenvatting van Alle Gegevens</h3>
+        <h3 class="text-2xl font-dosis text-teal-700">Samenvatting van Alle Gegevens</h3>
         <div class="mt-6">
           <p class="text-lg text-gray-700 mb-4">Hier zie je een overzicht van de gegevens die je hebt ingevoerd:</p>
 
           <!-- Summary of Family Data -->
           <div class="bg-white p-6 rounded-2xl shadow-xl mb-4">
-            <h4 class="text-xl font-semibold text-teal-800">Gezinsleden</h4>
+            <h4 class="text-xl font-dosis text-teal-800">Gezinsleden</h4>
             <ul class="mt-4">
               <li v-for="member in familyMembers" :key="member.id" class="text-gray-700">
                 {{ member.name }} - {{ member.relationship }}
@@ -60,13 +60,13 @@
 
           <!-- Bullet Journal Summary -->
           <div class="bg-white p-6 rounded-2xl shadow-xl mb-4">
-            <h4 class="text-xl font-semibold text-teal-800">Bullet Journal</h4>
+            <h4 class="text-xl font-dosis text-teal-800">Bullet Journal</h4>
             <p class="text-gray-700">Hier kun je je notities en belangrijke gebeurtenissen bijhouden.</p>
           </div>
 
           <!-- Jouw Gegevens Summary -->
           <div class="bg-white p-6 rounded-2xl shadow-xl mb-4">
-            <h4 class="text-xl font-semibold text-teal-800">Jouw Gegevens</h4>
+            <h4 class="text-xl font-dosis text-teal-800">Jouw Gegevens</h4>
             <p class="text-gray-700">Hier kunnen ouders hun persoonlijke gegevens en voorkeuren invoeren.</p>
           </div>
         </div>

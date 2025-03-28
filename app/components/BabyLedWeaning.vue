@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-4 font-dosis text-gray-800">
-    <h2 class="text-2xl font-zen_loop text-[#C8A2C8]">
+    <h2 class="font-zen_loop text-2xl text-[#C8A2C8]">
       Wat is Baby-Led Weaning?
     </h2>
 
@@ -15,15 +15,19 @@
       in het eigen tempo van het kind. Het kind bepaalt wat het eet, hoe snel en hoeveel.
     </p>
 
-    <h3 class="font-semibold text-[#8c6d95] mt-4">Wanneer starten met BLW?</h3>
-    <ul class="list-disc list-inside ml-2 space-y-1">
+    <h3 class="mt-4 font-dosis text-[#8c6d95]">
+      Wanneer starten met BLW?
+    </h3>
+    <ul class="ml-2 list-inside list-disc space-y-1">
       <li>Je kind kan goed rechtop zitten (zonder hulp).</li>
       <li>Toont interesse in jouw eten.</li>
       <li>Kan stukjes zelfstandig oppakken en naar de mond brengen.</li>
     </ul>
 
-    <h3 class="font-semibold text-[#8c6d95] mt-4">Wanneer (deels) niet geschikt?</h3>
-    <ul class="list-disc list-inside ml-2 space-y-1">
+    <h3 class="mt-4 font-dosis text-[#8c6d95]">
+      Wanneer (deels) niet geschikt?
+    </h3>
+    <ul class="ml-2 list-inside list-disc space-y-1">
       <li>Bij medische redenen of verhoogd risico op verslikken.</li>
       <li>Als ouders zich onzeker voelen – dan is een combinatie met gepureerd eten ook prima.</li>
     </ul>

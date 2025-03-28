@@ -11,7 +11,7 @@
           <div class="w-80 p-6 bg-purple-200 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
             <h3 class="text-xl font-bold text-center text-purple-900 mb-2">📧 E-mail</h3>
             <p class="text-gray-700 text-center mb-4">Stuur ons een e-mail voor vragen of feedback.</p>
-            <a href="mailto:info@voorbeeld.com" class="block text-center text-purple-800 hover:text-purple-600 font-semibold">
+            <a href="mailto:info@voorbeeld.com" class="block text-center text-purple-800 hover:text-purple-600 font-dosis">
               Klik hier om een e-mail te sturen
             </a>
           </div>
@@ -20,7 +20,7 @@
           <div class="w-80 p-6 bg-blue-200 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
             <h3 class="text-xl font-bold text-center text-blue-900 mb-2">🎟️ Ticket Aanmaken</h3>
             <p class="text-gray-700 text-center mb-4">Maak een ticket aan voor technische ondersteuning of vragen over Onze visie.</p>
-            <a href="#" class="block text-center text-blue-800 hover:text-blue-600 font-semibold">
+            <a href="#" class="block text-center text-blue-800 hover:text-blue-600 font-dosis">
               Klik hier om een ticket aan te maken
             </a>
           </div>
@@ -31,7 +31,7 @@
             <p class="text-gray-700 text-center mb-4">Start een live chat met onze chatbot voor snel antwoord op je vragen.</p>
             <button
               @click="startChat"
-              class="block text-center text-green-800 hover:text-green-600 font-semibold"
+              class="block text-center text-green-800 hover:text-green-600 font-dosis"
             >
               Klik hier om de chatbot te starten
             </button>

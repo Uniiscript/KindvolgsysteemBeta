@@ -1,9 +1,8 @@
 <script setup lang="ts">
 const menuOpen = ref(false)
-const dropdownOpen = ref(false)
 
 function scrollToTop() {
-	window.scrollTo({ top: 0, behavior: 'smooth' })
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 };
 </script>
 
@@ -26,25 +25,25 @@ function scrollToTop() {
 
         <!-- Navigatiebalk (Desktop) -->
         <nav class="hidden lg:flex">
-          <ul class="flex text-base font-semibold text-gray-500 md:space-x-10 md:text-xl lg:space-x-16 lg:text-2xl">
+          <ul class="flex font-dosis text-base text-gray-500 md:space-x-10 md:text-xl lg:space-x-16 lg:text-2xl">
             <li>
               <NuxtLink to="/" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                Home
+                <strong>Home</strong>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/onze-visie" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                Onze visie
+                <strong>Onze visie</strong>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/pakketten" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                Pakketten
+                <strong>Pakketten</strong>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/ons-team" class="font-zen_loop transition hover:text-[#C8A2C8]">
-                Ons team
+                <strong>Ons Team</strong>
               </NuxtLink>
             </li>
           </ul>
@@ -60,37 +59,17 @@ function scrollToTop() {
 
       <!-- Mobiele Navigatie -->
       <nav v-if="menuOpen" class="fixed right-4 top-16 w-64 max-w-xs scale-95 rounded-lg border border-gray-300 bg-[#fdf6f9] shadow-xl transition-all duration-300">
-        <ul class="flex flex-col space-y-4 p-4 text-lg font-semibold text-gray-500">
+        <ul class="flex flex-col space-y-4 p-4 font-dosis text-lg text-gray-500">
           <li>
             <NuxtLink to="/" class="block transition hover:text-[#C8A2C8]" @click="menuOpen = false">
               Home
             </NuxtLink>
           </li>
-
-          <!-- Dropdown menu voor mobiel -->
-          <li class="relative">
-            <button class="block w-full text-left transition hover:text-[#C8A2C8]" @click="dropdownOpen = !dropdownOpen">
-              Onze visie
-            </button>
-            <ul v-if="dropdownOpen" class="ml-4 mt-2 space-y-2 border-l border-gray-300 pl-3 text-sm">
-              <li>
-                <NuxtLink to="/gezinsondersteuning" class="block hover:text-[#C8A2C8]" @click="menuOpen = false">
-                  Gezinsondersteuning
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/oppasservice" class="block hover:text-[#C8A2C8]" @click="menuOpen = false">
-                  Oppasservice
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/consultingencoaching" class="block hover:text-[#C8A2C8]" @click="menuOpen = false">
-                  Consulting & Coaching
-                </NuxtLink>
-              </li>
-            </ul>
+          <li>
+            <NuxtLink to="/onze-visie" class="block transition hover:text-[#C8A2C8]" @click="menuOpen = false">
+              Onze Visie
+            </NuxtLink>
           </li>
-
           <li>
             <NuxtLink to="/pakketten" class="block transition hover:text-[#C8A2C8]" @click="menuOpen = false">
               Pakketten
@@ -120,13 +99,13 @@ function scrollToTop() {
       <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-3">
         <!-- Linksectie links -->
         <div class="flex flex-col space-y-3 text-left font-zen_loop">
-          <NuxtLink to="/underconstruction" class="text-lg font-semibold transition hover:text-[#A8E6CF]">
+          <NuxtLink to="/underconstruction" class="font-dosis text-lg transition hover:text-[#A8E6CF]">
             ▻ Vind jouw Gezinsondersteuner bij jou in de buurt
           </NuxtLink>
-          <NuxtLink to="/underconstruction" class="text-lg font-semibold transition hover:text-[#A8E6CF]">
+          <NuxtLink to="/underconstruction" class="font-dosis text-lg transition hover:text-[#A8E6CF]">
             ▻ Vraag de informatiebrochure aan
           </NuxtLink>
-          <NuxtLink to="/underconstruction" class="text-lg font-semibold transition hover:text-[#A8E6CF]">
+          <NuxtLink to="/underconstruction" class="font-dosis text-lg transition hover:text-[#A8E6CF]">
             ▻ Schrijf je hier in voor een kennismakingsgesprek
           </NuxtLink>
         </div>

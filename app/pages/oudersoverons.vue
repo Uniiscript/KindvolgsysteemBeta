@@ -13,7 +13,7 @@
     </div>
 
     <!-- Terug naar home knop -->
-    <NuxtLink to="/" class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-semibold text-white shadow-lg transition hover:bg-[#A983A2]">
+    <NuxtLink to="/" class="mt-6 inline-block rounded-lg bg-[#C8A2C8] px-6 py-3 font-dosis text-white shadow-lg transition hover:bg-[#A983A2]">
       Terug naar home
     </NuxtLink>
   </div>

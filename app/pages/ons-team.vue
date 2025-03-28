@@ -42,7 +42,7 @@
 
     <!-- Call to Action -->
     <section class="mt-6 w-full max-w-3xl text-center">
-      <NuxtLink to="/contact" class="rounded-lg bg-[#FF8C94] px-6 py-3 font-semibold text-white shadow-md transition hover:bg-[#E5737A]">
+      <NuxtLink to="/contact" class="rounded-lg bg-[#FF8C94] px-6 py-3 font-dosis text-white shadow-md transition hover:bg-[#E5737A]">
         Boek een nanny vandaag! 🍼
       </NuxtLink>
     </section>
